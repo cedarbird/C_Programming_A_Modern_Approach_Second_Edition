@@ -13,7 +13,7 @@ CFLAGS=-O
 CC=cc
 
 compile: baruch.c
-	${CC} ${CFLAGS} -std=c89 baruch.c -o ../bin/baruch
+	${CC} ${CFLAGS} baruch.c -o ../bin/baruch
 
 clean:
 	rm -f ../bin/*
