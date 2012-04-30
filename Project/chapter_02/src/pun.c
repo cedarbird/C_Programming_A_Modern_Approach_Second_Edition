@@ -1,3 +1,7 @@
+/* Name: pun.c                */
+/* Purpose: prints a bad pun. */
+/* Author: K.N.King           */
+
 #include <stdio.h>
 
 int main(void)
