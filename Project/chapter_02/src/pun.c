@@ -1,5 +1,5 @@
 /*
- * Name: pun.c
+ * Name: pun.c (Chapter 2, page 10)
  * Purpose: prints a bad pun.
  * Author: K.N.King
  */
