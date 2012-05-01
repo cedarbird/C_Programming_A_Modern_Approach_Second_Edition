@@ -7,14 +7,10 @@ CC=gcc
 CP=cp
 RM=rm
 
-# flags for common K&R compiles
-#
-CFLAGS=-O
-CC=cc
-
-compile:pun.c dweight.c
-	${CC} ${CFLAGS} pun.c -o ../bin/pun
-	${CC} ${CFLAGS} dweight.c -o ../bin/dweight
+compile:pun.c dweight.c dweight2.c
+	${CC} pun.c -o ../bin/pun
+	${CC} dweight.c -o ../bin/dweight
+	${CC} dweight2.c -o ../bin/dweight2
 
 clean:
 	rm -f ../bin/*
