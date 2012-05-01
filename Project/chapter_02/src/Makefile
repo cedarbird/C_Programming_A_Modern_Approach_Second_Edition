@@ -12,8 +12,9 @@ RM=rm
 CFLAGS=-O
 CC=cc
 
-compile:pun.c
+compile:pun.c dweight.c
 	${CC} ${CFLAGS} pun.c -o ../bin/pun
+	${CC} ${CFLAGS} dweight.c -o ../bin/dweight
 
 clean:
 	rm -f ../bin/*
