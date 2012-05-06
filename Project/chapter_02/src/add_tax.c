@@ -12,11 +12,6 @@
 #include <stdio.h>
 #define TAXRATE 0.05f
 
-/*
- * name: add_tax.c
- * purpose: a program to calculate a amount with 5% tax added
- * author: bxs
- */
 int main(void)
 {
 

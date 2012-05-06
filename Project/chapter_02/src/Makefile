@@ -12,6 +12,9 @@ compile:pun.c dweight.c dweight2.c celsius.c
 	${CC} ${OPTIONS} ../bin/dweight3 dweight3.c
 	${CC} ${OPTIONS} ../bin/celsius celsius.c
 	${CC} ${OPTIONS} ../bin/hello hello.c
+	${CC} ${OPTIONS} ../bin/printstar print_star.c
+	${CC} ${OPTIONS} ../bin/calculatevolume calculate_volume.c
+	${CC} ${OPTIONS} ../bin/addtax add_tax.c
 
 clean:
 	rm -f ../bin/*

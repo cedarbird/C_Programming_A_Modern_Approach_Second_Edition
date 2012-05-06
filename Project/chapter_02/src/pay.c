@@ -1,15 +1,20 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By XueSong.Bai                                        *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/* pay.c (Chapter 2, page 34) */
+
 #include <stdio.h>
 #define TWENTY 20
 #define TEN 10
 #define FIVE 5
 #define ONE 1
 
-/*
- * name: pay.c
- * purpose: a program to show how to pay the amount using smallest
- * $20, $10, $5 and $1 bills.
- * author: bxs
- */
 int main(int argc, char* argv[])
 {
 

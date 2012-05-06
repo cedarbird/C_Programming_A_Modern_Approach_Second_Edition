@@ -13,11 +13,6 @@
 
 #define PI 3.1416f
 
-/*
- * NAME: calculate_volume.c
- * PURPOSE: calculate a circle volume.
- * AUTHOR: bxs
- */
 int main(void)
 {
   float radius;
