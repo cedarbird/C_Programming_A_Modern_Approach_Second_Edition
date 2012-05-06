@@ -15,7 +15,7 @@
 #define FIVE 5
 #define ONE 1
 
-int main(int argc, char* argv[])
+int main(void)
 {
 
   int bill_list[] = { TWENTY, TEN, FIVE, ONE };

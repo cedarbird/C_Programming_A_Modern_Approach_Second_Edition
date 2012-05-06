@@ -15,6 +15,8 @@ compile:pun.c dweight.c dweight2.c celsius.c
 	${CC} ${OPTIONS} ../bin/printstar print_star.c
 	${CC} ${OPTIONS} ../bin/calculatevolume calculate_volume.c
 	${CC} ${OPTIONS} ../bin/addtax add_tax.c
+	${CC} ${OPTIONS} ../bin/calculatepolynomial calculate_polynomial.c
+	${CC} ${OPTIONS} ../bin/calculatepolynomial2 calculate_polynomial2.c
 
 clean:
 	rm -f ../bin/*
