@@ -7,7 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* calculate_polynomial.c (Chapter 2, page 34) */
+/* calculate_polynomial2.c (Chapter 2, page 34) */
+/* Horner's Rule */
 
 #include <stdio.h>
 
