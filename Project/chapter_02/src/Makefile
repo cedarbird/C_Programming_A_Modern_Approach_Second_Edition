@@ -5,7 +5,7 @@ CC=gcc
 RM=rm
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
-compile:pun.c dweight.c dweight2.c celsius.c
+compile: *.c
 	${CC} ${OPTIONS} ../bin/pun pun.c
 	${CC} ${OPTIONS} ../bin/dweight dweight.c
 	${CC} ${OPTIONS} ../bin/dweight2 dweight2.c
@@ -17,6 +17,8 @@ compile:pun.c dweight.c dweight2.c celsius.c
 	${CC} ${OPTIONS} ../bin/addtax add_tax.c
 	${CC} ${OPTIONS} ../bin/calculatepolynomial calculate_polynomial.c
 	${CC} ${OPTIONS} ../bin/calculatepolynomial2 calculate_polynomial2.c
+	${CC} ${OPTIONS} ../bin/pay pay.c
+	${CC} ${OPTIONS} ../bin/calculatebalance calculate_balance.c
 
 clean:
 	rm -f ../bin/*
