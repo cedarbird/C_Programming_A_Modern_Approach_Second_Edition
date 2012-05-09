@@ -25,7 +25,6 @@ int main(void)
   printf("Enter monthly payment: ");
   scanf("%f", &monthly_payment);
 
-
   for(i = 0; i < NUM; i++) {
 
     amount = amount + amount * interest_rate / 100.0f / 12  - monthly_payment;
