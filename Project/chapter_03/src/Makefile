@@ -13,6 +13,8 @@ compile: *.c
 	${CC} ${OPTIONS} ../bin/productinfo productinfo.c
 	${CC} ${OPTIONS} ../bin/isbn isbn.c
 	${CC} ${OPTIONS} ../bin/tel tel.c
+	${CC} ${OPTIONS} ../bin/magicsquare magicsquare.c
+	${CC} ${OPTIONS} ../bin/addfrac2 addfrac2.c
 
 clean:
 	rm -f ../bin/*
