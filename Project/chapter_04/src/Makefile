@@ -11,7 +11,8 @@ compile: *.c
 	${CC} ${OPTIONS} ../bin/section11 section11.c
 	${CC} ${OPTIONS} ../bin/section12 section12.c
 	${CC} ${OPTIONS} ../bin/reversaldigit2 reversaldigit2.c
-	${CC} ${OPTIONS} ../bin/reversaldigit3 reversaldigit3.c
+	${CC} ${OPTIONS} ../bin/reversaldigit3_2 reversaldigit3_2.c
+	${CC} ${OPTIONS} ../bin/convert_to_octal convert_to_octal.c
 
 clean:
 	rm -f ../bin/*
