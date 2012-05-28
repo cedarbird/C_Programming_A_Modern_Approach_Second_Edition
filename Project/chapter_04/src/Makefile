@@ -13,6 +13,7 @@ compile: *.c
 	${CC} ${OPTIONS} ../bin/reversaldigit2 reversaldigit2.c
 	${CC} ${OPTIONS} ../bin/reversaldigit3_2 reversaldigit3_2.c
 	${CC} ${OPTIONS} ../bin/convert_to_octal convert_to_octal.c
+	${CC} ${OPTIONS} ../bin/upc2 upc2.c
 
 clean:
 	rm -f ../bin/*
