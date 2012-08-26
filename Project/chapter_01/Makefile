@@ -12,8 +12,8 @@ RM=rm
 CFLAGS=-O
 CC=cc
 
-compile: baruch.c
-	${CC} ${CFLAGS} baruch.c -o ../bin/baruch
+compile: src/baruch.c
+	${CC} ${CFLAGS} src/baruch.c -o bin/baruch
 
 clean:
-	rm -f ../bin/*
+	rm -f bin/*
