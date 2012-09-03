@@ -5,7 +5,7 @@ CC=gcc
 RM=rm
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
-compile:
+compile: src/*.c
 	${CC} ${OPTIONS} bin/section41 src/section41.c
 	${CC} ${OPTIONS} bin/section10 src/section10.c
 	${CC} ${OPTIONS} bin/section11 src/section11.c
