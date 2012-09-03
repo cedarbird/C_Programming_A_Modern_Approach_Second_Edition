@@ -5,7 +5,7 @@ CC=gcc
 RM=rm
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
-compile: 
+compile: src/*.c
 	${CC} ${OPTIONS} bin/pun src/pun.c
 	${CC} ${OPTIONS} bin/dweight src/dweight.c
 	${CC} ${OPTIONS} bin/dweight2 src/dweight2.c
