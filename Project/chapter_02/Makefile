@@ -21,4 +21,4 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/calculatebalance src/calculate_balance.c
 
 clean:
-	rm -f bin/*
+	${RM} -f bin/*
