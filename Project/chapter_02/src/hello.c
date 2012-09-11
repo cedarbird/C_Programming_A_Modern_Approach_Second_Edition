@@ -8,13 +8,12 @@
  *********************************************************/
 
 /* hello.c (Chapter 2, page 33) */
+/* K&R hello world program      */
 
 #include <stdio.h>
 
 int main(void)
 {
   printf("hello world\n");
-
-  return 0;
 }
 
