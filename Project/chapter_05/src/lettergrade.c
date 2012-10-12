@@ -13,9 +13,9 @@
 
 int main(void)
 {
-  int digit, tendigit;
+  int digit;
   char lettergrade;
-  printf("enter numerical grade.\n");
+  printf("Enter Numerical Grade.\n");
   scanf("%d", &digit);
 
   if ( 0 > digit || 100 <= digit) {
@@ -23,9 +23,8 @@ int main(void)
     return -1;
   }
 
-  tendigit = digit/10;
 
-  switch (tendigit) {
+  switch (digit/10) {
     case 9:  lettergrade = 'A'; break;
     case 8:  lettergrade = 'B'; break;
     case 7:  lettergrade = 'C'; break;
