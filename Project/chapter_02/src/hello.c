@@ -8,6 +8,7 @@
  *********************************************************/
 
 /* hello.c (Chapter 2, page 33) */
+/* K&R hello world program      */
 
 #include <stdio.h>
 

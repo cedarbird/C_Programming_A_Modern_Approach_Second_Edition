@@ -7,20 +7,32 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* dweight.c (Chapter 2, page 33) */
-/* Computes the dimensional weight of a 12" x 10" x 8" box */
+/* lettergrade.c (Chapter 5, page 97) */
 
 #include <stdio.h>
 
 int main(void)
 {
-  int height = 8, length = 12, width = 10, volume;
+  int digit;
+  char lettergrade;
+  printf("Enter Numerical Grade.\n");
+  scanf("%d", &digit);
 
-  volume = height * length * width;
+  if ( 0 > digit || 100 <= digit) {
+    printf("error!\nyour must input a postive number in 0-99.\n");
+    return -1;
+  }
 
-  printf("Dimensions: %dx%dx%d\n", length, width, height);
-  printf("Volume (cubic inches): %d\n", volume);
-  printf("Dimensional weight (pounds): %d\n", (volume + 165)/166);
+
+  switch (digit/10) {
+    case 9:  lettergrade = 'A'; break;
+    case 8:  lettergrade = 'B'; break;
+    case 7:  lettergrade = 'C'; break;
+    case 6:  lettergrade = 'D'; break;
+    default: lettergrade = 'F';
+  }
+
+  printf("Letter Grade: %c\n", lettergrade);
 
   return 0;
 }
