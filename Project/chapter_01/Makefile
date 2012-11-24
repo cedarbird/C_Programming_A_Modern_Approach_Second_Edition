@@ -3,9 +3,8 @@
 # baruch makefile
 
 SHELL=/bin/sh
-CC=gcc
-CP=cp
-RM=rm
+#CC=gcc
+#RM=rm
 
 # flags for common K&R compiles
 #
@@ -16,4 +15,4 @@ compile: src/baruch.c
 	${CC} ${CFLAGS} src/baruch.c -o bin/baruch
 
 clean:
-	rm -f bin/*
+	${RM} -f bin/*
