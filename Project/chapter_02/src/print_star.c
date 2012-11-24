@@ -22,13 +22,12 @@ int main(void)
                           "       *\n",
                           "      *\n",
                           "     *\n",
-                          "    *\n",
-                          "   *\n",
-                          "* *\n",
-                          " *\n"
+                          "*   *\n",
+                          " * *\n",
+                          "  *\n"
                           };
   int i;
-  for(i = 0; i < 7; i++) {
+  for(i = 0; i < 6; i++) {
     printf("%s", star_pattern[i]);
   }
 
