@@ -24,3 +24,4 @@ int main(void)
   printf("Check digit: %d\n", check_digit);
   return 0;
 }
+

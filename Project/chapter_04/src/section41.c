@@ -38,3 +38,4 @@ int main(void)
   printf("%d\n", (i + 5) % (j + 2) / k);
   return 0;
 }
+
