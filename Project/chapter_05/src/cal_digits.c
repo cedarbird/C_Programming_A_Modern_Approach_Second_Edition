@@ -13,10 +13,12 @@
 
 int main(void)
   {
-    int i, num;
+    int i, num = 0;
+
     printf("Enter a number: ");
     scanf("%d", &i);
-    if (i <=9 ) {
+
+    if (i <= 9) {
       num = 1;
     }
     else if (i <= 99) {
