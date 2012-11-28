@@ -14,6 +14,7 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/upc3        src/upc3.c
 	${CC} ${OPTIONS} bin/maxminin4   src/maxminin4.c
 	${CC} ${OPTIONS} bin/flight      src/flight.c
+	${CC} ${OPTIONS} bin/show2digit  src/show2digit.c
 
 clean:
 	${RM} -f bin/*
