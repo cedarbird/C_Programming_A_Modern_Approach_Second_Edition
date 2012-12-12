@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* s1ction63.c (Chapter 6, page 120) */
+/* s1ction63.c (Chapter 6, page 121) */
 
 #include <stdio.h>
 
