@@ -15,6 +15,7 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/section69  src/section69.c
 	${CC} ${OPTIONS} bin/section611 src/section611.c
 	${CC} ${OPTIONS} bin/section613 src/section613.c
+	${CC} ${OPTIONS} bin/show_max   src/show_max.c
 
 clean:
 	${RM} -f bin/*
