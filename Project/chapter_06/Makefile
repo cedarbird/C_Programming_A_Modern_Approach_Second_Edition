@@ -13,6 +13,8 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/section67  src/section67.c
 	${CC} ${OPTIONS} bin/section68  src/section68.c
 	${CC} ${OPTIONS} bin/section69  src/section69.c
+	${CC} ${OPTIONS} bin/section611 src/section611.c
+	${CC} ${OPTIONS} bin/section613 src/section613.c
 
 clean:
 	${RM} -f bin/*
