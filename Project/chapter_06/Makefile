@@ -18,6 +18,11 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/show_max   src/show_max.c
 	${CC} ${OPTIONS} bin/euclid     src/euclid.c
 	${CC} ${OPTIONS} bin/lowest_term src/lowest_term.c
+	${CC} ${OPTIONS} bin/broker     src/broker.c
+	${CC} ${OPTIONS} bin/reversaldigit src/reversaldigit.c
+	${CC} ${OPTIONS} bin/squre      src/squre.c
+	${CC} ${OPTIONS} bin/show_calendar src/show_calendar.c
+	${CC} ${OPTIONS} bin/calculate_balance src/calculate_balance.c
 
 clean:
 	${RM} -f bin/*
