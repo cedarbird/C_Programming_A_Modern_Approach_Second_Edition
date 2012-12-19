@@ -16,6 +16,8 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/section611 src/section611.c
 	${CC} ${OPTIONS} bin/section613 src/section613.c
 	${CC} ${OPTIONS} bin/show_max   src/show_max.c
+	${CC} ${OPTIONS} bin/euclid     src/euclid.c
+	${CC} ${OPTIONS} bin/lowest_term src/lowest_term.c
 
 clean:
 	${RM} -f bin/*
