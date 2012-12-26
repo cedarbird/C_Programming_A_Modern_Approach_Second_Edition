@@ -23,6 +23,7 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/squre      src/squre.c
 	${CC} ${OPTIONS} bin/show_calendar src/show_calendar.c
 	${CC} ${OPTIONS} bin/calculate_balance src/calculate_balance.c
+	${CC} ${OPTIONS} bin/show_earliestday src/show_earliestday.c
 
 clean:
 	${RM} -f bin/*
