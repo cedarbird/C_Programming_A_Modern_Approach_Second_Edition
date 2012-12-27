@@ -24,6 +24,8 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/show_calendar src/show_calendar.c
 	${CC} ${OPTIONS} bin/calculate_balance src/calculate_balance.c
 	${CC} ${OPTIONS} bin/show_earliestday src/show_earliestday.c
+	${CC} ${OPTIONS} bin/ln         src/ln.c
+	${CC} ${OPTIONS} bin/ln2        src/ln2.c
 
 clean:
 	${RM} -f bin/*
