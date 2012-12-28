@@ -14,14 +14,12 @@
 int main(void)
 {
   int n;
-  double e = 1.0f, a;
+  double e = 1.0f, a = 1.0f;
 
   printf("Enter a number: ");
   scanf("%d", &n);
   for (int i = 1; i <= n; i++) {
-    a = 1.0f;
-    for (int j = 1; j <=i; j++)
-      a *= j;
+    a *= i;
     e += 1/a;
   }
   printf("the e is %10.9f.\n", e);

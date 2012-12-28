@@ -13,14 +13,12 @@
 
 int main(void)
 {
-  double e = 1.0f, a, term;
+  double e = 1.0f, a = 1.0f, term;
 
   printf("Enter term: ");
   scanf("%lf", &term);
   for (int i = 1; ; i++) {
-    a = 1.0f;
-    for (int j = 1; j <= i; j++)
-      a *= j;
+    a *= i;
     if (1/a <= term)
       break;
     e += 1/a;
