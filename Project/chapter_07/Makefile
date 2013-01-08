@@ -7,6 +7,11 @@ OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
 compile: src/*.c
 	${CC} ${OPTIONS} bin/section71  src/section71.c
+	${CC} ${OPTIONS} bin/section72  src/section72.c
+	${CC} ${OPTIONS} bin/section75  src/section75.c
+	${CC} ${OPTIONS} bin/section77  src/section77.c
+	${CC} ${OPTIONS} bin/section78  src/section78.c
+	${CC} ${OPTIONS} bin/section715  src/section715.c
 
 clean:
 	${RM} -f bin/*
