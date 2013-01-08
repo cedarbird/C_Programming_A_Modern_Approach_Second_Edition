@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* section71.c (Chapter 7, page 155) */
+/* section75.c (Chapter 7, page 156) */
 
 #include <stdio.h>
 
