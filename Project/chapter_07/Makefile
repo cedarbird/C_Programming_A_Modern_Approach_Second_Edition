@@ -12,6 +12,8 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/section77  src/section77.c
 	${CC} ${OPTIONS} bin/section78  src/section78.c
 	${CC} ${OPTIONS} bin/section715  src/section715.c
+	${CC} ${OPTIONS} bin/count_vowels src/count_vowels.c
+	${CC} ${OPTIONS} bin/reverse_name src/reverse_name.c
 
 clean:
 	${RM} -f bin/*
