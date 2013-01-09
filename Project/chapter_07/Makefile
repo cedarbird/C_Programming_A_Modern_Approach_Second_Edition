@@ -20,5 +20,6 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/print_sizeof src/print_sizeof.c
 	${CC} ${OPTIONS} bin/convert24hour src/convert24hour.c
 	${CC} ${OPTIONS} bin/calculator src/calculator.c
+	${CC} ${OPTIONS} bin/cal_avg_length src/cal_avg_length.c
 clean:
 	${RM} -f bin/*
