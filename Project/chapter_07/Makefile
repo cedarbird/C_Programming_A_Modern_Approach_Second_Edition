@@ -21,5 +21,7 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/convert24hour src/convert24hour.c
 	${CC} ${OPTIONS} bin/calculator src/calculator.c
 	${CC} ${OPTIONS} bin/cal_avg_length src/cal_avg_length.c
+	${CC} ${OPTIONS} bin/newton_squareroot src/newton_squareroot.c
+
 clean:
 	${RM} -f bin/*
