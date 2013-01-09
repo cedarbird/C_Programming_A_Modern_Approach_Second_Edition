@@ -17,6 +17,8 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/convert_alphabetic_phone src/convert_alphabetic_phone.c
 	${CC} ${OPTIONS} bin/sum2       src/sum2.c
 	${CC} ${OPTIONS} bin/count_scrabble src/count_scrabble.c
-
+	${CC} ${OPTIONS} bin/print_sizeof src/print_sizeof.c
+	${CC} ${OPTIONS} bin/convert24hour src/convert24hour.c
+	${CC} ${OPTIONS} bin/calculator src/calculator.c
 clean:
 	${RM} -f bin/*
