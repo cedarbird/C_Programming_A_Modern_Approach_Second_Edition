@@ -13,20 +13,18 @@
 
 int main(void)
   {
-    char first_initial, ch, flag = 0;
+    char first_initial, ch;
     
-    do {
-      first_initial = getchar();
-    } while (first_intial == ' ');
+    while ((first_initial = getchar()) == ' ')
+      ;
 
-    do {
-      ch = getchar();
-      if (flag && ch != '\n' && ch != ' ')
+    while (getchar() != ' ')
+      ;
+
+    while ((ch = getchar()) != '\n') {
+      if (ch != ' ')
         putchar(ch);
-      if (ch == ' ') {
-        flag = 1;
-      }
-    } while (ch != '\n');
+    }
 
     printf(", %c\n", first_initial);
 
