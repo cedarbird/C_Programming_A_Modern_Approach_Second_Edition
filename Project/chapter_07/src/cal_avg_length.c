@@ -17,14 +17,14 @@ int main(void)
     char prech = ' ', ch;
 
     printf("Enter some word: ");
-    while((ch = getchar()) != '\n') {
-      if (ch != ' ')
+    do {
+      ch = getchar();
+      if (ch != ' ' && ch != '\n')
         lengths++;
       else if (prech != ' ')
         words++;
       prech = ch;
-    }
-    words++;
+    } while (ch != '\n');
  
     printf("Avarage Length is: %.1f\n", (float) lengths / words);
 
