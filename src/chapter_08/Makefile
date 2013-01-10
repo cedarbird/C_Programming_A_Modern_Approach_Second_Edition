@@ -10,6 +10,7 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/exercises05	src/exercises05.c
 	${CC} ${OPTIONS} bin/exercises10	src/exercises10.c
 	${CC} ${OPTIONS} bin/exercises11	src/exercises11.c
+	${CC} ${OPTIONS} bin/projects02		src/projects02.c
 	${CC} ${OPTIONS} bin/projects07		src/projects07.c
 
 clean:
