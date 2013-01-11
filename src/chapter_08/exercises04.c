@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises03.c (Chapter 08, page 177) */
+/* exercises04.c (Chapter 08, page 177) */
 /* show weekend */
 /* designated initializer */
 

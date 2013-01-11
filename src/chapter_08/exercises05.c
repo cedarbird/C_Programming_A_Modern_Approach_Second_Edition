@@ -7,8 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises05.c (Chapter 8, page 177) */
-/* fibonacci number */
+/* exercises05.c (Chapter 08, page 177) */
+/* Fibonacci number */
 
 #include <stdio.h>
 #define N 40 
@@ -16,15 +16,15 @@
 int main(void)
   {
     int fibonacci[N] = { 0, 1 };
-  
-    printf("%10d%10d\n", 1, fibonacci[0]);
-    printf("%10d%10d\n", 2, fibonacci[1]);
-  
-    for (int i = 2; i < N; i++) {
-      fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
+
+    printf("Fibonacci Number(end to %d):\n", N);
+
+    for (int i = 0; i < N; i++) {
+      if (i > 1)
+        fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
       printf("%10d%10d\n", i + 1, fibonacci[i]);
     }
-  
+
     return 0;
   }
 
