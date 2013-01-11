@@ -7,23 +7,24 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises03.c (Chapter 8, page 177) */
+/* exercises03.c (Chapter 08, page 177) */
+/* show weekend */
+/* designated initializer */
 
 #include <stdio.h>
 #include <stdbool.h>
-#define NUM_WEEKS 7
+
+#define DAYS_OF_WEEK 7
 
 int main(void)
   {
-    bool weekend[NUM_WEEKS] = { [0]  = true, [6] = true };
-    for (int i = 0; i < NUM_WEEKS; i++) {
-      if (weekend[i])
-        printf(" T ");
-      else
-        printf(" F ");
-    }
-    putchar('\n');
-  
+    bool weekend[DAYS_OF_WEEK] = { [0] = true, [6] = true };
+
+    printf("Weekend: ");
+    for (int i = 0; i < DAYS_OF_WEEK; i++)
+      printf("%2d", weekend[i]);
+    printf("\n");
+
     return 0;
   }
 
