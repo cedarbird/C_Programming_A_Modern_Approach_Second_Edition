@@ -22,7 +22,7 @@ int main(void)
     printf("A 24-hours temperature in a month:\n    ");
 
     for (int i = 0; i < HOURS_OF_DAY; i++) {
-      printf("%4dH", i + 1);
+      printf("%4dH", i);
     }
     printf("\n");
 
