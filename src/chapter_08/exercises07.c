@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises06.c (Chapter 08, page 177) */
+/* exercises07.c (Chapter 08, page 178) */
 /* Seven-segment LED decimal number display */
 /* shorest definition */
 
