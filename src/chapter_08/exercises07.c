@@ -9,6 +9,7 @@
 
 /* exercises06.c (Chapter 08, page 177) */
 /* Seven-segment LED decimal number display */
+/* shorest definition */
 
 #include <stdio.h>
 
@@ -17,14 +18,14 @@
 
 int main(void)
   {
-    const int segments[DIGITS_OF_DECIMAL][NUMS_OF_SEGMENT] = {{1, 1, 1, 1, 1, 1, 0},
-                                                              {0, 1, 1, 0, 0, 0, 0},
+    const int segments[DIGITS_OF_DECIMAL][NUMS_OF_SEGMENT] = {{1, 1, 1, 1, 1, 1},
+                                                              {0, 1, 1},
                                                               {1, 1, 0, 1, 1, 0, 1},
                                                               {1, 1, 1, 1, 0, 0, 1},
                                                               {0, 1, 1, 0, 0, 1, 1},
                                                               {1, 0, 1, 1, 0, 1, 1},
                                                               {1, 0, 1, 1, 1, 1, 1},
-                                                              {1, 1, 1, 0, 0, 0, 0},
+                                                              {1, 1, 1},
                                                               {1, 1, 1, 1, 1, 1, 1},
                                                               {1, 1, 1, 1, 0, 1, 1}}; 
 
