@@ -7,10 +7,11 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects02.c (Chapter 08, page 178) */
-/* count repeated digits */
+/* projects01.c (Chapter 08, page 178) */
+/* print numbers for repeated digits */
 
 #include <stdio.h>
+#include <stdbool.h>
 
 #define TEN 10
 
@@ -29,12 +30,10 @@ int main(void)
       n /= TEN;
     }
 
-    printf("Digit:      ");
+    printf("Repeated digit(s): ");
     for (digit  = 0; digit < TEN; digit++)
-      printf("%3d", digit);
-    printf("\nOccurences: ");
-    for (digit = 0; digit < TEN; digit++)
-      printf("%3d", digit_count[digit]);
+      if(digit_count[digit] > 1)
+        printf("%3d", digit);
     printf("\n");
 
     return 0;

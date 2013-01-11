@@ -7,35 +7,38 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects02.c (Chapter 08, page 178) */
-/* count repeated digits */
+/* projects03.c (Chapter 08, page 178) */
+/* Checks numbers for repeated digits */
 
 #include <stdio.h>
+#include <stdbool.h>
 
 #define TEN 10
 
 int main(void)
   {
-    int digit_count[TEN] = {0};
+    bool digit_seen[TEN] = {false};
     int digit;
     long n;
 
-    printf("Enter a number: ");
-    scanf("%ld", &n);
+    while(true) {
+      printf("Enter a number: ");
+      scanf("%ld", &n);
+      if (n <= 0)
+        break;
 
-    while (n > 0) {
-      digit = n % TEN;
-      digit_count[digit]++;
-      n /= TEN;
+      while (n > 0) {
+        digit = n % TEN;
+        if (digit_seen[digit])
+          break;
+        digit_seen[digit] = true;
+      }
+
+      if (n > 0)
+        printf("Repeated digit¥n");
+      else
+        printf("No Repeated digit¥n");
     }
-
-    printf("Digit:      ");
-    for (digit  = 0; digit < TEN; digit++)
-      printf("%3d", digit);
-    printf("\nOccurences: ");
-    for (digit = 0; digit < TEN; digit++)
-      printf("%3d", digit_count[digit]);
-    printf("\n");
 
     return 0;
   }
