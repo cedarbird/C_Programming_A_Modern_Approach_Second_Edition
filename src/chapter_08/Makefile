@@ -7,7 +7,7 @@ MKDIR=mkdir
 
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
-compile: *.c
+compile:
 	${MKDIR} -p bin
 	${CC} ${OPTIONS} bin/reverse		reverse.c
 	${CC} ${OPTIONS} bin/repdigit		repdigit.c
