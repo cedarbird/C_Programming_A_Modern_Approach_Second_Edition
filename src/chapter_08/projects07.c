@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects07.c (Chapter 08, page 179) */
-/* calculate 5 X 5 matrix's row/column total summary */
+/* calculate 5 X 5 matrix's row/column totals */
 
 #include <stdio.h>
 
@@ -17,32 +17,29 @@
 
 int main(void)
   {
-    int matrix[ROWS][COLS], sum;
+    int matrix[ROWS][COLS], total;
 
     for (int i = 0; i < ROWS; i++) {
-       printf("Enter Row %d: ", i + 1);
-       scanf("%d%d%d%d%d", &matrix[i][0],
-                           &matrix[i][1],
-                           &matrix[i][2],
-                           &matrix[i][3],
-                           &matrix[i][4]);
+      printf("Enter Row %d: ", i + 1);
+      for (int j = 0; j < COLS; j++)
+        scanf("%d", &matrix[i][j]);
     }
 
     printf("Row Totals:\t");
     for (int i = 0; i < ROWS; i++) {
-      sum = 0;
+      total = 0;
       for (int j = 0; j < COLS; j++)
-        sum += matrix[i][j];
-      printf("%10d", sum);
+        total += matrix[i][j];
+      printf("%10d", total);
     }
     printf("\n");
 
     printf("Column Totals:\t");
     for (int i = 0; i < COLS; i++) {
-      sum = 0;
+      total = 0;
       for (int j = 0; j < ROWS; j++)
-        sum += matrix[j][i];
-      printf("%10d", sum);
+        total += matrix[j][i];
+      printf("%10d", total);
     }
     printf("\n");
 
