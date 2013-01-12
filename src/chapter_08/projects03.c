@@ -13,11 +13,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define TEN 10
+#define NUMS_OF_DECIMAL 10
 
 int main(void)
   {
-    bool digit_seen[TEN] = {false};
+    bool digit_seen[NUMS_OF_DECIMAL] = {false};
     int digit;
     long n;
 
@@ -28,16 +28,16 @@ int main(void)
         break;
 
       while (n > 0) {
-        digit = n % TEN;
+        digit = n % NUMS_OF_DECIMAL;
         if (digit_seen[digit])
           break;
         digit_seen[digit] = true;
       }
 
       if (n > 0)
-        printf("Repeated digit¥n");
+        printf("Repeated digit\n");
       else
-        printf("No Repeated digit¥n");
+        printf("No Repeated digit\n");
     }
 
     return 0;

@@ -72,22 +72,22 @@ int main(void)
 
       /* make a random direction decision */
       switch((position[rand() % nums_of_selection])) {
-          case UP:
-            grid[--y][x] = ++ch;
-            break;
-          case DOWN:
-            grid[++y][x] = ++ch;
-            break;
-          case LEFT:
-            grid[y][--x] = ++ch;
-            break;
-          case RIGHT:
-            grid[y][++x] = ++ch;
-            break;
+        case UP:
+          grid[--y][x] = ++ch;
+          break;
+        case DOWN:
+          grid[++y][x] = ++ch;
+          break;
+        case LEFT:
+          grid[y][--x] = ++ch;
+          break;
+        case RIGHT:
+          grid[y][++x] = ++ch;
+          break;
       }
     }
 
-    /* print image */
+    /* show result */
     for (int i = 0; i < SIDE; i++) {
       for (int j = 0; j < SIDE; j++)
         printf("%2c", grid[i][j]);

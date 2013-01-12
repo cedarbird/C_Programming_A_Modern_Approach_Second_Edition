@@ -27,7 +27,7 @@ int main(void)
                                                               {1, 0, 1, 1, 1, 1, 1},
                                                               {1, 1, 1},
                                                               {1, 1, 1, 1, 1, 1, 1},
-                                                              {1, 1, 1, 1, 0, 1, 1}}; 
+                                                              {1, 1, 1, 1, 0, 1, 1}};
 
     printf("Seven-segment decimal number display:\n");
     for (int i = 0; i < DIGITS_OF_DECIMAL; i++) {

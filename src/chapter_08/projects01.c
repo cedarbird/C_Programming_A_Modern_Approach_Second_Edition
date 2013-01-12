@@ -13,11 +13,11 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define TEN 10
+#define NUMS_OF_DECIMAL 10
 
 int main(void)
   {
-    int digit_count[TEN] = {0};
+    int digit_count[NUMS_OF_DECIMAL] = {0};
     int digit;
     long n;
 
@@ -25,13 +25,13 @@ int main(void)
     scanf("%ld", &n);
 
     while (n > 0) {
-      digit = n % TEN;
+      digit = n % NUMS_OF_DECIMAL;
       digit_count[digit]++;
-      n /= TEN;
+      n /= NUMS_OF_DECIMAL;
     }
 
     printf("Repeated digit(s): ");
-    for (digit  = 0; digit < TEN; digit++)
+    for (digit  = 0; digit < NUMS_OF_DECIMAL; digit++)
       if(digit_count[digit] > 1)
         printf("%3d", digit);
     printf("\n");

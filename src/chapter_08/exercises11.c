@@ -30,7 +30,7 @@ int main(void)
           checker_board[i][j] = ODD_CHAR;
       }
 
-    printf("Check Board:\n");
+    printf("Checker Board:\n");
     for (int i = 0; i < ROWS; i++) {
       for (int j = 0; j < COLS; j++)
         printf("%2c", checker_board[i][j]);
