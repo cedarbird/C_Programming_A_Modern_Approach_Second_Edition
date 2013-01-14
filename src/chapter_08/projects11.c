@@ -18,36 +18,21 @@
 int main(void)
   {
     char ch, phone_number[MAXLENGHS] = {'\0'};
-    int count = 0;
+    char convert_table[] = {'2', '2', '2', '3', '3', '3', '4',
+                            '4', '4', '5', '5', '5', '6', '6',
+                            '6', '7', '7', '7', '7', '8', '8',
+                            '8', '9', '9', '9', '9'};
+    int index = 0;
     printf("Enter Phone Number : ");
 
-    do {
-      ch = toupper(getchar());
-      switch (ch) {
-        case 'A': case 'B': case 'C':
-          ch = '2'; break;
-        case 'D': case 'E': case 'F':
-          ch = '3'; break;
-        case 'G': case 'H': case 'I':
-          ch = '4'; break;
-        case 'J': case 'K': case 'L':
-          ch = '5'; break;
-        case 'M': case 'N': case 'O':
-          ch = '6'; break;
-        case 'P': case 'Q': case 'R': case 'S':
-          ch = '7'; break;
-        case 'T': case 'U': case 'V':
-          ch = '8'; break;
-        case 'W': case 'X': case 'Y': case 'Z':
-          ch = '9'; break;
-      }
-
-      phone_number[count++] = ch;
-    } while (ch != '\n');
+    while ((ch = toupper(getchar())) != '\n')
+      if (ch >= 'A' && ch <= 'Z')
+        phone_number[index++] = convert_table[toupper(ch) - 'A'];
+      else
+        phone_number[index++] = ch;
 
     /* print phone number */
-    for (int i = 0; i < count; i++)
-      putchar(phone_number[i]);
+    printf("In numeric form: %s\n", phone_number);
 
     return 0;
   }

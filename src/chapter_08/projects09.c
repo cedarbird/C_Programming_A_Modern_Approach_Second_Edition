@@ -21,7 +21,7 @@
 #define LEFT 2
 #define RIGHT 3
 #define DIRECTION 4
-#define LENGTH 'Z' - 'A'
+#define LENGTH 'Z' - 'A' + 1
 
 int main(void)
   {
@@ -39,12 +39,12 @@ int main(void)
     srand((unsigned) time(NULL));
 
     /* main logic */
-    for (int i = 0; i < LENGTH; i++) {
+    for (int i = 0; i < LENGTH - 1; i++) {
 
       /* initialize */
       nums_of_selection = 0;
 
-      /* get info for effective side */
+      /* get info for effective selection */
       for (int j = 0; j < DIRECTION; j++) {
         switch(j) {
           case UP:
