@@ -32,6 +32,8 @@ compile:
 	${CC} ${OPTIONS} bin/projects07		projects07.c
 	${CC} ${OPTIONS} bin/projects08		projects08.c
 	${CC} ${OPTIONS} bin/projects09		projects09.c
+	${CC} ${OPTIONS} bin/projects11		projects11.c
+	${CC} ${OPTIONS} bin/projects12		projects12.c
 
 clean:
 	${RM} -fR bin
