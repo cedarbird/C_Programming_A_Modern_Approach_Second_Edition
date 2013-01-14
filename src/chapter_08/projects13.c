@@ -30,16 +30,14 @@ int main(void)
       }
     }
 
-    index = 0; /* reset index */
-
     /* read last name */
+    index = 0; /* reset index */
     while ((ch = getchar()) != '\n') {
       if (ch != ' ')
         last_name[index++] = ch;
     }
 
     printf("%s, %c\n", last_name, first_name[0]);
-
     return 0;
   }
 

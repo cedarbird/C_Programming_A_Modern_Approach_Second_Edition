@@ -21,7 +21,7 @@
 #define LEFT 2
 #define RIGHT 3
 #define DIRECTION 4
-#define LENGTH 'Z' - 'A' + 1
+#define WALK_DISTANCE ('Z' - 'A' + 1)
 
 int main(void)
   {
@@ -39,7 +39,7 @@ int main(void)
     srand((unsigned) time(NULL));
 
     /* main logic */
-    for (int i = 0; i < LENGTH - 1; i++) {
+    for (int i = 0; i < WALK_DISTANCE - 1; i++) {
 
       /* initialize */
       nums_of_selection = 0;
