@@ -17,27 +17,25 @@
 
 int main(void)
   {
-    char ch, first_name[MAX_LENGTH] = {'\0'}, last_name[MAX_LENGTH] = {'\0'};
-    bool flag = false; /* non-space character exist */
+    char ch, first_character, last_name[MAX_LENGTH] = {'\0'};
     int index = 0;
 
-    /* read first name */
-    while (!((ch = getchar()) == ' ' && flag)) {
-      if (ch != ' ') {
-        if (!flag)
-          flag = true;
-        first_name[index++] = ch;
-      }
-    }
+    printf("Enter a first and last name: ");
+
+    /* skip prefix space & read first character */
+    while ((first_character = getchar()) == ' ')
+      ;
+
+    /* skip first name */
+    while (getchar() != ' ')
+      ;
 
     /* read last name */
-    index = 0; /* reset index */
-    while ((ch = getchar()) != '\n') {
+    while ((ch = getchar()) != '\n')
       if (ch != ' ')
         last_name[index++] = ch;
-    }
 
-    printf("%s, %c\n", last_name, first_name[0]);
+    printf("You entered the name: %s, %c\n", last_name, first_character);
     return 0;
   }
 
