@@ -12,6 +12,7 @@ compile:
 	${CC} ${OPTIONS} bin/reverse		reverse.c
 	${CC} ${OPTIONS} bin/repdigit		repdigit.c
 	${CC} ${OPTIONS} bin/interest		interest.c
+	${CC} ${OPTIONS} bin/deal		deal.c
 
 	${CC} ${OPTIONS} bin/exercises03	exercises03.c
 	${CC} ${OPTIONS} bin/exercises04	exercises04.c
