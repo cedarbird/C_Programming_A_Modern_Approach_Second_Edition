@@ -37,8 +37,8 @@ int main(void)
       if (ch == ' ') {
         for (j = i + 1; j <= index; j++)
           putchar(sentence[j]);
-        putchar(' ');
-        index = i - 1;
+        putchar(ch);
+        index = i;
       } else if (i == 0)
         for (j = 0; j <= index; j++)
           putchar(sentence[j]);
