@@ -43,7 +43,6 @@ int main(void)
         for (j = 0; j <= index; j++)
           putchar(sentence[j]);
     }
-
     printf("%c\n", terminating_character);
 
     return 0;
