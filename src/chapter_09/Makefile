@@ -9,7 +9,11 @@ OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
 compile:
 	${MKDIR} -p bin
-	${CC} ${OPTIONS} bin/projects17		projects17.c
+	${CC} ${OPTIONS} bin/average		average.c
+	${CC} ${OPTIONS} bin/countdown		countdown.c
+	${CC} ${OPTIONS} bin/pun2			pun2.c
+	${CC} ${OPTIONS} bin/prime			prime.c
+	${CC} ${OPTIONS} bin/qsort			qsort.c
 
 clean:
 	${RM} -fR bin
