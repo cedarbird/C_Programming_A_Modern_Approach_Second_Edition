@@ -24,6 +24,12 @@ compile:
 	${CC} ${OPTIONS} bin/exercises07	exercises07.c
 	${CC} ${OPTIONS} bin/exercises10	exercises10.c
 	${CC} ${OPTIONS} bin/exercises11	exercises11.c
+	${CC} ${OPTIONS} bin/exercises11	exercises11.c
+	${CC} ${OPTIONS} bin/exercises12	exercises12.c
+	${CC} ${OPTIONS} bin/exercises13	exercises13.c
+	${CC} ${OPTIONS} bin/exercises15	exercises15.c
+	${CC} ${OPTIONS} bin/exercises17	exercises17.c
+	${CC} ${OPTIONS} bin/exercises19	exercises19.c
 
 clean:
 	${RM} -fR bin

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises10.c (Chapter 09, page 214) */
+/* exercises10.c (Chapter 09, page 215) */
 /* largest average positive function from a array */
 
 #include <stdio.h>

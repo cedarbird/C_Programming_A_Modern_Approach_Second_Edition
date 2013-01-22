@@ -7,30 +7,26 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises11.c (Chapter 09, page 215) */
-/* compute GPA */
+/* exercises12.c (Chapter 09, page 215) */
+/* inner product */
 
 #include <stdio.h>
 #include <ctype.h>
 
-float compute_GPA(char grades[], int n)
+double inner_product(double a[], double b[], int n)
   {
+    double inner_product = 0.0;
     int i;
-    float sum =0.0f;
-    for (i = 0; i < n; i++)
-      switch (toupper(grades[i])) {
-        case 'A': sum += 4.0; break;
-        case 'B': sum += 3.0; break;
-        case 'C': sum += 2.0; break;
-        case 'D': sum += 1.0; break;
-      }
 
-    return sum / n;
+    for (i = 0; i < n; i++)
+      inner_product += a[i] * b[i];
+
+    return inner_product;
   }
 
 int main(void)
   {
-    printf("%f\n", compute_GPA((char []){'a', 'B', 'C', 'F', 'd', 'A', 'B'}, 7));
+    printf("%.2f\n", inner_product((double []){10.0, 11.0, 2.0}, (double []){1.0, 2.0, 3.0}, 3));
 
     return 0;
   }
