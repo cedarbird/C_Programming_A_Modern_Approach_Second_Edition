@@ -27,8 +27,10 @@ int gcd(int m, int n)
 
 int main(void)
   {
-    printf("%d\n", gcd(12, 28));
-    printf("%d\n", gcd(24, 9));
+    int x, y;
+    printf("Enter two integers: ");
+    scanf("%d%d", &x, &y);
+    printf("the gcd of (%d %d) is %d\n", x, y, gcd(x, y));
 
     return 0;
   }

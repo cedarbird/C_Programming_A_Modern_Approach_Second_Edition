@@ -7,44 +7,28 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises13.c (Chapter 09, page 215) */
-/* evaluate position */
+/* exercises18.c (Chapter 09, page 216) */
+/* Euclid's algorithm for computing the GCD */
+/* recursive version */
 
 #include <stdio.h>
-#include <ctype.h>
 
-int evaluate_position(char board[8][8])
-  {
-    int white_score = 0, black_score = 0, current_score;
-    int i, j;
-    char current_pieces;
-
-    for (i = 0; i < 8; i++)
-      for (j = 0; j < 8; j++) {
-        current_pieces = board[i][j];
-        current_score = 0;
-        switch (toupper(current_pieces)) {
-          case 'Q': current_score = 9; break;
-          case 'R': current_score = 5; break;
-          case 'B': current_score = 3; break;
-          case 'N': current_score = 3; break;
-          case 'P': current_score = 1; break;
-        }
-        if (current_pieces >='A' && current_pieces <= 'Z')
-          white_score += current_score;
-        else
-          black_score += current_score;
-      }
-
-    return white_score - black_score;
-  }
+int gcd(int, int);
 
 int main(void)
   {
-    char board[8][8] = {[0][1] = 'Q', 'B', 'B', 'N', 'P',
-                        [7][1] = 'q', 'r', 'b', 'n'};
-    printf("the position is %d\n", evaluate_position(board));
+    int x, y;
+    printf("Enter two integers: ");
+    scanf("%d%d", &x, &y);
+    printf("the gcd of (%d %d) is %d\n", x, y, gcd(x, y));
 
     return 0;
   }
 
+int gcd(int m, int n)
+  {
+    if (n == 0)
+      return m;
+    else
+      return gcd(n, m % n);
+  }

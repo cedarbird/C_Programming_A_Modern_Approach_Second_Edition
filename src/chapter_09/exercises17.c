@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* exercises17.c (Chapter 09, page 215) */
-/* fact function */
+/* no recursive fact function */
 
 #include <stdio.h>
 
@@ -19,7 +19,7 @@ int main(void)
   int n;
   printf("Enter a number: ");
   scanf("%d", &n);
-  printf("the result of fact(%d) is %d\n", n, fact(n));
+  printf("the factorial of %d is %d\n", n, fact(n));
 
   return 0;
 }
