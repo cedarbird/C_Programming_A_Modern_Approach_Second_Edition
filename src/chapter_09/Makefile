@@ -35,6 +35,8 @@ compile:
 	${CC} ${OPTIONS} bin/exercises19	exercises19.c
 
 	${CC} ${OPTIONS} bin/projects01		projects01.c
+	${CC} ${OPTIONS} bin/projects02		projects02.c
+	${CC} ${OPTIONS} bin/projects03		projects03.c
 
 clean:
 	${RM} -fR bin
