@@ -38,7 +38,8 @@ int main(void)
 void generate_random_walk(char walk[SIDE][SIDE])
   {
     char ch = 'A'; /* start alphabet */
-    int position[DIRECTION], x = 0, y = 0, nums_of_selection; /* initial direct and position */
+    int x = 0, y = 0, nums_of_selection; /* initial direct and position */
+    bool position[DIRECTION] = {false};
 
     /* walk initializer */
     for (int i = 0; i < SIDE; i++)
@@ -56,26 +57,14 @@ void generate_random_walk(char walk[SIDE][SIDE])
       nums_of_selection = 0;
 
       /* get info for effective selection */
-      for (int j = 0; j < DIRECTION; j++) {
-        switch(j) {
-          case UP:
-            if (y != 0 && walk[y - 1][x] == '.')
-              position[nums_of_selection++] = UP;
-            break;
-          case DOWN:
-            if (y != (SIDE - 1) && walk[y + 1][x] == '.')
-              position[nums_of_selection++] = DOWN;
-            break;
-          case LEFT:
-            if (x != 0 && walk[y][x - 1] == '.')
-              position[nums_of_selection++] = LEFT;
-            break;
-          case RIGHT:
-            if (x != (SIDE - 1) && walk[y][x + 1] == '.')
-              position[nums_of_selection++] = RIGHT;
-            break;
-        }
-      }
+      if (y != 0 && walk[y - 1][x] == '.')
+        position[UP] = true;
+      if (y != (SIDE - 1) && walk[y + 1][x] == '.')
+        position[nums_of_selection++] = DOWN;
+      if (x != 0 && walk[y][x - 1] == '.')
+        position[nums_of_selection++] = LEFT;
+      if (x != (SIDE - 1) && walk[y][x + 1] == '.')
+        position[nums_of_selection++] = RIGHT;
 
       /* stop when no way */
       if (nums_of_selection == 0)
@@ -83,18 +72,10 @@ void generate_random_walk(char walk[SIDE][SIDE])
 
       /* make a random direction decision */
       switch((position[rand() % nums_of_selection])) {
-        case UP:
-          walk[--y][x] = ++ch;
-          break;
-        case DOWN:
-          walk[++y][x] = ++ch;
-          break;
-        case LEFT:
-          walk[y][--x] = ++ch;
-          break;
-        case RIGHT:
-          walk[y][++x] = ++ch;
-          break;
+        case UP:    walk[--y][x] = ++ch; break;
+        case DOWN:  walk[++y][x] = ++ch; break;
+        case LEFT:  walk[y][--x] = ++ch; break;
+        case RIGHT: walk[y][++x] = ++ch; break;
       }
     }
   }
