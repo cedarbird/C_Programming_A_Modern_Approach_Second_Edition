@@ -7,25 +7,76 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects07.c (Chapter 09, page 217) */
-/* better power function to shorten number of recursive calls */
+/* projects07.c (Chapter 10, page 239) */
+/* Seven-segment LED decimal number display */
 
 #include <stdio.h>
+#include <ctype.h>
 
-int power(int x, int n);
+#define DIGITS_OF_DECIMAL 10
+#define NUMS_OF_SEGMENT 7
+#define NUM_DIGITS 10
+#define HEIGHT 3
+#define WIDTH 4
+
+int segments[DIGITS_OF_DECIMAL][NUMS_OF_SEGMENT] = {{1, 1, 1, 1, 1, 1, 0},
+                                                    {0, 1, 1, 0, 0, 0, 0},
+                                                    {1, 1, 0, 1, 1, 0, 1},
+                                                    {1, 1, 1, 1, 0, 0, 1},
+                                                    {0, 1, 1, 0, 0, 1, 1},
+                                                    {1, 0, 1, 1, 0, 1, 1},
+                                                    {1, 0, 1, 1, 1, 1, 1},
+                                                    {1, 1, 1, 0, 0, 0, 0},
+                                                    {1, 1, 1, 1, 1, 1, 1},
+                                                    {1, 1, 1, 1, 0, 1, 1}};
+
+int display_position[NUMS_OF_SEGMENT][2] = {{0, 1}, {1, 2}, {2, 2}, {2, 1}, {2, 0}, {1, 0}, {1, 1}};
+char display_mark[NUMS_OF_SEGMENT] = {'_', '|', '|', '_', '|', '|', '_'};
+
+char digits[HEIGHT][NUM_DIGITS * WIDTH];
+
+void clear_digits_array(void);
+void process_digit(int digit, int position);
+void print_digits_array(void);
 
 int main(void)
   {
-    int x, n;
-    printf("Enter two numbers x and n: ");
-    scanf("%d%d", &x, &n);
-    printf("the %d^%d  is %d\n", x, n, power(x, n));
+    int index = 0;
+    char ch;
+    clear_digits_array();
+    printf("Enter a number: ");
+    while ((ch = getchar()) != '\n' && index < NUM_DIGITS)
+      if(isdigit(ch))
+        process_digit(ch - '0', index++);
+    print_digits_array();
 
     return 0;
   }
 
-int power(int x, int n)
+
+void clear_digits_array(void)
   {
-    return n == 0 ? 1 : (n % 2 == 0 ? power(x * x, n / 2) : x * power(x * x, n / 2));
+    int i, j;
+    for (i = 0; i < HEIGHT; i++)
+      for (j = 0; j < NUM_DIGITS * WIDTH; j++)
+        digits[i][j] = ' ';
+  }
+
+void process_digit(int digit, int position)
+  {
+    int i;
+    for (i = 0; i < NUMS_OF_SEGMENT; i++)
+      if (segments[digit][i] == 1)
+        digits[display_position[i][0]][position * WIDTH + display_position[i][1]] = display_mark[i];
+  }
+
+void print_digits_array(void)
+  {
+    int i, j;
+    for (i = 0; i < HEIGHT; i++) {
+      for (j = 0; j < NUM_DIGITS * WIDTH; j++)
+        putchar(digits[i][j]);
+      putchar('\n');
+    }
   }
 
