@@ -1,6 +1,4 @@
-# %W% %G% %U%
-#
-# baruch makefile
+# Makefile
 
 SHELL=/bin/sh
 MKDIR=mkdir

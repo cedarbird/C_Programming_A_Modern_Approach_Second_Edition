@@ -1,4 +1,4 @@
-# %W% %G% %U%
+# Makefile
 
 SHELL=/bin/sh
 CC=gcc
@@ -6,20 +6,20 @@ RM=rm
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 OPTIONS89=-O -Wall -W -pedantic -ansi -std=c89 -o
 
-compile: src/*.c
-	${CC} ${OPTIONS} bin/pun src/pun.c
-	${CC} ${OPTIONS} bin/dweight src/dweight.c
-	${CC} ${OPTIONS} bin/dweight2 src/dweight2.c
-	${CC} ${OPTIONS} bin/dweight3 src/dweight3.c
-	${CC} ${OPTIONS} bin/celsius src/celsius.c
-	${CC} ${OPTIONS89} bin/hello src/hello.c
-	${CC} ${OPTIONS} bin/printstar src/print_star.c
-	${CC} ${OPTIONS} bin/calculatevolume src/calculate_volume.c
-	${CC} ${OPTIONS} bin/addtax src/add_tax.c
-	${CC} ${OPTIONS} bin/calculatepolynomial src/calculate_polynomial.c
-	${CC} ${OPTIONS} bin/calculatepolynomial2 src/calculate_polynomial2.c
-	${CC} ${OPTIONS} bin/pay src/pay.c
-	${CC} ${OPTIONS} bin/calculatebalance src/calculate_balance.c
+compile: *.c
+	${CC} ${OPTIONS} bin/pun pun.c
+	${CC} ${OPTIONS} bin/dweight dweight.c
+	${CC} ${OPTIONS} bin/dweight2 dweight2.c
+	${CC} ${OPTIONS} bin/dweight3 dweight3.c
+	${CC} ${OPTIONS} bin/celsius celsius.c
+	${CC} ${OPTIONS89} bin/hello hello.c
+	${CC} ${OPTIONS} bin/printstar print_star.c
+	${CC} ${OPTIONS} bin/calculatevolume calculate_volume.c
+	${CC} ${OPTIONS} bin/addtax add_tax.c
+	${CC} ${OPTIONS} bin/calculatepolynomial calculate_polynomial.c
+	${CC} ${OPTIONS} bin/calculatepolynomial2 calculate_polynomial2.c
+	${CC} ${OPTIONS} bin/pay pay.c
+	${CC} ${OPTIONS} bin/calculatebalance calculate_balance.c
 
 clean:
 	${RM} -f bin/*
