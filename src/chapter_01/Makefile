@@ -3,16 +3,18 @@
 # baruch makefile
 
 SHELL=/bin/sh
+MKDIR=mkdir
+OPTIONS=-O -Wall -W -pedantic -ansi -std=c89 -o
 #CC=gcc
 #RM=rm
 
 # flags for common K&R compiles
 #
-CFLAGS=-O
 CC=cc
 
-compile: src/baruch.c
-	${CC} ${CFLAGS} src/baruch.c -o bin/baruch
+compile: baruch.c
+	${MKDIR} -p  bin
+	${CC} ${OPTIONS} bin/baruch baruch.c
 
 clean:
 	${RM} -f bin/*
