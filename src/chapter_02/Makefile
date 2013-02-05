@@ -22,4 +22,4 @@ compile: *.c
 	${CC} ${OPTIONS} bin/calculatebalance calculate_balance.c
 
 clean:
-	${RM} -f bin/*
+	${RM} -f bin
