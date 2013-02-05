@@ -1,0 +1,37 @@
+     1	auto
+     2	break
+     3	case
+     4	char
+     5	const
+     6	continue
+     7	default
+     8	do
+     9	double
+    10	else
+    11	enum
+    12	extern
+    13	float
+    14	for
+    15	goto
+    16	if
+    17	inline      (c99)
+    18	int
+    19	long
+    20	register    (c99)
+    21	restrict
+    22	return
+    23	short
+    24	signed
+    25	sizeof
+    26	static
+    27	struct
+    28	switch
+    29	typedef
+    30	union
+    31	unsigned
+    32	void
+    33	volatile
+    34	while
+    35	_Bool       (c99)
+    36	_Complex    (c99)
+    37	_Imaginary  (c99)
