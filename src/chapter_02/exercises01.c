@@ -7,8 +7,9 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* hello.c (Chapter 2, page 33) */
-/* K&R hello world program      */
+/* exercises01.c (Chapter 2, page 33) */
+/* K&R hello world program */
+/* Warning: control reaches end of non-void function */
 
 #include <stdio.h>
 

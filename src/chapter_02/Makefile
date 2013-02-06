@@ -9,13 +9,14 @@ OPTIONS89=-O -Wall -W -pedantic -ansi -std=c89 -o
 
 compile: *.c
 	${MKDIR} -p bin
-	${CC} ${OPTIONS} bin/pun pun.c
-	${CC} ${OPTIONS} bin/dweight dweight.c
-	${CC} ${OPTIONS} bin/dweight2 dweight2.c
-	${CC} ${OPTIONS} bin/celsius celsius.c
+	${CC} ${OPTIONS} bin/pun			pun.c
+	${CC} ${OPTIONS} bin/dweight			dweight.c
+	${CC} ${OPTIONS} bin/dweight2			dweight2.c
+	${CC} ${OPTIONS} bin/celsius			celsius.c
 
+	${CC} ${OPTIONS89} bin/exercises01		exercises01.c
+	${CC} ${OPTIONS89} bin/exercises02		exercises02.c
 	${CC} ${OPTIONS} bin/dweight3 dweight3.c
-	${CC} ${OPTIONS89} bin/hello hello.c
 	${CC} ${OPTIONS} bin/printstar print_star.c
 	${CC} ${OPTIONS} bin/calculatevolume calculate_volume.c
 	${CC} ${OPTIONS} bin/addtax add_tax.c
