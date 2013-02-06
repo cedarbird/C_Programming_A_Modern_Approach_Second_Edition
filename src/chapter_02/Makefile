@@ -3,7 +3,7 @@
 SHELL=/bin/sh
 CC=gcc
 RM=rm
-MKDIR=mkdir
+KDIR=mkdir
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 OPTIONS89=-O -Wall -W -pedantic -ansi -std=c89 -o
 

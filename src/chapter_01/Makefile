@@ -11,4 +11,4 @@ compile: baruch.c
 	${CC} ${OPTIONS} bin/baruch baruch.c
 
 clean:
-	${RM} -fr bin
+	${RM} -fR bin
