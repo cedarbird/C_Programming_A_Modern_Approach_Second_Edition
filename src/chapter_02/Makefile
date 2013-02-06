@@ -18,13 +18,14 @@ compile: *.c
 	${CC} ${OPTIONS} bin/exercises03		exercises03.c
 	${CC} ${OPTIONS} bin/exercises04		exercises04.c
 
-	${CC} ${OPTIONS} bin/printstar print_star.c
-	${CC} ${OPTIONS} bin/calculatevolume calculate_volume.c
-	${CC} ${OPTIONS} bin/addtax add_tax.c
-	${CC} ${OPTIONS} bin/calculatepolynomial calculate_polynomial.c
-	${CC} ${OPTIONS} bin/calculatepolynomial2 calculate_polynomial2.c
-	${CC} ${OPTIONS} bin/pay pay.c
-	${CC} ${OPTIONS} bin/calculatebalance calculate_balance.c
+	${CC} ${OPTIONS} bin/projects01			projects01.c
+	${CC} ${OPTIONS} bin/projects02			projects02.c
+	${CC} ${OPTIONS} bin/projects03			projects03.c
+	${CC} ${OPTIONS} bin/projects04			projects04.c
+	${CC} ${OPTIONS} bin/projects05			projects05.c
+	${CC} ${OPTIONS} bin/projects06			projects06.c
+	${CC} ${OPTIONS} bin/projects07			projects07.c
+	${CC} ${OPTIONS} bin/projects08			projects08.c
 
 clean:
 	${RM} -fR bin

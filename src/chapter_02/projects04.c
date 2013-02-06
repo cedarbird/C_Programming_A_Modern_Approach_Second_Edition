@@ -1,25 +1,28 @@
 /*********************************************************
  * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By XueSong.Bai                                        *
+ * By K. N. King                                         *
  * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* calculate_volume.c (Chapter 02, page 34) */
+/* projects04.c (Chapter 02, page 34) */
+/* display the amount with 5% tax added */
 
 #include <stdio.h>
 
-#define PI 3.1416f
+#define TAX_RATE 0.05f
 
 int main(void)
-{
-  float radius;
-  printf("Enter a radius values:");
-  scanf("%f", &radius);
-  printf("The circle' volume is: %20.2f\n", 4.0f * PI * radius * radius * radius / 3.0f );
+  {
+    float amount;
 
-  return 0;
-}
+    printf("Enter an amount: ");
+    scanf("%f", &amount);
+
+    printf("With tax added: $%.2f\n", amount * (1.0f + TAX_RATE));
+
+    return 0;
+  }
 
