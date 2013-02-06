@@ -8,9 +8,9 @@
  *********************************************************/
 
 exercises07.txt (Chapter 2, page 33)
-(a) for			y (reference KEYWORDS)
-(b) If			n (c is a case sensitive language)
-(c) main		n (a program entry function name)
-(d) printf		n (standard library function name)
-(c) while		y (reference KEYWORDS)
+(a) for			yes (reference KEYWORDS)
+(b) If			no  (c is a case sensitive language)
+(c) main		no  (a program entry function name)
+(d) printf		no  (standard library function name)
+(c) while		yes (reference KEYWORDS)
 
