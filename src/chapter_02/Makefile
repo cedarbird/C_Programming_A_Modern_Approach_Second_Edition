@@ -3,9 +3,8 @@
 SHELL=/bin/sh
 CC=gcc
 RM=rm
-KDIR=mkdir
+MKDIR=mkdir
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
-OPTIONS89=-O -Wall -W -pedantic -ansi -std=c89 -o
 
 compile: *.c
 	${MKDIR} -p bin
@@ -14,9 +13,11 @@ compile: *.c
 	${CC} ${OPTIONS} bin/dweight2			dweight2.c
 	${CC} ${OPTIONS} bin/celsius			celsius.c
 
-	${CC} ${OPTIONS89} bin/exercises01		exercises01.c
-	${CC} ${OPTIONS89} bin/exercises02		exercises02.c
-	${CC} ${OPTIONS} bin/dweight3 dweight3.c
+	${CC} ${OPTIONS} bin/exercises01		exercises01.c
+	${CC} ${OPTIONS} bin/exercises02		exercises02.c
+	${CC} ${OPTIONS} bin/exercises03		exercises03.c
+	${CC} ${OPTIONS} bin/exercises04		exercises04.c
+
 	${CC} ${OPTIONS} bin/printstar print_star.c
 	${CC} ${OPTIONS} bin/calculatevolume calculate_volume.c
 	${CC} ${OPTIONS} bin/addtax add_tax.c
