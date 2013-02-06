@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* calculate_balance.c (Chapter 2, page 35) */
+/* calculate_balance.c (Chapter 02, page 35) */
 
 #include <stdio.h>
 #define NUM 3

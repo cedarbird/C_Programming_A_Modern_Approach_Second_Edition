@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises01.c (Chapter 2, page 33) */
+/* exercises04.c (Chapter 02, page 33) */
 /* Here's one possible program: */
 /* Warning: it's wrong to use uninitialized variable */
 

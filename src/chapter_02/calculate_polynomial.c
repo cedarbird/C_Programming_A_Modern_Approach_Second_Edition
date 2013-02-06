@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* calculate_polynomial.c (Chapter 2, page 34) */
+/* calculate_polynomial.c (Chapter 02, page 34) */
 
 #include <stdio.h>
 

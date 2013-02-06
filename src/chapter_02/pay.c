@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* pay.c (Chapter 2, page 34) */
+/* pay.c (Chapter 02, page 34) */
 
 #include <stdio.h>
 #define TWENTY 20

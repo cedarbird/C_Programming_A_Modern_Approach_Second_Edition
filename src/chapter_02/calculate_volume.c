@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* calculate_volume.c (Chapter 2, page 34) */
+/* calculate_volume.c (Chapter 02, page 34) */
 
 #include <stdio.h>
 

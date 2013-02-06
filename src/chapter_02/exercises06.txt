@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-exercises06.txt (Chapter 2, page 33)
+exercises06.txt (Chapter 02, page 33)
 Used by core & standard library, should be
 Reserved in any scope, including for use as implementation macros:
   identifiers beginning with an underscore and an uppercase letter

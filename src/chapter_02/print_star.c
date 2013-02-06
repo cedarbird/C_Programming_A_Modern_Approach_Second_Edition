@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* print_star.c (Chapter 2, page 33) */
+/* print_star.c (Chapter 02, page 33) */
 
 #include <stdio.h>
 

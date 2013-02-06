@@ -7,6 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-exercises09.txt (Chapter 2, page 34)
-answer = (3 * q - p * p) / 3;
+exercises09.txt (Chapter 02, page 34)
+answer = ( 3 * q - p * p ) / 3 ;
+answer = (3 * q - p * p) / 3; /* my style */
 

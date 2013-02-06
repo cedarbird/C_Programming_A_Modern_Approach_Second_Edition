@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* dweight.c (Chapter 2, page 20) */
+/* dweight.c (Chapter 02, page 20) */
 /* Computes the dimensional weight of a 12" x 10" x 8" box */
 
 #include <stdio.h>

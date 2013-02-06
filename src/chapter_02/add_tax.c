@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* add_tax.c (Chapter 2, page 34) */
+/* add_tax.c (Chapter 02, page 34) */
 
 #include <stdio.h>
 #define TAXRATE 0.05f

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* celsius.c (Chapter 2, page 24) */
+/* celsius.c (Chapter 02, page 24) */
 /* Converts a Fahrenheit temperature to Celsius */
 
 #include <stdio.h>

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* dweight2.c (Chapter 2, page 23) */
+/* dweight2.c (Chapter 02, page 23) */
 /* Computes the dimensional weight of a
    box from input provided by the user */
 

@@ -7,6 +7,6 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-exercises05.txt (Chapter 2, page 33)
+exercises05.txt (Chapter 02, page 33)
 (a) is not legal because 100_bottles begins with a digit.
 

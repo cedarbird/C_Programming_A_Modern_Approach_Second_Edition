@@ -7,13 +7,13 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises02.c (Chapter 2, page 33) */
-/*
-print message:
-Parkinson's Law:
-Work expands so as to fill the time
-available for its completion.
-*/
+/* exercises02.c (Chapter 02, page 33) */
+/**
+ * print message:
+ * Parkinson's Law:
+ * Work expands so as to fill the time
+ * available for its completion.
+ */
 
 #include <stdio.h>
 
