@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* printfloat.c (Chapter 3, page 49) */
+/* printfloat.c (Chapter 03, page 49) */
 /* Prints float values in various formats */
 
 #include <stdio.h>

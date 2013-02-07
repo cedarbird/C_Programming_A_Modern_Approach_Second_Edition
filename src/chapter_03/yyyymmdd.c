@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* tprintf.c (Chapter 3, page 50) */
+/* tprintf.c (Chapter 03, page 50) */
 /* Prints yyyymmdd */
 
 #include <stdio.h>

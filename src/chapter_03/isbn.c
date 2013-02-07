@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* isbn.c (Chapter 3, page 50) */
+/* isbn.c (Chapter 03, page 50) */
 /* Prints isbn */
 
 #include <stdio.h>

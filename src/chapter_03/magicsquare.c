@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* magicsquare.c (Chapter 3, page 50) */
+/* magicsquare.c (Chapter 03, page 50) */
 
 #include <stdio.h>
 

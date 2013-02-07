@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* tprintf.c (Chapter 3, page 40) */
+/* tprintf.c (Chapter 03, page 40) */
 /* Prints int and float values in various formats */
 
 #include <stdio.h>

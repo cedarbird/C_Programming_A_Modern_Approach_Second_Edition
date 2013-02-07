@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* productinfo.c (Chapter 3, page 50) */
+/* productinfo.c (Chapter 03, page 50) */
 /* Prints a pruduct information */
 
 #include <stdio.h>

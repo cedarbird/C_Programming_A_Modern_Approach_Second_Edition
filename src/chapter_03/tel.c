@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* tel.c (Chapter 3, page 50) */
+/* tel.c (Chapter 03, page 50) */
 /* Prints tel */
 
 #include <stdio.h>

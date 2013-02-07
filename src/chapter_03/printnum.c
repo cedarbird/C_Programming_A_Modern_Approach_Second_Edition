@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* printnum.c (Chapter 3, page 49) */
+/* printnum.c (Chapter 03, page 49) */
 /* Prints int and float values in various formats */
 
 #include <stdio.h>

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* addfrac.c (Chapter 3, page 46) */
+/* addfrac.c (Chapter 03, page 46) */
 /* Adds two fractions */
 
 #include <stdio.h>
