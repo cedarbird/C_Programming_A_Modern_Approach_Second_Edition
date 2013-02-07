@@ -1,12 +1,15 @@
-# %W% %G% %U%
+# Makefile
 
 SHELL=/bin/sh
 CC=gcc
 RM=rm
+MKDIR=mkdir
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
-compile: src/*.c
-	${CC} ${OPTIONS} bin/tprintf src/tprintf.c
+compile: *.c
+	${MKDIR} -p bin
+	${CC} ${OPTIONS} bin/tprintf		tprintf.c
+
 	${CC} ${OPTIONS} bin/printnum src/printnum.c
 	${CC} ${OPTIONS} bin/printfloat src/printfloat.c
 	${CC} ${OPTIONS} bin/yyyymmdd src/yyyymmdd.c
@@ -17,4 +20,4 @@ compile: src/*.c
 	${CC} ${OPTIONS} bin/addfrac2 src/addfrac2.c
 
 clean:
-	rm -f bin/*
+	${RM} -fR bin
