@@ -7,20 +7,15 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* tel.c (Chapter 03, page 50) */
-/* Prints tel */
+/* exercises04.txt (Chapter 03, page 49) */
+/* Shows variables value */
 
-#include <stdio.h>
-
-int main(void)
-{
-  int digit1, digit2, digit3;
-
-  printf("Enter phone number [(xxx)]xxx-xxxx]: ");
-  scanf("(%d)%d-%d", &digit1, &digit2, &digit3);
-  
-  printf("you enterd %d.%d.%d\n", digit1, digit2, digit3);
-
-  return 0;
-}
+scanf("%d%f%d", &i, &x, &j)
+INPUT:
+10.3 5 6
+RESULT:
+i 10
+x 0.3
+j 5
+(6 was dropped.)
 

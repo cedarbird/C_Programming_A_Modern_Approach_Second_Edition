@@ -7,20 +7,11 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* tel.c (Chapter 03, page 50) */
-/* Prints tel */
+/* exercises02.txt (Chapter 03, page 49) */
+/* Writes conversion specification */
 
-#include <stdio.h>
-
-int main(void)
-{
-  int digit1, digit2, digit3;
-
-  printf("Enter phone number [(xxx)]xxx-xxxx]: ");
-  scanf("(%d)%d-%d", &digit1, &digit2, &digit3);
-  
-  printf("you enterd %d.%d.%d\n", digit1, digit2, digit3);
-
-  return 0;
-}
+(a) printf("%-8.1e", x);
+(b) printf("%10.6e", x);
+(c) printf("%-8.3f", x);
+(d) printf("%6.0f", x);
 

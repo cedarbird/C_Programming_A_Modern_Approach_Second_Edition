@@ -1,29 +1,23 @@
 /*********************************************************
  * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By XueSong.Bai                                        *
+ * By K. N. King                                         *
  * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* printfloat.c (Chapter 03, page 49) */
-/* Prints float values in various formats */
+/* exercises01.txt (Chapter 03, page 49) */
+/* Shows output of the following call */
 
-#include <stdio.h>
-
-int main(void)
-{
-  float x;
-
-  printf("Enter a float-point number: ");
-  scanf("%f", &x);
-
-  printf("%-8.1e$\n", x);
-  printf("%10.6e$\n", x);
-  printf("%-8.3f$\n", x);
-  printf("%6.0f$\n", x);
-
-  return 0;
-}
+         1         2
+123456789*123456789*
+(a) printf("%6d,%4d", 86, 1040);
+    86,1040
+(b) printf("%12.5e", 30.253);
+ 3.02530e+01
+(c) printf("%.4f", 83.162);
+83.1620
+(d) printf("%-6.2g", .0000009979);
+1e-06
 

@@ -7,20 +7,11 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* tel.c (Chapter 03, page 50) */
-/* Prints tel */
+/* exercises03.txt (Chapter 03, page 49) */
+/* Indicates whether or not the two strings are equivalent */
 
-#include <stdio.h>
-
-int main(void)
-{
-  int digit1, digit2, digit3;
-
-  printf("Enter phone number [(xxx)]xxx-xxxx]: ");
-  scanf("(%d)%d-%d", &digit1, &digit2, &digit3);
-  
-  printf("you enterd %d.%d.%d\n", digit1, digit2, digit3);
-
-  return 0;
-}
+(a) eq the blank being ignored.
+(b) ne non-blank character - does not match.
+(c) ne the input ends until a non-blank character.
+(d) eq the blank being ignored.
 

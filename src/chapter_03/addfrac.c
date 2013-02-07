@@ -1,25 +1,30 @@
 /*********************************************************
  * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By XueSong.Bai                                        *
+ * By K. N. King                                         *
  * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* tprintf.c (Chapter 03, page 50) */
-/* Prints yyyymmdd */
+/* addfrac.c (Chapter 03, page 46) */
+/* Adds two fractions */
 
 #include <stdio.h>
 
 int main(void)
 {
-  int year, month, day;
+  int num1, denom1, num2, denom2, result_num, result_denom;
 
-  printf("Enter a date (mm/dd/yyyy): ");
-  scanf("%d/%d/%d", &month, &day, &year);
+  printf("Enter first fraction: ");
+  scanf("%d/%d", &num1, &denom1);
 
-  printf("%.4d%.2d%.2d\n", year, month, day);
+  printf("Enter second fraction: ");
+  scanf("%d/%d", &num2, &denom2);
+
+  result_num = num1 * denom2 + num2 * denom1;
+  result_denom = denom1 * denom2;
+  printf("The sum is %d/%d\n", result_num, result_denom);
 
   return 0;
 }

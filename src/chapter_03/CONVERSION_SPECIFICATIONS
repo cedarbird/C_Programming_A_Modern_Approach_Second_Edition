@@ -8,7 +8,7 @@ m        minimum field width
 p        precision
 X        conversion specifier
 
-Appendix 01 precision:
+Precision:
 
 float-point number(%e, %f)    the number of digits printed after the decimal point.
 float-point number(%g)        the maximun number of significant digits.
@@ -16,46 +16,4 @@ integer(%d)                   the minimum number of digits printed,
                               if necessary extra zero are added to the beginning of the number.
 integer(%.0d)                 special case, means no output when number is zero.
 string(%s)                    the maximum length of the string displayed.
-
-Appendix 02 conversion specifier:
-
-Conversion  Argument        Converted      Default  Pre-
- Specifier    Type            Value          Base  cision
-   %c       int x          (unsigned char)x
-  %lc       wint_t x       wchar_t a[2] = {x}
-   %d       int x          (int)x             10     1
-  %hd       int x          (short)x           10     1
-  %ld       long x         (long)x            10     1
-   %e       double x       (double)x          10     6
-  %Le       long double x  (long double)x     10     6
-   %E       double x       (double)x          10     6
-  %LE       long double x  (long double)x     10     6
-   %f       double x       (double)x          10     6
-  %Lf       long double x  (long double)x     10     6
-   %g       double x       (double)x          10     6
-  %Lg       long double x  (long double)x     10     6
-   %G       double x       (double)x          10     6
-  %LG       long double x  (long double)x     10     6
-   %i       int x          (int)x             10     1
-  %hi       int x          (short)x           10     1
-  %li       long x         (long)x            10     1
-   %n       int *x
-  %hn       short *x
-  %ln       long *x
-   %o       int x          (unsigned int)x     8     1
-  %ho       int x          (unsigned short)x   8     1
-  %lo       long x         (unsigned long)x    8     1
-   %p       void *x        (void *)x
-   %s       char x[]       x[0]...                 large
-  %ls       wchar_t x[]    x[0]...                 large
-   %u       int x          (unsigned int)x    10     1
-  %hu       int x          (unsigned short)x  10     1
-  %lu       long x         (unsigned long)x   10     1
-   %x       int x          (unsigned int)x    16     1
-  %hx       int x          (unsigned short)x  16     1
-  %lx       long x         (unsigned long)x   16     1
-   %X       int x          (unsigned int)x    16     1
-  %hX       int x          (unsigned short)x  16     1
-  %lX       long x         (unsigned long)x   16     1
-   %%       none           '%'
 

@@ -7,24 +7,20 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* isbn.c (Chapter 03, page 50) */
-/* Prints isbn */
+/* projects01.c (Chapter 03, page 50) */
+/* Displays the yyyymmdd format from mm/dd/yyyy input */
 
 #include <stdio.h>
 
 int main(void)
-{
-  int gs1_prefix, group_id, publisher_code, item_number, check_digit;
+  {
+    int year, month, day;
 
-  printf("Enter ISBN:  ");
-  scanf("%d-%d-%d-%d-%d", &gs1_prefix, &group_id, &publisher_code, &item_number, &check_digit);
-  
-  printf("GS1 prefix: %d\n", gs1_prefix);
-  printf("Group identifier: %d\n", group_id);
-  printf("Publisher code: %d\n", publisher_code);
-  printf("Item number: %d\n", item_number);
-  printf("Check digit: %d\n", check_digit);
+    printf("Enter a date (mm/dd/yyyy): ");
+    scanf("%d/%d/%d", &month, &day, &year);
 
-  return 0;
-}
+    printf("You entered the date %.4d%.2d%.2d\n", year, month, day);
+
+    return 0;
+  }
 
