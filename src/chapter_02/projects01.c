@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects01.c (Chapter 02, page 34) */
-/* display the following picture on the screen */
+/* Displays the following picture on the screen */
 /*
  *        *
  *       *

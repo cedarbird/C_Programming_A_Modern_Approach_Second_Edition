@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects04.c (Chapter 02, page 34) */
-/* display the amount with 5% tax added */
+/* Displays the amount with 5% tax added */
 
 #include <stdio.h>
 

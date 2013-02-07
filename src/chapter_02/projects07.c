@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects07.c (Chapter 02, page 34) */
-/* pay amount using the smallest number of $20,$10,$5,$1 */
+/* Pays amount using the smallest number of $20,$10,$5,$1 */
 
 #include <stdio.h>
 

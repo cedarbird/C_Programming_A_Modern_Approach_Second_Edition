@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects03.c (Chapter 02, page 34) */
-/* computes the volume of a sphere */
+/* Computes the volume of a sphere */
 
 #include <stdio.h>
 

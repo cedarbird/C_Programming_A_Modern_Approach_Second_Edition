@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects02.c (Chapter 02, page 34) */
-/* computes the volume of a sphere with 10-meter radius */
+/* Computes the volume of a sphere with 10-meter radius */
 
 #include <stdio.h>
 

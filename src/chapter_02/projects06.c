@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects06.c (Chapter 02, page 34) */
-/* use Horner's Rule to computes the value of the following polynomial */
+/* Computes the value of the following polynomial using Horner's Rule */
 /* 3x^5 + 2x^4 - 5x^3 - x^2 + 7x - 6 */
 
 #include <stdio.h>
