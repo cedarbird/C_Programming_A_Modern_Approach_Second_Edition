@@ -1,4 +1,4 @@
-# %W% %G% %U%
+# Makefile
 
 SHELL=/bin/sh
 CC=gcc
