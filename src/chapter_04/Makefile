@@ -1,21 +1,23 @@
-# %W% %G% %U%
+# Makefile
 
 SHELL=/bin/sh
 CC=gcc
 RM=rm
+MKDIR=mkdir
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
-compile: src/*.c
-	${CC} ${OPTIONS} bin/section41 src/section41.c
-	${CC} ${OPTIONS} bin/section10 src/section10.c
-	${CC} ${OPTIONS} bin/section11 src/section11.c
-	${CC} ${OPTIONS} bin/section12 src/section12.c
-	${CC} ${OPTIONS} bin/reversaldigit2 src/reversaldigit2.c
-	${CC} ${OPTIONS} bin/reversaldigit3 src/reversaldigit3.c
-	${CC} ${OPTIONS} bin/reversaldigit3_2 src/reversaldigit3_2.c
-	${CC} ${OPTIONS} bin/convert_to_octal src/convert_to_octal.c
-	${CC} ${OPTIONS} bin/upc2 src/upc2.c
-	${CC} ${OPTIONS} bin/ean src/ean.c
+compile: *.c
+	${MKDIR} -p bin
+	${CC} ${OPTIONS} bin/section41 section41.c
+	${CC} ${OPTIONS} bin/section10 section10.c
+	${CC} ${OPTIONS} bin/section11 section11.c
+	${CC} ${OPTIONS} bin/section12 section12.c
+	${CC} ${OPTIONS} bin/reversaldigit2 reversaldigit2.c
+	${CC} ${OPTIONS} bin/reversaldigit3 reversaldigit3.c
+	${CC} ${OPTIONS} bin/reversaldigit3_2 reversaldigit3_2.c
+	${CC} ${OPTIONS} bin/convert_to_octal convert_to_octal.c
+	${CC} ${OPTIONS} bin/upc2 upc2.c
+	${CC} ${OPTIONS} bin/ean ean.c
 
 clean:
-	rm -f bin/*
+	${RM} -fR bin
