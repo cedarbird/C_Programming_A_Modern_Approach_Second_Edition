@@ -15,13 +15,10 @@ compile: *.c
 
 	${CC} ${OPTIONS} bin/projects01		projects01.c
 	${CC} ${OPTIONS} bin/projects02		projects02.c
-
-	${CC} ${OPTIONS} bin/printnum src/printnum.c
-	${CC} ${OPTIONS} bin/printfloat src/printfloat.c
-	${CC} ${OPTIONS} bin/isbn src/isbn.c
-	${CC} ${OPTIONS} bin/tel src/tel.c
-	${CC} ${OPTIONS} bin/magicsquare src/magicsquare.c
-	${CC} ${OPTIONS} bin/addfrac2 src/addfrac2.c
+	${CC} ${OPTIONS} bin/projects03		projects03.c
+	${CC} ${OPTIONS} bin/projects04		projects04.c
+	${CC} ${OPTIONS} bin/projects05		projects05.c
+	${CC} ${OPTIONS} bin/projects06		projects06.c
 
 clean:
 	${RM} -fR bin
