@@ -7,7 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* reversaldigit3.c (Chapter 04, page 71) */
+/* projects02.c (Chapter 04, page 71) */
+/* Reverses three-digit number */
 
 #include <stdio.h>
 
