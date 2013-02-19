@@ -11,9 +11,10 @@ compile: *.c
 	${CC} ${OPTIONS} bin/upc		upc.c
 
 	${CC} ${OPTIONS} bin/exercises01	exercises01.c
-	${CC} ${OPTIONS} bin/section10		section10.c
-	${CC} ${OPTIONS} bin/section11		section11.c
-	${CC} ${OPTIONS} bin/section12		section12.c
+	${CC} ${OPTIONS} bin/exercises10	exercises10.c
+	${CC} ${OPTIONS} bin/exercises11	exercises11.c
+	${CC} ${OPTIONS} bin/exercises12	exercises12.c
+
 	${CC} ${OPTIONS} bin/reversaldigit2	reversaldigit2.c
 	${CC} ${OPTIONS} bin/reversaldigit3	reversaldigit3.c
 	${CC} ${OPTIONS} bin/reversaldigit3_2	reversaldigit3_2.c

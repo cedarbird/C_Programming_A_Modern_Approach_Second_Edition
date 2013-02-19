@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* convert_to_octal.c (Chapter 4, page 71) */
+/* convert_to_octal.c (Chapter 04, page 71) */
 
 #define OCTAL 8
 

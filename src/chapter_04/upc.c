@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* upc.c (Chapter 4, page 57) */
+/* upc.c (Chapter 04, page 57) */
 /* Computes a Universal Product Code check digit */
 
 #include <stdio.h>

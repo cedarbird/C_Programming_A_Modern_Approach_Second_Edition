@@ -7,18 +7,29 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* reversaldigit3.c (Chapter 04, page 71) */
+/* exercises12.c (Chapter 04, page 70) */
 
 #include <stdio.h>
 
 int main(void)
-{
-  int n;
+  {
+    int i, j;
+    i = 5;
+    j = ++i * 3 - 2;
+    printf("%d %d\n", i, j);
 
-  printf("Enter a three-digit number: ");
-  scanf("%d", &n);
-  printf("The reversal is: %d%d%d\n", n % 10, (n / 10) % 10, n / 100);
+    i = 5;
+    j = 3 - 2 * i++;
+    printf("%d %d\n", i, j);
 
-  return 0;
-}
+    i = 7;
+    j = 3 * i-- + 2;
+    printf("%d %d\n", i, j);
+
+    i = 7;
+    j = 3 + --i * 2;
+    printf("%d %d\n", i, j);
+
+    return 0;
+  }
 
