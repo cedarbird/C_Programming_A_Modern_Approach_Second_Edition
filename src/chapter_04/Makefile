@@ -8,7 +8,9 @@ OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
 compile: *.c
 	${MKDIR} -p bin
-	${CC} ${OPTIONS} bin/section41		section41.c
+	${CC} ${OPTIONS} bin/upc		upc.c
+
+	${CC} ${OPTIONS} bin/exercises01	exercises01.c
 	${CC} ${OPTIONS} bin/section10		section10.c
 	${CC} ${OPTIONS} bin/section11		section11.c
 	${CC} ${OPTIONS} bin/section12		section12.c
@@ -21,3 +23,4 @@ compile: *.c
 
 clean:
 	${RM} -fR bin
+

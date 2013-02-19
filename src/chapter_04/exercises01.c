@@ -7,31 +7,35 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* convert_to_octal.c (Chapter 4, page 71) */
-
-#define OCTAL 8
+/* exercises01.c (Chapter 04, page 68) */
 
 #include <stdio.h>
 
 int main(void)
-{
-  int i;
-  int d1, d2, d3, d4, d5;
+  {
+    int i, j, k;
 
-  printf("Enter a number between 0 and 32767: ");
-  scanf("%d", &i);
+    i = 5;
+    j = 3;
 
-  d5 = i % OCTAL;
-  i /= OCTAL;
-  d4 = i % OCTAL;
-  i /= OCTAL;
-  d3 = i % OCTAL;
-  i /= OCTAL;
-  d2 = i % OCTAL;
-  i /= OCTAL;
-  d1 = i % OCTAL;
-  
-  printf("In octal, your number is: %d%d%d%d%d\n", d1, d2, d3, d4, d5);
-  return 0;
-}
+    printf("%d %d\n", i / j, i % j);
+
+    i = 2;
+    j = 3;
+
+    printf("%d\n", (i + 10) % j);
+
+    i = 7;
+    j = 8;
+    k = 9;
+
+    printf("%d\n", (i + 10) % k / j);
+
+    i = 1;
+    j = 2;
+    k = 3;
+
+    printf("%d\n", (i + 5) % (j + 2) / k);
+    return 0;
+  }
 
