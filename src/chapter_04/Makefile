@@ -15,12 +15,12 @@ compile: *.c
 	${CC} ${OPTIONS} bin/exercises11	exercises11.c
 	${CC} ${OPTIONS} bin/exercises12	exercises12.c
 
-	${CC} ${OPTIONS} bin/reversaldigit2	reversaldigit2.c
-	${CC} ${OPTIONS} bin/reversaldigit3	reversaldigit3.c
-	${CC} ${OPTIONS} bin/reversaldigit3_2	reversaldigit3_2.c
-	${CC} ${OPTIONS} bin/convert_to_octal	convert_to_octal.c
-	${CC} ${OPTIONS} bin/upc2		upc2.c
-	${CC} ${OPTIONS} bin/ean		ean.c
+	${CC} ${OPTIONS} bin/projects01		projects01.c
+	${CC} ${OPTIONS} bin/projects02		projects02.c
+	${CC} ${OPTIONS} bin/projects03		projects03.c
+	${CC} ${OPTIONS} bin/projects04		projects04.c
+	${CC} ${OPTIONS} bin/projects05		projects05.c
+	${CC} ${OPTIONS} bin/projects06		projects06.c
 
 clean:
 	${RM} -fR bin
