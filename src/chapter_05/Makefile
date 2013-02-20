@@ -3,19 +3,24 @@
 SHELL=/bin/sh
 CC=gcc
 RM=rm
+MKDIR=mkdir
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
-compile: src/*.c
-	${CC} ${OPTIONS} bin/lettergrade src/lettergrade.c
-	${CC} ${OPTIONS} bin/cal_digits  src/cal_digits.c
-	${CC} ${OPTIONS} bin/convert12hour  src/convert12hour.c
-	${CC} ${OPTIONS} bin/estimate_windforce  src/estimate_windforce.c
-	${CC} ${OPTIONS} bin/cal_tax     src/cal_tax.c
-	${CC} ${OPTIONS} bin/upc3        src/upc3.c
-	${CC} ${OPTIONS} bin/maxminin4   src/maxminin4.c
-	${CC} ${OPTIONS} bin/flight      src/flight.c
-	${CC} ${OPTIONS} bin/show2digit  src/show2digit.c
-	${CC} ${OPTIONS} bin/show_earlierday src/show_earlierday.c
+compile: *.c
+	${MKDIR} -p bin
+	${CC} ${OPTIONS} bin/broker		broker.c
+	${CC} ${OPTIONS} bin/date		date.c
+
+	${CC} ${OPTIONS} bin/lettergrade	lettergrade.c
+	${CC} ${OPTIONS} bin/cal_digits 	cal_digits.c
+	${CC} ${OPTIONS} bin/convert12hour 	convert12hour.c
+	${CC} ${OPTIONS} bin/estimate_windforce	estimate_windforce.c
+	${CC} ${OPTIONS} bin/cal_tax    	cal_tax.c
+	${CC} ${OPTIONS} bin/upc3       	upc3.c
+	${CC} ${OPTIONS} bin/maxminin4  	maxminin4.c
+	${CC} ${OPTIONS} bin/flight     	flight.c
+	${CC} ${OPTIONS} bin/show2digit 	show2digit.c
+	${CC} ${OPTIONS} bin/show_earlierday	show_earlierday.c
 
 clean:
-	${RM} -f bin/*
+	${RM} -fR bin
