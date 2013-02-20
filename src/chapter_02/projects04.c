@@ -15,14 +15,14 @@
 #define TAX_RATE 0.05f
 
 int main(void)
-  {
-    float amount;
+{
+  float amount;
 
-    printf("Enter an amount: ");
-    scanf("%f", &amount);
+  printf("Enter an amount: ");
+  scanf("%f", &amount);
 
-    printf("With tax added: $%.2f\n", amount * (1.0f + TAX_RATE));
+  printf("With tax added: $%.2f\n", amount * (1.0f + TAX_RATE));
 
-    return 0;
-  }
+  return 0;
+}
 

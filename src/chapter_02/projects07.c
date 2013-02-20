@@ -13,26 +13,26 @@
 #include <stdio.h>
 
 int main(void)
-  {
-    int amount, product;
+{
+  int amount, product;
 
-    printf("Enter a dollar amount: ");
-    scanf("%d", &amount);
+  printf("Enter a dollar amount: ");
+  scanf("%d", &amount);
 
-    product = amount / 20;
-    printf("$20 bills: %d\n", product);
-    amount = amount - product * 20;
+  product = amount / 20;
+  printf("$20 bills: %d\n", product);
+  amount = amount - product * 20;
 
-    product = amount / 10;
-    printf("$10 bills: %d\n", product);
-    amount = amount - product * 10;
+  product = amount / 10;
+  printf("$10 bills: %d\n", product);
+  amount = amount - product * 10;
 
-    product = amount / 5;
-    printf(" $5 bills: %d\n", product);
-    amount = amount - product * 5;
+  product = amount / 5;
+  printf(" $5 bills: %d\n", product);
+  amount = amount - product * 5;
 
-    printf(" $1 bills: %d\n", amount);
+  printf(" $1 bills: %d\n", amount);
 
-    return 0;
-  }
+  return 0;
+}
 

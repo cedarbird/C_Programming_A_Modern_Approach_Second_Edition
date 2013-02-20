@@ -15,15 +15,15 @@
 #define PI 3.1416f
 
 int main(void)
-  {
-    float radius;
+{
+  float radius;
 
-    printf("Enter a radius: ");
-    scanf("%f", &radius);
+  printf("Enter a radius: ");
+  scanf("%f", &radius);
 
-    printf("The volume of a sphere with %.2f-meter radius is: %.2f\n",
-             radius, 4.0f * PI * radius * radius * radius / 3.0f);
+  printf("The volume of a sphere with %.2f-meter radius is: %.2f\n",
+           radius, 4.0f * PI * radius * radius * radius / 3.0f);
 
-    return 0;
-  }
+  return 0;
+}
 

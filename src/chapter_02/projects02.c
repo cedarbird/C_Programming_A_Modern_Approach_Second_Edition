@@ -15,10 +15,10 @@
 #define PI 3.1416f
 
 int main(void)
-  {
-    printf("The volume of a sphere with 10-meter radius is: %.2f\n",
-             4.0f * PI * 10.0f * 10.0f * 10.0f / 3.0f);
+{
+  printf("The volume of a sphere with 10-meter radius is: %.2f\n",
+           4.0f * PI * 10.0f * 10.0f * 10.0f / 3.0f);
 
-    return 0;
-  }
+  return 0;
+}
 
