@@ -11,6 +11,8 @@ compile: *.c
 	${CC} ${OPTIONS} bin/broker		broker.c
 	${CC} ${OPTIONS} bin/date		date.c
 
+	${CC} ${OPTIONS} bin/exercises01	exercises01.c
+
 	${CC} ${OPTIONS} bin/lettergrade	lettergrade.c
 	${CC} ${OPTIONS} bin/cal_digits 	cal_digits.c
 	${CC} ${OPTIONS} bin/convert12hour 	convert12hour.c
