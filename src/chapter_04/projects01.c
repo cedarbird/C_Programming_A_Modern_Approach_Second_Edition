@@ -13,13 +13,13 @@
 #include <stdio.h>
 
 int main(void)
-  {
-    int n;
+{
+  int n;
 
-    printf("Enter a two-digit number: ");
-    scanf("%d", &n);
-    printf("The reversal is: %d%d\n", n % 10, n / 10);
+  printf("Enter a two-digit number: ");
+  scanf("%d", &n);
+  printf("The reversal is: %d%d\n", n % 10, n / 10);
 
-    return 0;
-  }
+  return 0;
+}
 
