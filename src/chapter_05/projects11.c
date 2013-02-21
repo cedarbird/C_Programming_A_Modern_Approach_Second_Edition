@@ -37,33 +37,31 @@ int main(void)
   /* Prints digit from 10 to 19 (special case) */
   if (digit_in_tens == 1)
     switch (digit_in_ones) {
-      case 0: printf("ten.");       break;
-      case 1: printf("eleven.");    break;
-      case 2: printf("twelve.");    break;
-      case 3: printf("thirteen.");  break;
-      case 4: printf("fourteen.");  break;
-      case 5: printf("fifteen.");   break;
-      case 6: printf("sixteen.");   break;
-      case 7: printf("seventeen."); break;
-      case 8: printf("eighteen.");  break;
-      case 9: printf("nineteen.");  break;
+      case 0: printf("ten.\n");       break;
+      case 1: printf("eleven.\n");    break;
+      case 2: printf("twelve.\n");    break;
+      case 3: printf("thirteen.\n");  break;
+      case 4: printf("fourteen.\n");  break;
+      case 5: printf("fifteen.\n");   break;
+      case 6: printf("sixteen.\n");   break;
+      case 7: printf("seventeen.\n"); break;
+      case 8: printf("eighteen.\n");  break;
+      case 9: printf("nineteen.\n");  break;
     }
   /* Prints digit in ones */
   else
     switch (digit_in_ones) {
-      case 0: printf(".");       break;
-      case 1: printf("-one.");   break;
-      case 2: printf("-two.");   break;
-      case 3: printf("-three."); break;
-      case 4: printf("-four.");  break;
-      case 5: printf("-five.");  break;
-      case 6: printf("-six.");   break;
-      case 7: printf("-seven."); break;
-      case 8: printf("-eight."); break;
-      case 9: printf("-nine.");  break;
+      case 0: printf(".\n");       break;
+      case 1: printf("-one.\n");   break;
+      case 2: printf("-two.\n");   break;
+      case 3: printf("-three.\n"); break;
+      case 4: printf("-four.\n");  break;
+      case 5: printf("-five.\n");  break;
+      case 6: printf("-six.\n");   break;
+      case 7: printf("-seven.\n"); break;
+      case 8: printf("-eight.\n"); break;
+      case 9: printf("-nine.\n");  break;
     }
-
-  printf("\n");
 
   return 0;
 }
