@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* broker.c (Chapter 5, page 81) */
+/* broker.c (Chapter 05, page 81) */
 /* Calculates a broker's commission */
 
 #include <stdio.h>

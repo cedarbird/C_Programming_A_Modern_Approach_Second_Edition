@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* show2digit.c (Chapter 5, page 97) */
+/* show2digit.c (Chapter 05, page 97) */
 
 #include <stdio.h>
 

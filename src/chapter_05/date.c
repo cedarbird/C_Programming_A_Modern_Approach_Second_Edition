@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* date.c (Chapter 5, page 89) */
+/* date.c (Chapter 05, page 89) */
 /* Prints a date in legal form */
 
 #include <stdio.h>

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* upc3.c (Chapter 5, page 96) */
+/* upc3.c (Chapter 05, page 96) */
 
 #include <stdio.h>
 

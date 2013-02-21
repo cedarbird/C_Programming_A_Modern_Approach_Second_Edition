@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* show_ealierday.c (Chapter 5, page 97) */
+/* show_ealierday.c (Chapter 05, page 97) */
 
 #include <stdio.h>
 

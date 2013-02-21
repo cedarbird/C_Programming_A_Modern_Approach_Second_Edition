@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* lettergrade.c (Chapter 5, page 97) */
+/* lettergrade.c (Chapter 05, page 97) */
 
 #include <stdio.h>
 

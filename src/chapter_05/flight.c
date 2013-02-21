@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* flight.c (Chapter 5, page 96) */
+/* flight.c (Chapter 05, page 96) */
 
 #include <stdio.h>
 
