@@ -7,7 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* estimate_windforce.c (Chapter 05, page 96) */
+/* projects04.c (Chapter 05, page 96) */
+/* Estimates wind force by Beaufort scale */
 
 #include <stdio.h>
 

@@ -7,7 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* cal_tax.c (Chapter 05, page 96) */
+/* projects05.c (Chapter 05, page 96) */
+/* Calculates tax due */
 
 #include <stdio.h>
 
@@ -24,14 +25,15 @@ int main(void)
     tax = 7.5f + (income - 750.0f) * 2.0f / 100.0f;
   else if (income <= 3750.0f)
     tax = 37.5f + (income - 2250.0f) * 3.0f / 100.0f;
-  else if (income < 5250.0f)
+  else if (income <= 5250.0f)
     tax = 82.5f + (income - 3750.0f) * 4.0f / 100.0f;
-  else if (income < 7000.0f)
+  else if (income <= 7000.0f)
     tax = 142.5f + (income - 5250.0f) * 5.0f / 100.0f;
   else
     tax = 230.0f + (income - 7000.0f) * 6.0f / 100.0f;
 
-  printf("the amount of tax is : %.2f\n", tax);
+  printf("the amount of tax : %.2f\n", tax);
+
   return 0;
 }
 

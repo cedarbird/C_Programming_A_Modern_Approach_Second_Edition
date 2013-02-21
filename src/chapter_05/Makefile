@@ -17,14 +17,15 @@ compile: *.c
 
 	${CC} ${OPTIONS} bin/projects01		projects01.c
 	${CC} ${OPTIONS} bin/projects02		projects02.c
-	${CC} ${OPTIONS} bin/lettergrade	lettergrade.c
-	${CC} ${OPTIONS} bin/estimate_windforce	estimate_windforce.c
-	${CC} ${OPTIONS} bin/cal_tax    	cal_tax.c
-	${CC} ${OPTIONS} bin/upc3       	upc3.c
-	${CC} ${OPTIONS} bin/maxminin4  	maxminin4.c
-	${CC} ${OPTIONS} bin/flight     	flight.c
-	${CC} ${OPTIONS} bin/show2digit 	show2digit.c
-	${CC} ${OPTIONS} bin/show_earlierday	show_earlierday.c
+	${CC} ${OPTIONS} bin/projects03		projects03.c
+	${CC} ${OPTIONS} bin/projects04		projects04.c
+	${CC} ${OPTIONS} bin/projects05		projects05.c
+	${CC} ${OPTIONS} bin/projects06		projects06.c
+	${CC} ${OPTIONS} bin/projects07		projects07.c
+	${CC} ${OPTIONS} bin/projects08		projects08.c
+	${CC} ${OPTIONS} bin/projects09		projects09.c
+	${CC} ${OPTIONS} bin/projects10		projects10.c
+	${CC} ${OPTIONS} bin/projects11		projects11.c
 
 clean:
 	${RM} -fR bin
