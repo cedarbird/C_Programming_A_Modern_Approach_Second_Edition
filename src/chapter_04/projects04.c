@@ -10,9 +10,9 @@
 /* projects04.c (Chapter 04, page 71) */
 /* Converts Decimal number to Octal number */
 
-#define OCTAL 8
-
 #include <stdio.h>
+
+#define OCTAL 8
 
 int main(void)
 {
