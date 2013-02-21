@@ -16,8 +16,8 @@ compile: *.c
 	${CC} ${OPTIONS} bin/exercises11	exercises11.c
 
 	${CC} ${OPTIONS} bin/projects01		projects01.c
+	${CC} ${OPTIONS} bin/projects02		projects02.c
 	${CC} ${OPTIONS} bin/lettergrade	lettergrade.c
-	${CC} ${OPTIONS} bin/convert12hour 	convert12hour.c
 	${CC} ${OPTIONS} bin/estimate_windforce	estimate_windforce.c
 	${CC} ${OPTIONS} bin/cal_tax    	cal_tax.c
 	${CC} ${OPTIONS} bin/upc3       	upc3.c

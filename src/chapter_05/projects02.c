@@ -7,26 +7,27 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* convert12hour.c (Chapter 05, page 96) */
+/* projects02.c (Chapter 05, page 96) */
+/* Converts 24-hour time to 12-hour time */
 
 #include <stdio.h>
 
 int main(void)
-  {
-    int hours, minutes;
-    printf("Enter a 24-hour time: ");
-    scanf("%d:%d", &hours, &minutes);
+{
+  int hours, minutes;
 
-    printf("Equivalent 12-hour time: ");
-    if (hours == 0)
-      printf("12:%.2d AM\n", minutes);
-    if (hours < 12)
-      printf("%d:%.2d AM\n", hours, minutes);
-    else if (hours == 12)
-      printf("%d:%.2d PM\n", hours, minutes);
-    else
-      printf("%d:%.2d PM\n", hours - 12, minutes);
+  printf("Enter a 24-hour time: ");
+  scanf("%d:%d", &hours, &minutes);
 
-    return 0;
-  }
+  printf("Equivalent 12-hour time: ");
+  if (hours == 0)
+    printf("12:%.2d AM\n", minutes);
+  else if (hours < 12)
+    printf("%d:%.2d AM\n", hours, minutes);
+  else if (hours == 12)
+    printf("%d:%.2d PM\n", hours, minutes);
+  else
+    printf("%d:%.2d PM\n", hours - 12, minutes);
 
+  return 0;
+}
