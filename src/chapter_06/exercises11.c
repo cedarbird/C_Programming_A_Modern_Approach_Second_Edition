@@ -7,16 +7,20 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* section68.c (Chapter 6, page 121) */
-/* infinite loop */
+/* exercises11.c (Chapter 06, page 121) */
 
 #include <stdio.h>
 
 int main(void)
-  {
-    for (int i = 10; i >= 1; i /= 2)
-      printf("%d ", i++);
-
-    return 0;
+{
+  int sum = 0;
+  for (int i = 0; i < 10; i++) {
+    if (i % 2)
+      continue;
+    sum += i;
   }
+  printf("%d\n", sum);
+
+  return 0;
+}
 

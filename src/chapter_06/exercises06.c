@@ -7,14 +7,15 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* s1ction63.c (Chapter 6, page 121) */
+/* exercises06.c (Chapter 06, page 121) */
 
 #include <stdio.h>
 
 int main(void)
-  {
-    for (int i = 5, j = i - 1; i > 0, j > 0; --i, j = i - 1)
-      printf("%d ", i);
-    return 0;
-  }
+{
+  for(int i = 1; i <= 128; i *= 2)
+    printf("%d ", i);
+
+  return 0;
+}
 

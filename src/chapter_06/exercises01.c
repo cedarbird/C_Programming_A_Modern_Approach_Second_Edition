@@ -7,15 +7,19 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* section66.c (Chapter 6, page 121) */
+/* exercises01.c (Chapter 06, page 121) */
 
 #include <stdio.h>
 
 int main(void)
-  {
-    for(int i = 1; i<=128; i *= 2)
-      printf("%d ", i);
+{
+  int i = 1;
 
-    return 0;
+  while (i <= 128) {
+    printf("%d ", i);
+    i *= 2;
   }
+
+  return 0;
+}
 

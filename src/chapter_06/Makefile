@@ -16,7 +16,12 @@ compile: *.c
 	${CC} ${OPTIONS} bin/checking		checking.c
 
 	${CC} ${OPTIONS} bin/exercises01	exercises01.c
+	${CC} ${OPTIONS} bin/exercises02	exercises02.c
 	${CC} ${OPTIONS} bin/exercises03	exercises03.c
+	${CC} ${OPTIONS} bin/exercises06	exercises06.c
+	${CC} ${OPTIONS} bin/exercises07	exercises07.c
+	${CC} ${OPTIONS} bin/exercises08	exercises08.c
+	${CC} ${OPTIONS} bin/exercises09	exercises09.c
 	${CC} ${OPTIONS} bin/exercises11	exercises11.c
 
 	${CC} ${OPTIONS} bin/projects01		projects01.c

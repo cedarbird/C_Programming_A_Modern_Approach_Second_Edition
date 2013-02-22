@@ -7,18 +7,16 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* section62.c (Chapter 6, page 121) */
+/* exercises08.c (Chapter 06, page 121) */
+/* Warning: infinite loop */
 
 #include <stdio.h>
 
 int main(void)
-  {
-    int i = 9384;
-    do {
-      printf("%d ", i);
-      i /= 10;
-    } while (i > 0); 
+{
+  for (int i = 10; i >= 1; i /= 2)
+    printf("%d ", i++);
 
-    return 0;
-  }
+  return 0;
+}
 

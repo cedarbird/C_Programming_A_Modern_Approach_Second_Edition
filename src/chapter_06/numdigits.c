@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* numdigits.c (Chapter 6, page 105) */
+/* numdigits.c (Chapter 06, page 105) */
 /* Calculates the number of digits in an integer */
 
 #include <stdio.h>

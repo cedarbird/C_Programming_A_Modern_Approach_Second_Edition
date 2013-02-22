@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* show_max.c (Chapter 6, page 122) */
+/* show_max.c (Chapter 06, page 122) */
 /* infinite loop */
 
 #include <stdio.h>

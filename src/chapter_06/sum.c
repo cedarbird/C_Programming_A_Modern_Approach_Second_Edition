@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* sum.c (Chapter 6, page 103) */
+/* sum.c (Chapter 06, page 103) */
 /* Sums a series of numbers */
 
 #include <stdio.h>

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* show_ealiestday.c (Chapter 6, page 124) */
+/* show_ealiestday.c (Chapter 06, page 124) */
 
 #include <stdio.h>
 

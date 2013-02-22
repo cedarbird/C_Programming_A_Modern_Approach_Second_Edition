@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* reversaldigit.c (Chapter 6, page 123) */
+/* reversaldigit.c (Chapter 06, page 123) */
 
 #include <stdio.h>
 

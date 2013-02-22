@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* square.c (Chapter 6, page 102) */
+/* square.c (Chapter 06, page 102) */
 /* Prints a table of squares using a while statement */
 
 #include <stdio.h>

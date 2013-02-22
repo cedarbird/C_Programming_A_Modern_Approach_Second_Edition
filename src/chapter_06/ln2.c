@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* ln.c (Chapter 6, page 123) */
+/* ln.c (Chapter 06, page 123) */
 
 #include <stdio.h>
 

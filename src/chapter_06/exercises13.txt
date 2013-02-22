@@ -7,15 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* section67.c (Chapter 6, page 121) */
-
-#include <stdio.h>
-
-int main(void)
-  {
-    for (int i = 9384; i > 0; i /= 10)
-      printf("%d ", i);
-
-    return 0;
-  }
+/* exercises13.txt (Chapter 06, page 122) */
+for (int n = 0, m = 100; m > 0; n++, m /= 2)
+  ;
 

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* square3.c (Chapter 6, page 110) */
+/* square3.c (Chapter 06, page 110) */
 /* Prints a table of squares using an odd method */
 
 #include <stdio.h>

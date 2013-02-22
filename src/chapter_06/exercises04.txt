@@ -7,20 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* section611.c (Chapter 6, page 122) */
-
-#include <stdio.h>
-
-int main(void)
-  {
-    int sum = 0;
-    for (int i = 0; i < 10; i++) {
-      if (i % 2)
-        continue;
-      sum += i;
-    }
-    printf("%d\n", sum);
-
-    return 0;
-  }
+/* exercises04.txt (Chapter 06, page 121) */
+(c) is not equivalent to (a) and (b), because i is incremented before the
+  loop body is executed.
 

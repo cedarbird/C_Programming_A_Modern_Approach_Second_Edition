@@ -1,24 +1,22 @@
 /*********************************************************
  * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K.N.King                                        *
+ * By K. N. King                                         *
  * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* squre.c (Chapter 06, page 123) */
+/* exercises12.txt (Chapter 06, page 122) */
 
-#include <stdio.h>
+for (d = 2; d * d <= n; d++)
+  if (n % d == 0)
+    break;
 
-int main(void)
-{
-  int n;
+The if statement that follows the loop will need to be modified as well:
 
-  printf("Enter a number: ");
-  scanf("%d", &n);
-  for (int i = 2; i * i <= n; i += 2)
-    printf("%d\n", i * i);
+if (d * d <= n)
+  printf("%d is divisible by %d\n", n, d);
+else
+  printf("%d is prime\n", n);
 
-  return 0;
-}

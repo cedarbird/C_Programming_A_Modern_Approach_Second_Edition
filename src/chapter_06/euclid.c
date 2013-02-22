@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* euclid.c (Chapter 6, page 122) */
+/* euclid.c (Chapter 06, page 122) */
 
 #include <stdio.h>
 

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* checking.c (Chapter 6, page 115) */
+/* checking.c (Chapter 06, page 115) */
 /* Balances a checkbook */
 
 #include <stdio.h>

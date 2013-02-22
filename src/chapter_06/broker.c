@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* broker.c (Chapter 6, page 123) */
+/* broker.c (Chapter 06, page 123) */
 
 #include <stdio.h>
 

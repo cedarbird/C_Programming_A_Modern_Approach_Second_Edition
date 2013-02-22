@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* lowest_term.c (Chapter 6, page 122) */
+/* lowest_term.c (Chapter 06, page 122) */
 
 #include <stdio.h>
 
