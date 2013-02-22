@@ -3,29 +3,35 @@
 SHELL=/bin/sh
 CC=gcc
 RM=rm
+MKDIR=mkdir
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
-compile: src/*.c
-	${CC} ${OPTIONS} bin/section61  src/section61.c
-	${CC} ${OPTIONS} bin/section62  src/section62.c
-	${CC} ${OPTIONS} bin/section63  src/section63.c
-	${CC} ${OPTIONS} bin/section66  src/section66.c
-	${CC} ${OPTIONS} bin/section67  src/section67.c
-	${CC} ${OPTIONS} bin/section68  src/section68.c
-	${CC} ${OPTIONS} bin/section69  src/section69.c
-	${CC} ${OPTIONS} bin/section611 src/section611.c
-	${CC} ${OPTIONS} bin/section613 src/section613.c
-	${CC} ${OPTIONS} bin/show_max   src/show_max.c
-	${CC} ${OPTIONS} bin/euclid     src/euclid.c
-	${CC} ${OPTIONS} bin/lowest_term src/lowest_term.c
-	${CC} ${OPTIONS} bin/broker     src/broker.c
-	${CC} ${OPTIONS} bin/reversaldigit src/reversaldigit.c
-	${CC} ${OPTIONS} bin/squre      src/squre.c
-	${CC} ${OPTIONS} bin/show_calendar src/show_calendar.c
-	${CC} ${OPTIONS} bin/calculate_balance src/calculate_balance.c
-	${CC} ${OPTIONS} bin/show_earliestday src/show_earliestday.c
-	${CC} ${OPTIONS} bin/ln         src/ln.c
-	${CC} ${OPTIONS} bin/ln2        src/ln2.c
+compile: *.c
+	${MKDIR} -p bin
+	${CC} ${OPTIONS} bin/square		square.c
+	${CC} ${OPTIONS} bin/sum		sum.c
+	${CC} ${OPTIONS} bin/numdigits		numdigits.c
+	${CC} ${OPTIONS} bin/square2		square2.c
+	${CC} ${OPTIONS} bin/square3		square3.c
+	${CC} ${OPTIONS} bin/checking		checking.c
+
+	${CC} ${OPTIONS} bin/exercises01	exercises01.c
+	${CC} ${OPTIONS} bin/exercises03	exercises03.c
+	${CC} ${OPTIONS} bin/exercises11	exercises11.c
+
+	${CC} ${OPTIONS} bin/projects01		projects01.c
+	${CC} ${OPTIONS} bin/projects02		projects02.c
+	${CC} ${OPTIONS} bin/projects03		projects03.c
+	${CC} ${OPTIONS} bin/projects04		projects04.c
+	${CC} ${OPTIONS} bin/projects05		projects05.c
+	${CC} ${OPTIONS} bin/projects06		projects06.c
+	${CC} ${OPTIONS} bin/projects07		projects07.c
+	${CC} ${OPTIONS} bin/projects08		projects08.c
+	${CC} ${OPTIONS} bin/projects09		projects09.c
+	${CC} ${OPTIONS} bin/projects10		projects10.c
+	${CC} ${OPTIONS} bin/projects11		projects11.c
+	${CC} ${OPTIONS} bin/projects12		projects12.c
 
 clean:
-	${RM} -f bin/*
+	${RM} -fR bin
+

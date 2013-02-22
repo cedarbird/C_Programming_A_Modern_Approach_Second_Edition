@@ -7,24 +7,23 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* sum.c (Chapter 7, page 157) */
+/* length.c (Chapter 7, page 142) */
+/* Determines the length of a message */
 
 #include <stdio.h>
 
 int main(void)
-  {
-    double n, sum = 0.0;
+{
+  char ch;
+  int len = 0;
 
-    printf("This program sums a series of doubles.\n");
-    printf("Enter doubles (0 to terminate): ");
-
-    scanf("%lf", &n);
-    while (n != 0) {
-      sum += n;
-      scanf("%lf", &n);
-    }
-    printf("The sum is: %f\n", sum);
-
-    return 0;
+  printf("Enter a message: ");
+  ch = getchar();
+  while (ch != '\n') {
+    len++;
+    ch = getchar();
   }
+  printf("Your message was %d character(s) long.\n", len);
 
+  return 0;
+}
