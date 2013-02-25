@@ -7,24 +7,30 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* euclid.c (Chapter 06, page 122) */
+/* projects08.c (Chapter 06, page 123) */
+/* Prints a one-month calendar */
 
 #include <stdio.h>
 
 int main(void)
 {
-  int m, n, remainder;
+  int i, n, start_day;
 
-  printf("Enter two integers: ");
-  scanf("%d%d", &m, &n);
+  printf("Enter number of days in month: ");
+  scanf("%d", &n);
+  printf("Enter starting day of the week (1=Sun, 7=Sat): ");
+  scanf("%d", &start_day);
 
-  while (n != 0) {
-    remainder = m % n;
-    m = n;
-    n = remainder;
+  /* print any leading "blank dates" */
+  for (i = 1; i < start_day; i++)
+    printf("   ");
+
+  /* now print the calendar */
+  for (i = 1; i <= n; i++) {
+    printf("%3d", i);
+    if ((start_day + i - 1) % 7 == 0)
+      printf("\n");
   }
-
-  printf("Greatest common divisor: %d\n", m);
 
   return 0;
 }

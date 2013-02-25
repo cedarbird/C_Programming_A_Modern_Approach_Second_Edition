@@ -1,24 +1,30 @@
 /*********************************************************
  * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K.N.King                                        *
+ * By K. N. King                                         *
  * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* squre.c (Chapter 06, page 123) */
+/* projects07.c (Chapter 06, page 123) */
+/* Prints a table of squares using an odd method */
 
 #include <stdio.h>
 
 int main(void)
 {
-  int n;
+  int i, n, odd, square;
 
-  printf("Enter a number: ");
+  printf("This program prints a table of squares.\n");
+  printf("Enter number of entries in table: ");
   scanf("%d", &n);
-  for (int i = 2; i * i <= n; i += 2)
-    printf("%d\n", i * i);
+
+  for (i = 1, odd = 3, square = 1; i <= n; ++i, odd += 2) {
+    printf("%10d%10d\n", i, square);
+    square += odd;
+  }
 
   return 0;
 }
+

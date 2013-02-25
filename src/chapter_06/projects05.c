@@ -7,26 +7,24 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* lowest_term.c (Chapter 06, page 122) */
+/* projects05.c (Chapter 06, page 123) */
+/* Reverses integer entered by user */
 
 #include <stdio.h>
 
 int main(void)
 {
-  int m, n, remainder, numerator, denominator;
+  int n;
 
-  printf("Enter a fraction: ");
-  scanf("%d/%d", &m, &n);
-  numerator = m;
-  denominator = n;
+  printf("Enter a nonnegative number: ");
+  scanf("%d", &n);
 
-  while (n != 0) {
-    remainder = m % n;
-    m = n;
-    n = remainder;
-  }
-
-  printf("In lowest Terms: %d/%d\n", numerator/m, denominator/m);
+  printf("The reversal is: ");
+  do {
+    printf("%d", n % 10);
+    n /= 10;
+  } while (n > 0);
+  printf("\n");
 
   return 0;
 }
