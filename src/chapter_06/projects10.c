@@ -11,36 +11,39 @@
 /* Indicates which date comes earliest on the calendar */
 
 #include <stdio.h>
+#include <stdbool.h>
 
 #define MAXDAYS_OF_YEAR 366
 #define MAXDAYS_OF_MONTH 31
 
 int main(void)
 {
-  int day, month, year, min_day, min_month, min_year,
-      weighing, min_weighing;
+  int day, month, year,
+      earliest_day = 0, earliest_month = 0, earliest_year = 0,
+      weighing, earliest_weighing = 0;
+  bool initialized = false;
 
-  printf("Enter a date (mm/dd/yy): ");
-  scanf("%d /%d /%d", &min_day, &min_month, &min_year);
-  /* Computes weighing of date */
-  min_weighing = min_year * (MAXDAYS_OF_YEAR + 1)
-               + min_month * (MAXDAYS_OF_MONTH + 1)
-               + min_day;
-
-  while (weighing > 0) {
-    weighing = year * (MAXDAYS_OF_YEAR + 1) + month * (MAXDAYS_OF_MONTH + 1) + day;
-    if (weighing < min_weighing) {
-      min_weighing = weighing;
-      min_day = day;
-      min_month = month;
-      min_year = year;
-    }
-
+  for(;;) {
     printf("Enter a date (mm/dd/yy): ");
     scanf("%d /%d /%d", &day, &month, &year);
+    weighing = year * (MAXDAYS_OF_YEAR + 1) + month * (MAXDAYS_OF_MONTH + 1) + day;
+    if (weighing == 0)
+      break;
+
+    if (!initialized || weighing < earliest_weighing) {
+      earliest_weighing = weighing;
+      earliest_day = day;
+      earliest_month = month;
+      earliest_year = year;
+      if (!initialized)
+        initialized = true;
+    }
   }
 
-  printf("%.2d/%.2d/%.2d is earliest date.\n", min_month, min_day, min_year);
+  if (earliest_weighing > 0)
+    printf("%.2d/%.2d/%.2d is earliest date.\n", earliest_month, earliest_day, earliest_year);
+  else
+    printf("Valid date was not enterd!\n");
 
   return 0;
 }

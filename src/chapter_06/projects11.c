@@ -1,29 +1,30 @@
 /*********************************************************
  * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K.N.King                                        *
+ * By K. N. King                                         *
  * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* ln.c (Chapter 06, page 123) */
+/* projects11.c (Chapter 06, page 124) */
+/* Computes the value of the mathematical constant e
+   by function : e = 1 + 1/1! + 1/2! + ... + 1/n! */
 
 #include <stdio.h>
 
 int main(void)
 {
-  double e = 1.0f, a = 1.0f, term;
+  int n;
+  float e = 1.0f, a = 1.0f;
 
-  printf("Enter term: ");
-  scanf("%lf", &term);
-  for (int i = 1; ; i++) {
+  printf("Enter a number: ");
+  scanf("%d", &n);
+  for (int i = 2; i <= n; i++) {
     a *= i;
-    if (1/a <= term)
-      break;
-    e += 1/a;
+    e += 1.0f / a;
   }
-  printf("the e is %10.9f.\n", e);
+  printf("the e is %f.\n", e);
 
   return 0;
 }

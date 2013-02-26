@@ -1,28 +1,30 @@
 /*********************************************************
  * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- * By K.N.King                                        *
+ * By K. N. King                                         *
  * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
  * All rights reserved.                                  *
  * This program may be freely distributed for class use, *
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* ln.c (Chapter 06, page 123) */
+/* projects12.c (Chapter 06, page 124) */
+/* Computes the value of the mathematical constant e
+   by function : e = 1 + 1/1! + 1/2! + ... + 1/n!
+   When current term becomes less than precision, The Program stop. */
 
 #include <stdio.h>
 
 int main(void)
 {
-  int n;
-  double e = 1.0f, a = 1.0f;
+  float e = 1.0f, a = 1.0f, precision;
 
-  printf("Enter a number: ");
-  scanf("%d", &n);
-  for (int i = 1; i <= n; i++) {
+  printf("Enter precision: ");
+  scanf("%f", &precision);
+  for (int i = 2; precision <= 1.0f / a; i++) {
+    e += 1.0f / a;
     a *= i;
-    e += 1/a;
   }
-  printf("the e is %10.9f.\n", e);
+  printf("the e is %f.\n", e);
 
   return 0;
 }
