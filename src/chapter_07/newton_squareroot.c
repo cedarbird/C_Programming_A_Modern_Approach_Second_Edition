@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* newton_squareroot.c (Chapter 7, page 159) */
+/* newton_squareroot.c (Chapter 07, page 159) */
 
 #include <stdio.h>
 #include <math.h>

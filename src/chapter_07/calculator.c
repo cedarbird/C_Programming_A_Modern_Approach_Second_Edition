@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* calculator.c (Chapter 7, page 158) */
+/* calculator.c (Chapter 07, page 158) */
 
 #include <stdio.h>
 #include <stdlib.h>

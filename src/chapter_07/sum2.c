@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* sum2.c (Chapter 7, page 131) */
+/* sum2.c (Chapter 07, page 131) */
 /* Sums a series of numbers (using long variables) */
 
 #include <stdio.h>

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* reverse_name.c (Chapter 7, page 158) */
+/* reverse_name.c (Chapter 07, page 158) */
 
 #include <stdio.h>
 

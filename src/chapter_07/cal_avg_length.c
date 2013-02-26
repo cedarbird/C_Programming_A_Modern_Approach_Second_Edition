@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* cal_avg_length.c (Chapter 7, page 159) */
+/* cal_avg_length.c (Chapter 07, page 159) */
 
 #include <stdio.h>
 

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* convert24hour.c (Chapter 7, page 158) */
+/* convert24hour.c (Chapter 07, page 158) */
 
 #include <stdio.h>
 #include <ctype.h>

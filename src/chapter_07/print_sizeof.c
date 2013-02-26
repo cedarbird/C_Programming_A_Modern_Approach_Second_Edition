@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* print_sizeof.c (Chapter 7, page 158) */
+/* print_sizeof.c (Chapter 07, page 158) */
 
 #include <stdio.h>
 

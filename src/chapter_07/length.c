@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* length.c (Chapter 7, page 142) */
+/* length.c (Chapter 07, page 142) */
 /* Determines the length of a message */
 
 #include <stdio.h>

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* count_vowels.c (Chapter 7, page 158) */
+/* count_vowels.c (Chapter 07, page 158) */
 
 #include <stdio.h>
 

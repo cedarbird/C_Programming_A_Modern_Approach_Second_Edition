@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* count_scrabble.c (Chapter 7, page 158) */
+/* count_scrabble.c (Chapter 07, page 158) */
 
 #include <stdio.h>
 #include <ctype.h>

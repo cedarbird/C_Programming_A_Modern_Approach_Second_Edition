@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* convert_alphabetic_phone.c (Chapter 7, page 157) */
+/* convert_alphabetic_phone.c (Chapter 07, page 157) */
 
 #include <stdio.h>
 
