@@ -24,27 +24,25 @@ int main(void)
     case '+':
       result_num = num1 * denom2 + num2 * denom1;
       result_denom = denom1 * denom2;
-      printf("The result is %d/%d\n", result_num, result_denom);
       break;
     case '-':
       result_num = num1 * denom2 - num2 * denom1;
       result_denom = denom1 * denom2;
-      printf("The result is %d/%d\n", result_num, result_denom);
       break;
     case '*':
       result_num = num1 * num2;
       result_denom = denom1 * denom2;
-      printf("The result is %d/%d\n", result_num, result_denom);
       break;
     case '/':
       result_num = num1 * denom2;
       result_denom = denom1 * num2;
-      printf("The result is %d/%d\n", result_num, result_denom);
       break;
     default:
       printf("wrong sign (%c)!\n", sign);
-      break;
+      return 1; /* error exit */
   }
+
+  printf("The result is %d/%d\n", result_num, result_denom);
 
   return 0;
 }
