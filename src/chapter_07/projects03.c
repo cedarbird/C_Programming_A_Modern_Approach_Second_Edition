@@ -7,27 +7,25 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* reverse_name.c (Chapter 07, page 158) */
+/* projects03.c (Chapter 07, page 157) */
+/* Sums a series of numbers */
 
 #include <stdio.h>
 
 int main(void)
-  {
-    char first_initial, ch;
-    
-    while ((first_initial = getchar()) == ' ')
-      ;
+{
+  double n, sum = 0.0;
 
-    while (getchar() != ' ')
-      ;
+  printf("This program sums a series of numbers.\n");
+  printf("Enter number (0 to terminate): ");
 
-    while ((ch = getchar()) != '\n') {
-      if (ch != ' ')
-        putchar(ch);
-    }
-
-    printf(", %c\n", first_initial);
-
-    return 0;
+  scanf("%lf", &n); // %f is not ok.
+  while (n != 0.0) {
+    sum += n;
+    scanf("%lf", &n);
   }
+  printf("The sum is: %f\n", sum); // %lf is also ok in c99, but meaningless.
+
+  return 0;
+}
 

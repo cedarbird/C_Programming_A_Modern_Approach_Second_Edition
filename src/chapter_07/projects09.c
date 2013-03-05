@@ -7,24 +7,28 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* count_vowels.c (Chapter 07, page 158) */
+/* projects09.c (Chapter 07, page 158) */
+/* Converts a 12-hour time to 24-hour form. */
 
 #include <stdio.h>
+#include <ctype.h>
 
 int main(void)
-  {
-    char ch;
-    int count = 0;
-    do {
-      ch = getchar();
-      if ( ch >= 'A' && ch <= 'Z')
-        ch = ch + 'a' - 'A';
-      if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
-        count++;
-    } while (ch != '\n');
+{
+  int hours, minutes;
+  char ch;
 
-    printf("Your sentence contains %d vowels.\n", count);
+  printf("Enter a 12-hour time: ");
+  scanf("%d :%d %c", &hours, &minutes, &ch);
 
-    return 0;
-  }
+  ch = toupper(ch);
+
+  /* Adjusts time */
+  if (ch == 'A' && hours == 12) hours -= 12;
+  if (ch == 'P' && hours != 12) hours += 12;
+
+  printf("Equivalment 24-hour time: %.2d:%.2d\n", hours, minutes);
+
+  return 0;
+}
 

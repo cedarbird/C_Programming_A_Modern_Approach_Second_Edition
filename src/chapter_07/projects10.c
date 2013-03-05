@@ -7,19 +7,29 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* print_sizeof.c (Chapter 07, page 158) */
+/* projects10.c (Chapter 07, page 158) */
+/* Counts the number of vowels */
 
 #include <stdio.h>
+#include <ctype.h>
 
 int main(void)
-  {
-    printf("Size of int: %zu\n", sizeof(int));
-    printf("Size of short: %zu\n", sizeof(short));
-    printf("Size of long: %zu\n", sizeof(long));
-    printf("Size of float: %zu\n", sizeof(float));
-    printf("Size of double: %zu\n", sizeof(double));
-    printf("Size of long double: %zu\n", sizeof(long double));
+{
+  char ch;
+  int count = 0;
 
-    return 0;
-  }
+  printf("Enter a sentence: ");
+  while ((ch = getchar()) != '\n')
+    switch (toupper(ch)) {
+      case 'A': case 'E': case 'I': case 'O': case 'U':
+        count++;
+        break;
+      default:
+        break;
+    }
+
+  printf("Your sentence contains %d vowels.\n", count);
+
+  return 0;
+}
 
