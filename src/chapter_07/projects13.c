@@ -7,27 +7,27 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* cal_avg_length.c (Chapter 07, page 159) */
+/* projects13.c (Chapter 07, page 159) */
+/* Calculates the average word length for a sentence. */
 
 #include <stdio.h>
 
 int main(void)
-  {
-    int words = 0, lengths = 0;
-    char prech = ' ', ch;
+{
+  int words = 0, lengths = 0;
+  char ch, previous_ch = ' ';
 
-    printf("Enter some word: ");
-    do {
-      ch = getchar();
-      if (ch != ' ' && ch != '\n')
-        lengths++;
-      else if (prech != ' ')
-        words++;
-      prech = ch;
-    } while (ch != '\n');
- 
-    printf("Avarage Length is: %.1f\n", (float) lengths / words);
+  printf("Enter a sentence: ");
+  do {
+    if ((ch = getchar()) != ' ' && ch != '\n')
+      lengths++;
+    else if (prech != ' ')
+      words++;
+    prech = ch;
+  } while (ch != '\n');
 
-    return 0;
-  }
+  printf("Avarage  word length: %.1f\n", (float) lengths / words);
+
+  return 0;
+}
 

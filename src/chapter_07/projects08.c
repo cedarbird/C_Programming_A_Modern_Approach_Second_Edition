@@ -12,13 +12,20 @@
    is closest to that entered bu the user */
 
 #include <stdio.h>
+#include <ctype.h>
 
 int main(void)
 {
   int hours, minutes, minutes_from_midnight;
+  char ch;
 
-  printf("Enter a 24-hour time: ");
-  scanf("%d:%d", &hours, &minutes);
+  printf("Enter a 12-hour time: ");
+  scanf("%d :%d %c", &hours, &minutes, &ch);
+  /* while (getchar() != '\n'); -> advoid abnormal read error by scanf */
+
+  /* Adjusts time */
+  if (toupper(ch) == 'A' && hours == 12) hours -= 12;
+  if (toupper(ch) == 'P' && hours != 12) hours += 12;
 
   minutes_from_midnight = hours * 60 + minutes;
 

@@ -8,53 +8,33 @@
  *********************************************************/
 
 /* projects12.c (Chapter 07, page 158) */
-/* Evaluates an expression from left to right(no perator precedence) */
+/* Evaluates an expression from left to right(no operator precedence) */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 int main(void)
 {
-  double result = 0.0;
-  char ch, sign;
+  float value, result;
+  char ch;
 
   printf("Enter an expression: ");
+  scanf("%f", &result);
 
-  while((ch = getchar()) != '\n') {
-    if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
-      switch(sign) {
-        case '+':
-          sum += atof(num); break;
-        case '-':
-          sum -= atof(num); break;
-        case '*':
-          sum *= atof(num); break;
-        case '/':
-          sum /= atof(num); break;
-      }
-      if (sign == '\0')
-        sum = atof(num); 
-      sign = ch;
-      memset(num, 0x00, sizeof(num)); 
-      numidx = 0;
-    } else {
-      num[numidx++] = ch;
+  while ((ch = getchar()) != '\n')
+    switch (ch) {
+      case '+': scanf("%f", &value); result += value; break;
+      case '-': scanf("%f", &value); result -= value; break;
+      case '*': scanf("%f", &value); result *= value; break;
+      case '/': scanf("%f", &value);
+        if (value != 0.0f) {
+                                     result /= value; break;
+        } else {
+          printf("can't divide with 0.");
+          return 1; /* error exit */
+        }
     }
-  }
 
-  switch(sign) {
-    case '+':
-      sum += atof(num); break;
-    case '-':
-      sum -= atof(num); break;
-    case '*':
-      sum *= atof(num); break;
-    case '/':
-      sum /= atof(num); break;
-  }
-
-  printf("The result is %f\n", sum);
+  printf("The result is %f\n", result);
 
   return 0;
 }
