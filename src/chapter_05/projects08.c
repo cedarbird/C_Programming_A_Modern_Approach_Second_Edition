@@ -18,7 +18,7 @@ int main(void)
   int hours, minutes, minutes_from_midnight;
 
   printf("Enter a 24-hour time: ");
-  scanf("%d:%d", &hours, &minutes);
+  scanf("%d :%d", &hours, &minutes);
 
   minutes_from_midnight = hours * 60 + minutes;
 
