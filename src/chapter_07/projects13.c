@@ -9,6 +9,8 @@
 
 /* projects13.c (Chapter 07, page 159) */
 /* Calculates the average word length for a sentence. */
+/* When letter is followed by space or LF, get the word count up.
+   continue space is also handled rightly. */
 
 #include <stdio.h>
 
@@ -19,11 +21,12 @@ int main(void)
 
   printf("Enter a sentence: ");
   do {
-    if ((ch = getchar()) != ' ' && ch != '\n')
+    ch = getchar();
+    if (ch  != ' ' && ch != '\n')
       lengths++;
-    else if (prech != ' ')
+    else if (previous_ch != ' ') /* letter is followed by space or LF */
       words++;
-    prech = ch;
+    previous_ch = ch;
   } while (ch != '\n');
 
   printf("Avarage  word length: %.1f\n", (float) lengths / words);
