@@ -10,7 +10,7 @@
 /* projects15.c (Chapter 07, page 159) */
 /* Computes the factorial of a positive integer */
 /* Uses short,int,long,long long,float,double,long double type to compute. */
-/* The comment includes the result on RHEL5.9. */
+/* The comment includes the result on RHEL5.9 x96_64. */
 
 #include <stdio.h>
 
