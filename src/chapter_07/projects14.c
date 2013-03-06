@@ -27,20 +27,17 @@
 
 int main(void)
 {
-  double x, y = 1.0, square_root;
+  double x, y = 1.0, new_y = 2.0;
 
   printf("Enter a positive number: ");
   scanf("%lf", &x);
 
-  for (;;) {
-    square_root = (y + (x / y)) / 2.0;
-    if (fabs(square_root - y) <= DIFF)
-      break;
-    else
-      y = square_root;
+  while (fabs(new_y - y) > DIFF) {
+    y = new_y;
+    new_y = (x / y + y) / 2.0;
   }
 
-  printf("The square x is %.10f\n", square_root);
+  printf("Square root: %lf\n", y);
 
   return 0;
 }
