@@ -10,7 +10,7 @@
 /* projects13.c (Chapter 07, page 159) */
 /* Calculates the average word length for a sentence. */
 /* When letter is followed by space or LF, get the word count up.
-   continue space is also handled rightly. */
+   continuous space is also considered. */
 
 #include <stdio.h>
 
