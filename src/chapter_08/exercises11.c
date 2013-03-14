@@ -8,35 +8,34 @@
  *********************************************************/
 
 /* exercises11.c (Chapter 08, page 178) */
-/* show checker_board(A/B) */
+/* Declarates checker_board(cross B/R) */
 
 #include <stdio.h>
 
 #define ROWS 8
 #define COLS 8
-#define ODD_CHAR 'A'
+#define ODD_CHAR 'R'
 #define EVEN_CHAR 'B'
 
 int main(void)
-  {
-    char checker_board[ROWS][COLS];
+{
+  char checker_board[ROWS][COLS];
 
-    /* fill checker board */
-    for (int i = 0; i < ROWS; i++)
-      for (int j = 0; j < COLS; j++) {
-        if ((i + j) % 2 == 0)
-          checker_board[i][j] = EVEN_CHAR;
-        else
-          checker_board[i][j] = ODD_CHAR;
-      }
+  /* fill checker board */
+  for (int i = 0; i < ROWS; i++)
+    for (int j = 0; j < COLS; j++)
+      if ((i + j) % 2 == 0)
+        checker_board[i][j] = EVEN_CHAR;
+      else
+        checker_board[i][j] = ODD_CHAR;
 
-    printf("Checker Board:\n");
-    for (int i = 0; i < ROWS; i++) {
-      for (int j = 0; j < COLS; j++)
-        printf("%2c", checker_board[i][j]);
-      printf("\n");
-    }
-
-    return 0;
+  printf("Checker Board:\n");
+  for (int i = 0; i < ROWS; i++) {
+    for (int j = 0; j < COLS; j++)
+      printf("%2c", checker_board[i][j]);
+    printf("\n");
   }
+
+  return 0;
+}
 

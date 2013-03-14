@@ -8,8 +8,7 @@
  *********************************************************/
 
 /* exercises04.c (Chapter 08, page 177) */
-/* show weekend */
-/* designated initializer */
+/* Declarates weekend by designated initializer C99 Only */
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -17,14 +16,14 @@
 #define DAYS_OF_WEEK 7
 
 int main(void)
-  {
-    bool weekend[DAYS_OF_WEEK] = { [0] = true, [6] = true };
+{
+  bool weekend[DAYS_OF_WEEK] = { [0] = true, [6] = true };
 
-    printf("Weekend: ");
-    for (int i = 0; i < DAYS_OF_WEEK; i++)
-      printf("%2d", weekend[i]);
-    printf("\n");
+  printf("Weekend: ");
+  for (int i = 0; i < DAYS_OF_WEEK; i++)
+    printf("%2d", weekend[i]);
+  printf("\n");
 
-    return 0;
-  }
+  return 0;
+}
 

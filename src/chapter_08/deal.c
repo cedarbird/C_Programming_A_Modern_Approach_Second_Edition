@@ -7,9 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* deal.c (Chapter 08, page 173) */
+/* deal.c (Chapter 8, page 173) */
 /* Deals a random hand of cards */
-/* Warning: a missing braces around initializer in the 23 line */
 
 #include <stdbool.h>   /* C99 only */
 #include <stdio.h>
@@ -46,4 +45,3 @@ int main(void)
 
   return 0;
 }
-

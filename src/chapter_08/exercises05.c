@@ -8,23 +8,25 @@
  *********************************************************/
 
 /* exercises05.c (Chapter 08, page 177) */
-/* Fibonacci number */
+/* Fills Fibonacci Number Array */
 
 #include <stdio.h>
-#define N 40 
+#define N 40
 
 int main(void)
-  {
-    int fibonacci[N] = { 0, 1 };
+{
+  int i, fibonacci[N] = { 0, 1 };
 
-    printf("Fibonacci Number(end to %d):\n", N);
+  printf("Fibonacci Number(end to %d):\n", N);
 
-    for (int i = 0; i < N; i++) {
-      if (i > 1)
-        fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
-      printf("%10d%10d\n", i + 1, fibonacci[i]);
-    }
+  /* Fills fibonacci number */
+  for (i = 2; i < N; i++)
+    fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
 
-    return 0;
-  }
+  /* Prints result */
+  for (i = 0; i < N; i++)
+    printf("%10d%10d\n", i + 1, fibonacci[i]);
+
+  return 0;
+}
 

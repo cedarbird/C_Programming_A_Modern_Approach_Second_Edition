@@ -7,23 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises03.c (Chapter 08, page 177) */
-/* Declarates weekend */
-
-#include <stdio.h>
-#include <stdbool.h>
-
-#define DAYS_OF_WEEK 7
-
-int main(void)
-{
-  bool weekend[DAYS_OF_WEEK] = { true, false, false, false, false, false, true };
-
-  printf("Weekend: ");
-  for (int i = 0; i < DAYS_OF_WEEK; i++)
-    printf("%2d", weekend[i]);
-  printf("\n");
-
-  return 0;
-}
+/* exercises01.txt (Chapter 08, page 177) */
+The problem with sizeof(a) / sizeof(t) is that it can't easily be checked for
+correctness by someone reading the program. (The reader would have to locate
+the declaration of a and make sure that its elements have type t.)
 

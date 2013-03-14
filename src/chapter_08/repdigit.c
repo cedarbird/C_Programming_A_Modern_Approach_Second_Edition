@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* repdigit.c (Chapter 08, page 166) */
+/* repdigit.c (Chapter 8, page 166) */
 /* Checks numbers for repeated digits */
 
 #include <stdbool.h>   /* C99 only */
@@ -37,4 +37,3 @@ int main(void)
 
   return 0;
 }
-

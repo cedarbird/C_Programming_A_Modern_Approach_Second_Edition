@@ -8,33 +8,33 @@
  *********************************************************/
 
 /* exercises06.c (Chapter 08, page 177) */
-/* Seven-segment LED decimal number display */
+/* Displays Seven-segment LED decimal number */
 
 #include <stdio.h>
 
-#define DIGITS_OF_DECIMAL 10
-#define NUMS_OF_SEGMENT 7
+#define DIGITS_DECIMAL 10
+#define NUMS_SEGMENT 7
 
 int main(void)
-  {
-    const int segments[DIGITS_OF_DECIMAL][NUMS_OF_SEGMENT] = {{1, 1, 1, 1, 1, 1, 0},
-                                                              {0, 1, 1, 0, 0, 0, 0},
-                                                              {1, 1, 0, 1, 1, 0, 1},
-                                                              {1, 1, 1, 1, 0, 0, 1},
-                                                              {0, 1, 1, 0, 0, 1, 1},
-                                                              {1, 0, 1, 1, 0, 1, 1},
-                                                              {1, 0, 1, 1, 1, 1, 1},
-                                                              {1, 1, 1, 0, 0, 0, 0},
-                                                              {1, 1, 1, 1, 1, 1, 1},
-                                                              {1, 1, 1, 1, 0, 1, 1}};
+{
+  const int segments[DIGITS_DECIMAL][NUMS_SEGMENT] = {{1, 1, 1, 1, 1, 1, 0},
+                                                      {0, 1, 1, 0, 0, 0, 0},
+                                                      {1, 1, 0, 1, 1, 0, 1},
+                                                      {1, 1, 1, 1, 0, 0, 1},
+                                                      {0, 1, 1, 0, 0, 1, 1},
+                                                      {1, 0, 1, 1, 0, 1, 1},
+                                                      {1, 0, 1, 1, 1, 1, 1},
+                                                      {1, 1, 1, 0, 0, 0, 0},
+                                                      {1, 1, 1, 1, 1, 1, 1},
+                                                      {1, 1, 1, 1, 0, 1, 1}};
 
-    printf("Seven-segment decimal number display:\n");
-    for (int i = 0; i < DIGITS_OF_DECIMAL; i++) {
-      for (int j = 0; j < NUMS_OF_SEGMENT; j++)
-        printf("%2d", segments[i][j]);
-      printf("\n");
-    }
-
-    return 0;
+  printf("Seven-segment decimal number display:\n");
+  for (int i = 0; i < DIGITS_DECIMAL; i++) {
+    for (int j = 0; j < NUMS_SEGMENT; j++)
+      printf("%2d", segments[i][j]);
+    printf("\n");
   }
+
+  return 0;
+}
 

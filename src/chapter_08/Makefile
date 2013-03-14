@@ -10,6 +10,7 @@ OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 compile:
 	${MKDIR} -p bin
 	${CC} ${OPTIONS} bin/reverse		reverse.c
+	${CC} ${OPTIONS} bin/reverse2		reverse2.c
 	${CC} ${OPTIONS} bin/repdigit		repdigit.c
 	${CC} ${OPTIONS} bin/interest		interest.c
 	${CC} ${OPTIONS} bin/deal		deal.c

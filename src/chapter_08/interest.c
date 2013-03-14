@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* interest.c (Chapter 08, page 169) */
+/* interest.c (Chapter 8, page 169) */
 /* Prints a table of compound interest */
 
 #include <stdio.h>
@@ -43,4 +43,3 @@ int main(void)
 
   return 0;
 }
-

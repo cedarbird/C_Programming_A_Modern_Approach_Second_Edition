@@ -8,34 +8,34 @@
  *********************************************************/
 
 /* projects01.c (Chapter 08, page 178) */
-/* print numbers for repeated digits */
+/* Prints which digits were repeated. */
 
 #include <stdio.h>
 #include <stdbool.h>
 
-#define NUMS_OF_DECIMAL 10
+#define NUMS_DECIMAL 10
 
 int main(void)
-  {
-    int digit_count[NUMS_OF_DECIMAL] = {0};
-    int digit;
-    long n;
+{
+  int digit_count[NUMS_DECIMAL] = {0};
+  int digit;
+  long n;
 
-    printf("Enter a number: ");
-    scanf("%ld", &n);
+  printf("Enter a number: ");
+  scanf("%ld", &n);
 
-    while (n > 0) {
-      digit = n % NUMS_OF_DECIMAL;
-      digit_count[digit]++;
-      n /= NUMS_OF_DECIMAL;
-    }
-
-    printf("Repeated digit(s): ");
-    for (digit  = 0; digit < NUMS_OF_DECIMAL; digit++)
-      if(digit_count[digit] > 1)
-        printf("%3d", digit);
-    printf("\n");
-
-    return 0;
+  while (n > 0) {
+    digit = n % NUMS_DECIMAL;
+    digit_count[digit]++;
+    n /= NUMS_DECIMAL;
   }
+
+  printf("Repeated digit(s):");
+  for (int i = 0; i < NUMS_DECIMAL; i++)
+    if(digit_count[i] > 1)
+      printf("%2d", i);
+  printf("\n");
+
+  return 0;
+}
 

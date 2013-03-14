@@ -7,23 +7,9 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises03.c (Chapter 08, page 177) */
-/* Declarates weekend */
-
-#include <stdio.h>
-#include <stdbool.h>
-
-#define DAYS_OF_WEEK 7
-
-int main(void)
-{
-  bool weekend[DAYS_OF_WEEK] = { true, false, false, false, false, false, true };
-
-  printf("Weekend: ");
-  for (int i = 0; i < DAYS_OF_WEEK; i++)
-    printf("%2d", weekend[i]);
-  printf("\n");
-
-  return 0;
-}
+/* exercises02.txt (Chapter 08, page 177) */
+To use a digit d (in character form) as a subscript into the array a, we would
+write a[d-'0']. This assumes that digits have consecutive codes in the
+underlying character set, which is true of ASCII and other popular character
+sets.
 
