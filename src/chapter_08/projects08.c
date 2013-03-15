@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects08.c (Chapter 08, page 179) */
-/* summary five quiz grades for five students */
+/* Summarys five quiz grades for five students */
 
 #include <stdio.h>
 
