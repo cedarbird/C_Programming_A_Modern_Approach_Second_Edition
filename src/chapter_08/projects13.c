@@ -8,34 +8,35 @@
  *********************************************************/
 
 /* projects13.c (Chapter 08, page 180) */
-/* reverse name */
+/* Displays first name and last name entered by user like this
+   last name, a comma, and the first initial, followed by a period. */
 
 #include <stdio.h>
 #include <stdbool.h>
 
-#define MAX_LENGTH 10
+#define MAX_LENGTH 20
 
 int main(void)
-  {
-    char ch, first_character, last_name[MAX_LENGTH] = {'\0'};
-    int index = 0;
+{
+  char ch, first_character, last_name[MAX_LENGTH] = {'\0'};
+  int index = 0;
 
-    printf("Enter a first and last name: ");
+  printf("Enter a first and last name: ");
 
-    /* skip prefix space & read first character */
-    while ((first_character = getchar()) == ' ')
-      ;
+  /* skip prefix space & read first character */
+  while ((first_character = getchar()) == ' ')
+    ;
 
-    /* skip first name */
-    while (getchar() != ' ')
-      ;
+  /* skip first name */
+  while (getchar() != ' ')
+    ;
 
-    /* read last name */
-    while ((ch = getchar()) != '\n')
-      if (ch != ' ')
-        last_name[index++] = ch;
+  /* read last name */
+  while ((ch = getchar()) != '\n')
+    if (ch != ' ')
+      last_name[index++] = ch;
 
-    printf("You entered the name: %s, %c\n", last_name, first_character);
-    return 0;
-  }
+  printf("You entered the name: %s, %c\n", last_name, first_character);
+  return 0;
+}
 

@@ -8,41 +8,41 @@
  *********************************************************/
 
 /* projects16.c (Chapter 08, page 181) */
-/* is anagrams */
+/* Tests whether two words are anagrams */
 
 #include <stdio.h>
 #include <stdbool.h>
 #include <ctype.h>
 
-#define LENGTH_OF_ALPHABET ('Z' - 'A' + 1)
+#define LENGTH_ALPHABETS 26
 
 int main(void)
-  {
-    char ch;
-    int i, amount_of_alpha[LENGTH_OF_ALPHABET] = {0};
-    bool isanagrams = true;
+{
+  char ch;
+  int i, amount_alphas[LENGTH_ALPHABETS] = {0};
+  bool is_anagrams = true;
 
-    printf("Enter first word: ");
-    while ((ch = getchar()) != '\n')
-      if (isalpha(ch))
-        amount_of_alpha[tolower(ch) - 'a']++;
+  printf("Enter first word: ");
+  while ((ch = getchar()) != '\n')
+    if (isalpha(ch))
+      amount_alphas[tolower(ch) - 'a']++;
 
-    printf("Enter second word: ");
-    while ((ch = getchar()) != '\n')
-      if (isalpha(ch))
-        amount_of_alpha[tolower(ch) - 'a']--;
+  printf("Enter second word: ");
+  while ((ch = getchar()) != '\n')
+    if (isalpha(ch))
+      amount_alphas[tolower(ch) - 'a']--;
 
-    for (i = 0; i < LENGTH_OF_ALPHABET; i++)
-      if (amount_of_alpha[i] != 0) {
-        isanagrams = false;
-        break;
-      }
+  for (i = 0; i < LENGTH_ALPHABETS; i++)
+    if (amount_alphas[i] != 0) {
+      is_anagrams = false;
+      break;
+    }
 
-    if (isanagrams)
-      printf("The words are anagrams.\n");
-    else
-      printf("The words are not anagrams.\n");
+  if (is_anagrams)
+    printf("The words are anagrams.\n");
+  else
+    printf("The words are not anagrams.\n");
 
-    return 0;
-  }
+  return 0;
+}
 

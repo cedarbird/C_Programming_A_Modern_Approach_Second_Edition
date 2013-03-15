@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects09.c (Chapter 08, page 179) */
-/* random walk across 10 X 10 array */
+/* Generates random walk across 10 X 10 array */
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -21,79 +21,57 @@
 #define LEFT 2
 #define RIGHT 3
 #define DIRECTION 4
-#define WALK_DISTANCE ('Z' - 'A' + 1)
+#define WALK_DISTANCE 26
 
 int main(void)
-  {
-    char grid[SIDE][SIDE];
-    char ch = 'A'; /* start alphabet */
-    int position[4], x = 0, y = 0, nums_of_selection; /* initial direct and position */
+{
+  char grid[SIDE][SIDE];
+  char ch = 'A';
+  int position[DIRECTION], x = 0, y = 0, num_selections;
 
-    /* grid initializer */
-    for (int i = 0; i < SIDE; i++)
-      for (int j = 0; j < SIDE; j++)
-        grid[i][j] = '.';
-    grid[y][x] = ch;
+  /* grid initializer */
+  for (int i = 0; i < SIDE; i++)
+    for (int j = 0; j < SIDE; j++)
+      grid[i][j] = '.';
+  grid[y][x] = ch;
 
-    /* random initializer */
-    srand((unsigned) time(NULL));
+  /* random initializer */
+  srand((unsigned) time(NULL));
 
-    /* main logic */
-    for (int i = 0; i < WALK_DISTANCE - 1; i++) {
+  /* main logic */
+  for (int i = 0; i < WALK_DISTANCE - 1; i++) {
+    num_selections = 0;
 
-      /* initialize */
-      nums_of_selection = 0;
+    /* get info for effective selection */
+    if (y != 0 && grid[y - 1][x] == '.')
+      position[num_selections++] = UP;
+    if (y != (SIDE - 1) && grid[y + 1][x] == '.')
+      position[num_selections++] = DOWN;
+    if (x != 0 && grid[y][x - 1] == '.')
+      position[num_selections++] = LEFT;
+    if (x != (SIDE - 1) && grid[y][x + 1] == '.')
+      position[num_selections++] = RIGHT;
 
-      /* get info for effective selection */
-      for (int j = 0; j < DIRECTION; j++) {
-        switch(j) {
-          case UP:
-            if (y != 0 && grid[y - 1][x] == '.')
-              position[nums_of_selection++] = UP;
-            break;
-          case DOWN:
-            if (y != (SIDE - 1) && grid[y + 1][x] == '.')
-              position[nums_of_selection++] = DOWN;
-            break;
-          case LEFT:
-            if (x != 0 && grid[y][x - 1] == '.')
-              position[nums_of_selection++] = LEFT;
-            break;
-          case RIGHT:
-            if (x != (SIDE - 1) && grid[y][x + 1] == '.')
-              position[nums_of_selection++] = RIGHT;
-            break;
-        }
-      }
+    /* stop when no way */
+    if (num_selections == 0)
+      break;
 
-      /* stop when no way */
-      if (nums_of_selection == 0)
-        break;
-
-      /* make a random direction decision */
-      switch((position[rand() % nums_of_selection])) {
-        case UP:
-          grid[--y][x] = ++ch;
-          break;
-        case DOWN:
-          grid[++y][x] = ++ch;
-          break;
-        case LEFT:
-          grid[y][--x] = ++ch;
-          break;
-        case RIGHT:
-          grid[y][++x] = ++ch;
-          break;
-      }
+    /* make a random direction decision */
+    switch((position[rand() % num_selections])) {
+      case UP:    grid[--y][x] = ++ch; break;
+      case DOWN:  grid[++y][x] = ++ch; break;
+      case LEFT:  grid[y][--x] = ++ch; break;
+      case RIGHT: grid[y][++x] = ++ch; break;
     }
-
-    /* show result */
-    for (int i = 0; i < SIDE; i++) {
-      for (int j = 0; j < SIDE; j++)
-        printf("%2c", grid[i][j]);
-      printf("\n");
-    }
-
-    return 0;
   }
+
+  /* show result */
+  for (int i = 0; i < SIDE; i++) {
+    for (int j = 0; j < SIDE; j++)
+      printf("%2c", grid[i][j]);
+    printf("\n");
+  }
+
+  return 0;
+}
 

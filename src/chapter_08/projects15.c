@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects15.c (Chapter 08, page 180) */
-/* Caesar cipher - attributed by Julius Caesar */
+/* Encrypts message with Caesar cipher - attributed by Julius Caesar */
 /* Hint: message + shift => encrypted message
          encrypted message + (26 - shift) => message */
 
@@ -16,34 +16,36 @@
 #include <stdbool.h>
 
 #define MAX_LENGTH 80
-#define LENGTH_OF_ALPHABET ('Z' - 'A' + 1)
+#define LENGTH_ALPHABETS 26
 
 int main(void)
-  {
-    char ch, message[MAX_LENGTH] = {'\0'}, encrypted_message[MAX_LENGTH] = {'\0'};
-    int i = 0, shift_amount;
+{
+  char ch, message[MAX_LENGTH] = {'\0'}, encrypted[MAX_LENGTH] = {'\0'};
+  int length = 0, i, shift_amount;
 
-    printf("Enter message to be encrypted: ");
-    while ((ch = getchar()) != '\n') {
-      message[i++] = ch;
-    }
+  printf("Enter message to be encrypted: ");
+  while ((ch = getchar()) != '\n')
+    message[length++] = ch;
 
-    printf("Enter shift amount (1-25): ");
-    scanf("%d", &shift_amount);
+  printf("Enter shift amount (1-25): ");
+  scanf("%d", &shift_amount);
 
-    /* caesar cipher */
-    for (i = 0; i < MAX_LENGTH; i++) {
-      ch = message[i];
-      if (ch >= 'A' && ch <= 'Z')
-        encrypted_message[i] = ((ch - 'A') + shift_amount) % LENGTH_OF_ALPHABET + 'A';
-      else if (ch >= 'a' && ch <= 'z')
-        encrypted_message[i] = ((ch - 'a') + shift_amount) % LENGTH_OF_ALPHABET + 'a';
-      else
-        encrypted_message[i] = ch;
-    }
-
-    printf("Encrypted message: %s\n", encrypted_message);
-
-    return 0;
+  /* caesar cipher */
+  for (i = 0; i < length; i++) {
+    ch = message[i];
+    if ('A' <= ch && ch <= 'Z')
+      encrypted[i] = ((ch - 'A') + shift_amount) % LENGTH_ALPHABETS + 'A';
+    else if ('a' <= ch && ch <= 'z')
+      encrypted[i] = ((ch - 'a') + shift_amount) % LENGTH_ALPHABETS + 'a';
+    else
+      encrypted[i] = ch;
   }
+
+  printf("Encrypted message: ");
+  for (i = 0; i < length; i++)
+    putchar(encrypted[i]);
+  printf("\n");
+
+  return 0;
+}
 
