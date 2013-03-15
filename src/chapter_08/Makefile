@@ -44,3 +44,4 @@ compile:
 
 clean:
 	${RM} -fR bin
+
