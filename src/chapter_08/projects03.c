@@ -13,33 +13,39 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define NUMS_OF_DECIMAL 10
+#define NUMS_DECIMAL 10
 
 int main(void)
-  {
-    bool digit_seen[NUMS_OF_DECIMAL] = {false};
-    int digit;
-    long n;
+{
+  bool digit_seen[NUMS_DECIMAL];
+  int digit;
+  long n;
 
-    while(true) {
-      printf("Enter a number: ");
-      scanf("%ld", &n);
-      if (n <= 0)
+  printf("Enter a number: ");
+  scanf("%ld", &n);
+  while (n > 0) {
+    /* array initializer */
+    for (int i = 0; i < NUMS_DECIMAL; i++)
+      digit_seen[i] = false;
+
+    /* check repeated digit */
+    while (n > 0) {
+      digit = n % NUMS_DECIMAL;
+      if (digit_seen[digit])
         break;
-
-      while (n > 0) {
-        digit = n % NUMS_OF_DECIMAL;
-        if (digit_seen[digit])
-          break;
-        digit_seen[digit] = true;
-      }
-
-      if (n > 0)
-        printf("Repeated digit\n");
-      else
-        printf("No Repeated digit\n");
+      digit_seen[digit] = true;
+      n /= 10;
     }
 
-    return 0;
+    if (n > 0)
+      printf("Repeated digit\n");
+    else
+      printf("No Repeated digit\n");
+
+    printf("Enter a number: ");
+    scanf("%ld", &n);
   }
+
+  return 0;
+}
 
