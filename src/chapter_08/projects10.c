@@ -16,7 +16,7 @@
 
 int main(void)
 {
-  int hours, minutes, minutes_from_midnight;
+  int i, hours, minutes, minutes_from_midnight;
   const int departure_times[] = {480, 583, 679, 767, 840, 945,  1140, 1305},
             arrival_times[]   = {616, 712, 811, 900, 968, 1075, 1280, 1438};
 
@@ -25,9 +25,16 @@ int main(void)
 
   minutes_from_midnight = hours * 60 + minutes;
 
-  for (int i = 0; i < NUM_FLIGHTS; i++)
-    if (minutes_from_midnight > departure_times[i])
-      
+  for (i = NUM_FLIGHTS - 1; i >= 0; i--)
+    if (minutes_from_midnight >= departure_times[i])
+      break;
+
+  if (minutes_from_midnight < departure_times[0])
+    i = NUM_FLIGHTS - 1;
+
+  printf("Closest departure time is %.2d:%.2d, arriving at %.2d:%.2d.\n",
+           departure_times[i] / 60, departure_times[i] % 60,
+           arrival_times[i] / 60, arrival_times[i] % 60);
 
   return 0;
 }
