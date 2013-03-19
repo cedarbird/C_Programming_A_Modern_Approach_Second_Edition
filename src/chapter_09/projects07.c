@@ -8,24 +8,25 @@
  *********************************************************/
 
 /* projects07.c (Chapter 09, page 217) */
-/* better power function to shorten number of recursive calls */
+/* Computes power (shorten number of recursive calls) */
 
 #include <stdio.h>
 
 int power(int x, int n);
 
 int main(void)
-  {
-    int x, n;
-    printf("Enter two numbers x and n: ");
-    scanf("%d%d", &x, &n);
-    printf("the %d^%d  is %d\n", x, n, power(x, n));
+{
+  int x, n;
+  printf("Enter two numbers x and n: ");
+  scanf("%d%d", &x, &n);
+  printf("the %d^%d: %d\n", x, n, power(x, n));
 
-    return 0;
-  }
+  return 0;
+}
 
 int power(int x, int n)
-  {
-    return n == 0 ? 1 : (n % 2 == 0 ? power(x * x, n / 2) : x * power(x * x, n / 2));
-  }
+{
+  return n == 0 ? 1 : (n % 2 == 0 ? power(x * x, n / 2)
+                                  : x * power(x * x, n / 2));
+}
 

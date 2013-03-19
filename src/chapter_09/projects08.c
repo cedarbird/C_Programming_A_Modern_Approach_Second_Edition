@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects08.c (Chapter 09, page 217) */
-/* roll dice game */
+/* Rolls dice game */
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -16,57 +16,59 @@
 #include <time.h>
 #include <ctype.h>
 
-#define NUMS_OF_DIRECTION 6
+#define NUM_DIRECTIONS 6
 
 int roll_dice(void);
 bool play_game(void);
 
 int main(void)
-  {
-    int wins = 0, losses = 0;
+{
+  int wins = 0, losses = 0;
 
-    srand((unsigned) time(NULL));
-    for (;;) {
-      if (play_game()) wins++;
-      else losses++;
-      printf("\nPlay again? ");
-      if (toupper(getchar()) != 'Y') {
-        printf("Wins: %d  Losses: %d\n", wins, losses);
-        break;
-      }
-      while (getchar() != '\n') /* skip the left input end to newline */
-        ;
-      printf("\n");
+  srand((unsigned) time(NULL));
+  for (;;) {
+    if (play_game()) wins++;
+    else losses++;
+    printf("\nPlay again? ");
+    if (toupper(getchar()) != 'Y') {
+      printf("Wins: %d  Losses: %d\n", wins, losses);
+      break;
     }
-
-    return 0;
+    while (getchar() != '\n') /* skip the left input end to newline */
+      ;
+    printf("\n");
   }
+
+  return 0;
+}
 
 bool play_game(void)
-  {
-    int dice, point;
-    switch (point = roll_dice()) {
-      case 7: case 11: printf("You win!\n"); return true;
-      case 2: case 3: case 12: printf("You lose!\n"); return false;
-    }
-    printf("Your point is %d\n", point);
+{
+  int dice, point;
+  switch (point = roll_dice()) {
+    case 7: case 11: printf("You win!\n"); return true;
+    case 2: case 3: case 12: printf("You lose!\n"); return false;
+  }
+  printf("Your point is %d\n", point);
 
-    for (;;) {
-      dice = roll_dice();
-      if (dice == point) {
-        printf("You win!\n");
-        return true;
-      } else if (dice == 7) {
-        printf("You lose!\n");
-        return false;
-      }
+  for (;;) {
+    dice = roll_dice();
+    if (dice == point) {
+      printf("You win!\n");
+      return true;
+    } else if (dice == 7) {
+      printf("You lose!\n");
+      return false;
     }
   }
+}
 
 int roll_dice(void)
-  {
-    int dice = rand() % NUMS_OF_DIRECTION + rand() %NUMS_OF_DIRECTION + 2;
-    printf("You rolled: %d\n", dice);
-    return dice;
-  }
+{
+  int dice = rand() % NUM_DIRECTIONS + rand() % NUM_DIRECTIONS + 2;
+
+  printf("You rolled: %d\n", dice);
+
+  return dice;
+}
 
