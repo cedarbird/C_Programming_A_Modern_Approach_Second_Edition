@@ -7,8 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises15.c (Chapter 09, page 215) */
-/* get median of 3 number */
+/* exercises15.c (Chapter 09, page 216) */
+/* Gets median of 3 number */
 
 #include <stdio.h>
 

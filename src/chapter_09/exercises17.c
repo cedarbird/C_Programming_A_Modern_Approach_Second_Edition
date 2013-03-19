@@ -7,8 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises17.c (Chapter 09, page 215) */
-/* no recursive fact function */
+/* exercises17.c (Chapter 09, page 216) */
+/* Computes fact with no recursive method */
 
 #include <stdio.h>
 

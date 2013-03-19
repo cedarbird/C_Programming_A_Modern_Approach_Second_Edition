@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* exercises19.c (Chapter 09, page 216) */
-/* binary representation for positive ingeter */
+/* Shows binary representation for positive ingeter */
 
 /*
     Enter a number: 53

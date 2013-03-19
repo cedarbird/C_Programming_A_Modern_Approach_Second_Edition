@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* exercises18.c (Chapter 09, page 216) */
-/* Euclid's algorithm for computing the GCD */
+/* Computes GCD with Euclid's algorithm */
 /* recursive version */
 
 #include <stdio.h>
@@ -16,19 +16,17 @@
 int gcd(int, int);
 
 int main(void)
-  {
-    int x, y;
-    printf("Enter two integers: ");
-    scanf("%d%d", &x, &y);
-    printf("the gcd of (%d %d) is %d\n", x, y, gcd(x, y));
+{
+  int x, y;
+  printf("Enter two integers: ");
+  scanf("%d%d", &x, &y);
+  printf("the gcd of (%d %d) is %d\n", x, y, gcd(x, y));
 
-    return 0;
-  }
+  return 0;
+}
 
 int gcd(int m, int n)
-  {
-    if (n == 0)
-      return m;
-    else
-      return gcd(n, m % n);
-  }
+{
+  return (n == 0) ? m : gcd(n, m % n);
+}
+

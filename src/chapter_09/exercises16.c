@@ -8,24 +8,24 @@
  *********************************************************/
 
 /* exercises16.c (Chapter 09, page 216) */
-/* concise version fact function */
+/* Condenses fact function */
 
 #include <stdio.h>
 
 int fact(int);
 
 int main(void)
-  {
-    int n;
-    printf("Enter a positive number: ");
-    scanf("%d", &n);
-    printf("the factorial of %d is %d\n", n, fact(n));
+{
+  int n;
+  printf("Enter a positive number: ");
+  scanf("%d", &n);
+  printf("the factorial of %d is %d\n", n, fact(n));
 
-    return 0;
-  }
+  return 0;
+}
 
 int fact(int n)
-  {
-    return n == 1 ? 1 : n * fact(n - 1);
-  }
+{
+  return n == 1 ? 1 : n * fact(n - 1);
+}
 

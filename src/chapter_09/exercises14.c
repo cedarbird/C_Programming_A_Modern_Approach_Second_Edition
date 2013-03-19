@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* exercises14.c (Chapter 09, page 215) */
-/* check source error */
+/* Checks source error */
 
 #include <stdio.h>
 #include <stdbool.h>
