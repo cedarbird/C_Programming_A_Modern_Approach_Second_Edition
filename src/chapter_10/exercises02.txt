@@ -7,27 +7,10 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises01.c (Chapter 10, page 237) */
-/* list visible variable and parameter */
-/* compile warning */
+/* exercises02.txt (Chapter 10, page 238) */
 
-int a;
-
-void f(int b) /* a,b,c */
-  {
-    int c;
-  }
-
-void g(void) /* a,d */
-  {
-    int d;
-    { /* a,d,e */
-      int e;
-    }
-  }
-
-int main(void) /* a,f */
-  {
-    int f;
-  }
+(a) local b, global c, local d
+(b) block local a, global b, local c
+(c) block local a, global b, function local c, block local d
+(d) global b, local c, local d
 

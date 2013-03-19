@@ -13,10 +13,6 @@ compile:
 	${CC} ${OPTIONS} bin/guess2		guess2.c
 	${CC} ${OPTIONS} bin/poker		poker.c
 
-	${CC} ${OPTIONS} bin/exercises01	exercises01.c
-	${CC} ${OPTIONS} bin/exercises02	exercises02.c
-	${CC} ${OPTIONS} bin/exercises03	exercises03.c
-
 	${CC} ${OPTIONS} bin/projects01		projects01.c
 	${CC} ${OPTIONS} bin/projects02		projects02.c
 	${CC} ${OPTIONS} bin/projects03		projects03.c
