@@ -8,11 +8,12 @@
  *********************************************************/
 
 /* projects06.c (Chapter 10, page 239) */
-/* computing RPN expression */
+/* Computes RPN expression */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <ctype.h>
-#include <stdbool.h> /* c99 only */
+#include <stdbool.h> /* C99 only */
 
 #define STACK_SIZE 100
 #define MAX_LENGTH 100
@@ -20,7 +21,6 @@
 /* external variables */
 int rpn[STACK_SIZE];
 int top = 0;
-bool out_of_range = false;
 
 void make_empty(void);
 bool is_empty(void);
@@ -31,73 +31,78 @@ void stack_overflow(void);
 void stack_underflow(void);
 
 int main(void)
-  {
-    char ch, tmp;
+{
+  char ch, tmp;
 
-    make_empty();
-    printf("Enter an RPN expression: ");
-    scanf(" %c", &ch);
-    while(ch != '=') {
-      if (ch >= '0' && ch <= '9') {
-          push(ch - '0');
-      } else if (ch == '+') {
-        push(pop() + pop());
-      } else if (ch == '-') {
-        tmp = pop();
-        push(pop() - tmp);
-      } else if (ch == '*') {
-        push(pop() * pop());
-      } else if (ch == '/') {
-        tmp = pop();
-        push(pop() / tmp);
-      }
-      scanf(" %c", &ch);
+  printf("Enter an RPN expression: ");
+  scanf(" %c", &ch);
+  while(ch != '\n') {
+    if (ch >= '0' && ch <= '9') {
+        push(ch - '0');
+    } else if (ch == '+') {
+      push(pop() + pop());
+    } else if (ch == '-') {
+      tmp = pop();
+      push(pop() - tmp);
+    } else if (ch == '*') {
+      push(pop() * pop());
+    } else if (ch == '/') {
+      tmp = pop();
+      push(pop() / tmp);
+    } else if (ch == '=') {
+      printf("Value of expression: %d\n", pop());
+      make_empty();
+      printf("Enter an RPN expression: ");
+    } else {
+      break;
     }
-    printf("Value of expression: %d", pop());
 
-    return 0;
+    scanf(" %c", &ch);
   }
+
+  return 0;
+}
 
 void make_empty(void)
-  {
-    top = 0;
-  }
+{
+  top = 0;
+}
 
 bool is_empty(void)
-  {
-    return top == 0;
-  }
+{
+  return top == 0;
+}
 
 bool is_full(void)
-  {
-    return top == STACK_SIZE;
-  }
+{
+  return top == STACK_SIZE;
+}
 
 void push(int digit)
-  {
-    if(is_full())
-      stack_overflow();
-    else
-      rpn[top++] = digit;
-  }
+{
+  if(is_full())
+    stack_overflow();
+  else
+    rpn[top++] = digit;
+}
 
 int pop(void)
-  {
-    if(is_empty())
-      stack_underflow();
-    else
-      return rpn[--top];
-  }
+{
+  if(is_empty())
+    stack_underflow();
+  else
+    return rpn[--top];
+}
 
 void stack_overflow(void)
-  {
-    out_of_range = true;
-    printf("stack overflow!\n");
-  }
+{
+  printf("Expression is too complex!\n");
+  exit(1);
+}
 
 void stack_underflow(void)
-  {
-    out_of_range = true;
-    printf("stack underflow!\n");
-  }
+{
+  printf("Not enough operands in expression!\n");
+  exit(1);
+}
 

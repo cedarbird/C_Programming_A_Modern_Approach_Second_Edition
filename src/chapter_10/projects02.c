@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* poker.c (Chapter 10, page 233) */
+/* projects02.c (Chapter 10, page 239) */
 /* Classifies a poker hand */
 
 #include <stdbool.h>   /* C99 only */

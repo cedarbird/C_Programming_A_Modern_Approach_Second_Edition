@@ -8,10 +8,11 @@
  *********************************************************/
 
 /* projects01.c (Chapter 10, page 238) */
-/* check whether or not parentheses/braces properly nested */
+/* Checks whether or not parentheses/braces properly nested */
 
 #include <stdio.h>
-#include <stdbool.h> /* c99 only */
+#include <stdlib.h>
+#include <stdbool.h> /* C99 only */
 
 #define STACK_SIZE 100
 
@@ -29,75 +30,75 @@ void stack_overflow(void);
 void stack_underflow(void);
 
 int main(void)
-  {
-    char ch;
-    bool is_nested = true;
+{
+  char ch;
+  bool is_nested = true;
 
-    printf("Enter parentheses and/or braces: ");
-    while((ch = getchar()) != '\n') {
-      if (ch == '{' || ch == '(') {
-          push(ch);
-          if (out_of_range) break;
-      } else if (ch == '}') {
-        if (pop() != '{' || out_of_range) {
-          is_nested = false;
-          break;
-        }
-      } else if (ch == ')')
-        if (pop() != '(' || out_of_range) {
-          is_nested = false;
-          break;
-        }
+  printf("Enter parentheses and/or braces: ");
+  while ((ch = getchar()) != '\n') {
+    if (ch == '{' || ch == '(') {
+        push(ch);
+    } else if (ch == '}') {
+      if (pop() != '{' || out_of_range) {
+        is_nested = false;
+        break;
+      }
+    } else if (ch == ')') {
+      if (pop() != '(' || out_of_range) {
+        is_nested = false;
+        break;
+      }
     }
-
-    if (is_nested && top == 0)
-      printf("Parentheses/braces are nested properly\n");
-    else
-      printf("Parentheses/braces are not nested properly\n");
-
-    return 0;
   }
+
+  if (is_nested && top == 0)
+    printf("Parentheses/braces are nested properly\n");
+  else
+    printf("Parentheses/braces are not nested properly\n");
+
+  return 0;
+}
 
 void make_empty(void)
-  {
-    top = 0;
-  }
+{
+  top = 0;
+}
 
 bool is_empty(void)
-  {
-    return top == 0;
-  }
+{
+  return top == 0;
+}
 
 bool is_full(void)
-  {
-    return top == STACK_SIZE;
-  }
+{
+  return top == STACK_SIZE;
+}
 
 void push(char ch)
-  {
-    if(is_full())
-      stack_overflow();
-    else
-      contents[top++] = ch;
-  }
+{
+  if (is_full())
+    stack_overflow();
+  else
+    contents[top++] = ch;
+}
 
 char pop(void)
-  {
-    if(is_empty())
-      stack_underflow();
-    else
-      return contents[--top];
-  }
+{
+  if (is_empty())
+    stack_underflow();
+  else
+    return contents[--top];
+}
 
 void stack_overflow(void)
-  {
-    out_of_range = true;
-    printf("stack overflow!\n");
-  }
+{
+  printf("stack overflow!\n");
+  exit(1);
+}
 
 void stack_underflow(void)
-  {
-    out_of_range = true;
-    printf("stack underflow!\n");
-  }
+{
+  out_of_range = true;
+  printf("stack underflow!\n");
+}
 
