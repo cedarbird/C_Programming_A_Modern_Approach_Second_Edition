@@ -8,27 +8,27 @@
  *********************************************************/
 
 /* exercises07.c (Chapter 09, page 214) */
-/* validate legal call */
-
-int f(int a, int b)
-  {
-    return a % b;
-  }
+/* Validates legal call (all call is legal.) */
 
 #include <stdio.h>
 
-int main(void)
-  {
-    int i = f(83, 12);
-    printf("%d\n", i);
-    double x = f(83, 12);
-    printf("%f\n", x);
-    i = f(3.15, 9.28);
-    printf("%d\n", i);
-    x = f(3.15, 9.28);
-    printf("%f\n", x);
-    f(83, 12);
+int f(int a, int b)
+{
+  return a % b;
+}
 
-    return 0;
-  }
+int main(void)
+{
+  int i = f(83, 12);
+  printf("%d\n", i);
+  double x = f(83, 12);
+  printf("%f\n", x);
+  i = f(3.15, 9.28);
+  printf("%d\n", i);
+  x = f(3.15, 9.28);
+  printf("%f\n", x);
+  f(83, 12);
+
+  return 0;
+}
 

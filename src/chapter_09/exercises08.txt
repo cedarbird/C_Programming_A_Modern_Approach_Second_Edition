@@ -7,23 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises01.c (Chapter 09, page 214) */
-/* Reviews to find error */
-
-#include <stdio.h>
-
-/* 1. double triangle_area(double base, height) => height no type */
-/* 2. double product; => out of block */
-double triangle_area(double base, double height)
-{
-  double product;
-  product = base * height;
-  return product / 2;
-}
-
-int main(void)
-{
-  printf("%.2f\n", triangle_area(10.0, 10.0));
-  return 0;
-}
+/* exercises08.txt (Chapter 09, page 214) */
+(a) and (b) are valid prototypes. (c) is illegal, since it doesn't specify
+ the type of the parameter. (d) incorrectly specifies that f returns
+ an int value in C89; in C99, omitting the return type is illegal.
 

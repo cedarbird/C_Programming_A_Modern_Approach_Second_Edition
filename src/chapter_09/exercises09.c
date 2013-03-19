@@ -7,23 +7,26 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises01.c (Chapter 09, page 214) */
-/* Reviews to find error */
+/* exercises09.c (Chapter 09, page 215) */
+/* Checks function's output(no any change because of passed by value) */
 
 #include <stdio.h>
 
-/* 1. double triangle_area(double base, height) => height no type */
-/* 2. double product; => out of block */
-double triangle_area(double base, double height)
-{
-  double product;
-  product = base * height;
-  return product / 2;
-}
+void swap(int a, int b);
 
 int main(void)
 {
-  printf("%.2f\n", triangle_area(10.0, 10.0));
+  int i = 1, j = 2;
+  swap(i, j);
+  printf("i = %d, j = %d\n", i, j);
+
   return 0;
+}
+
+void swap(int a, int b)
+{
+  int temp = a;
+  a = b;
+  b = temp;
 }
 

@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* exercises06.c (Chapter 09, page 214) */
-/* get k th digit */
+/* Gets k^th digit */
 
 #include <stdio.h>
 
@@ -24,7 +24,7 @@ int digit(int n, int k)
 
 int main(void)
   {
-    printf("%d\n", digit(143622, 4));
+    printf("%d\n", digit(905, 3));
     printf("%d\n", digit(1, 1));
     printf("%d\n", digit(1, 2));
 

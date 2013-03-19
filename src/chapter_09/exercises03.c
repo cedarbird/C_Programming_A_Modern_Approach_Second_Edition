@@ -8,30 +8,30 @@
  *********************************************************/
 
 /* exercises03.c (Chapter 09, page 214) */
-/* Euclid's algorithm for computing the GCD */
+/* Computes GCD with Euclid's algorithm */
 
 #include <stdio.h>
 
 int gcd(int m, int n)
-  {
-    int remainder;
+{
+  int remainder;
 
-    while (n != 0) {
-      remainder = m % n;
-      m = n;
-      n = remainder;
-    }
-
-    return m;
+  while (n != 0) {
+    remainder = m % n;
+    m = n;
+    n = remainder;
   }
+
+  return m;
+}
 
 int main(void)
-  {
-    int x, y;
-    printf("Enter two integers: ");
-    scanf("%d%d", &x, &y);
-    printf("the gcd of (%d %d) is %d\n", x, y, gcd(x, y));
+{
+  int x, y;
+  printf("Enter two integers: ");
+  scanf("%d%d", &x, &y);
+  printf("The gcd of (%d %d) is %d\n", x, y, gcd(x, y));
 
-    return 0;
-  }
+  return 0;
+}
 

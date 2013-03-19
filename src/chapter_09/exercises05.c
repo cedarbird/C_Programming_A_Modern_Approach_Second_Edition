@@ -8,27 +8,27 @@
  *********************************************************/
 
 /* exercises05.c (Chapter 09, page 214) */
-/* computing numbers of digit */
+/* Computes numbers of digit */
 
 #include <stdio.h>
 
 int num_digits(int n)
-  {
-    int num = 0;
+{
+  int num = 0;
 
-    while (n > 0) {
-      n /= 10;
-      num++;
-    }
-
-    return num;
+  while (n > 0) {
+    n /= 10;
+    num++;
   }
+
+  return num;
+}
 
 int main(void)
-  {
-    printf("%d\n", num_digits(143622));
-    printf("%d\n", num_digits(4));
+{
+  printf("%d\n", num_digits(905));
+  printf("%d\n", num_digits(4));
 
-    return 0;
-  }
+  return 0;
+}
 

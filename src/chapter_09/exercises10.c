@@ -8,51 +8,54 @@
  *********************************************************/
 
 /* exercises10.c (Chapter 09, page 215) */
-/* largest average positive function from a array */
+/* Finds largest average positive function from a array */
 
 #include <stdio.h>
 
+/* (a) The largest element in a */
 int largest(int a[], int n)
-  {
-    int i, max = a[0];
+{
+  int i, max = a[0];
 
-    for (i = 1; i < n; i++)
-      if (a[i] > max)
-        max = a[i];
+  for (i = 1; i < n; i++)
+    if (a[i] > max)
+      max = a[i];
 
-    return max;
-  }
+  return max;
+}
 
+/* (b) The average of all elements in a */
 int average(int a[], int n)
-  {
-    int i, avg = 0;
+{
+  int i, avg = 0;
 
-    for (i = 0; i < n; i++)
-      avg += a[i];
+  for (i = 0; i < n; i++)
+    avg += a[i];
 
-    return avg / n;
-  }
+  return avg / n;
+}
 
+/* (c) The number of positive elements in a */
 int num_positive(int a[], int n)
-  {
-    int i, count = 0;
+{
+  int i, count = 0;
 
-    for (i = 0; i < n; i++)
-      if (a[i] > 0)
-        count++;
+  for (i = 0; i < n; i++)
+    if (a[i] > 0)
+      count++;
 
-    return count;
-  }
+  return count;
+}
 
 int main(void)
-  {
-    int a[] = {1, 2, 6, -1};
+{
+  int a[] = {1, 2, 6, -1};
 
-    printf("%lu\n", sizeof(a)/sizeof(a[0]));
-    printf("%d\n", largest(a, 4));
-    printf("%d\n", average(a, 4));
-    printf("%d\n", num_positive(a, 4));
+  printf("%zu\n", sizeof(a) / sizeof(a[0]));
+  printf("%d\n", largest(a, 4));
+  printf("%d\n", average(a, 4));
+  printf("%d\n", num_positive(a, 4));
 
-    return 0;
-  }
+  return 0;
+}
 
