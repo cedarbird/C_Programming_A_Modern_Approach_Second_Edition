@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects04.c (Chapter 10, page 239) */
+/* projects04.c (Chapter 11, page 256) */
 /* Classifies a poker hand */
 
 #include <stdbool.h>   /* C99 only */
@@ -21,7 +21,7 @@
 /* external variables */
 int num_in_rank[NUM_RANKS];
 int num_in_suit[NUM_SUITS];
-bool royal, straight, flush, four, three;
+bool straight, flush, four, three;
 int pairs;   /* can be 0, 1, or 2 */
 
 /* prototypes */
@@ -126,7 +126,6 @@ void analyze_hand(void)
   int num_consec = 0;
   int rank, suit;
 
-  royal = false;
   straight = false;
   flush = false;
   four = false;
@@ -145,8 +144,6 @@ void analyze_hand(void)
     num_consec++;
   if (num_consec == NUM_CARDS) {
     straight = true;
-    if (num_in_rank[NUM_RANKS - 1] == 1)
-      royal = true;
     return;
   }
 
@@ -166,8 +163,7 @@ void analyze_hand(void)
  **********************************************************/
 void print_result(void)
 {
-  if (royal)             printf("royal flush");
-  else if (straight && flush) printf("Straight flush");
+  if (straight && flush) printf("Straight flush");
   else if (four)         printf("Four of a kind");
   else if (three &&
            pairs == 1)   printf("Full house");
@@ -180,4 +176,3 @@ void print_result(void)
 
   printf("\n\n");
 }
-
