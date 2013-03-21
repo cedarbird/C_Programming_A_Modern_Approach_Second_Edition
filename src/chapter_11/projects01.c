@@ -7,98 +7,40 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects01.c (Chapter 10, page 238) */
-/* Checks whether or not parentheses/braces properly nested */
+/* projects01.c (Chapter 11, page 256) */
+/* Pays amount using the smallest number of $20,$10,$5,$1 */
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h> /* C99 only */
 
-#define STACK_SIZE 100
-
-/* external variables */
-char contents[STACK_SIZE];
-int top = 0;
-bool out_of_range = false;
-
-void make_empty(void);
-bool is_empty(void);
-bool is_full(void);
-void push(char ch);
-char pop(void);
-void stack_overflow(void);
-void stack_underflow(void);
+void pay_amount(int dollars, int *twenties, int *tens, int *fives, int *ones);
 
 int main(void)
 {
-  char ch;
-  bool is_nested = true;
+  int amount, twenties, tens, fives, ones;
 
-  printf("Enter parentheses and/or braces: ");
-  while ((ch = getchar()) != '\n') {
-    if (ch == '{' || ch == '(') {
-        push(ch);
-    } else if (ch == '}') {
-      if (pop() != '{' || out_of_range) {
-        is_nested = false;
-        break;
-      }
-    } else if (ch == ')') {
-      if (pop() != '(' || out_of_range) {
-        is_nested = false;
-        break;
-      }
-    }
-  }
+  printf("Enter a dollar amount: ");
+  scanf("%d", &amount);
 
-  if (is_nested && top == 0)
-    printf("Parentheses/braces are nested properly\n");
-  else
-    printf("Parentheses/braces are not nested properly\n");
+  pay_amount(amount, &twenties, &tens, &fives, &ones);
+  printf("$20 bills: %d\n", twenties);
+  printf("$10 bills: %d\n", tens);
+  printf(" $5 bills: %d\n", fives);
+  printf(" $1 bills: %d\n", ones);
 
   return 0;
 }
 
-void make_empty(void)
+void pay_amount(int dollars, int *twenties, int *tens, int *fives, int *ones)
 {
-  top = 0;
-}
+  *twenties = dollars / 20;
+  dollars = dollars - *twenties * 20;
 
-bool is_empty(void)
-{
-  return top == 0;
-}
+  *tens = dollars / 10;
+  dollars = dollars - *tens * 10;
 
-bool is_full(void)
-{
-  return top == STACK_SIZE;
-}
+  *fives = dollars / 5;
+  dollars = dollars - *fives * 5;
 
-void push(char ch)
-{
-  if (is_full())
-    stack_overflow();
-  else
-    contents[top++] = ch;
-}
-
-char pop(void)
-{
-  if (is_empty())
-    stack_underflow();
-  else
-    return contents[--top];
-}
-
-void stack_overflow(void)
-{
-  printf("stack overflow!\n");
-  exit(1);
-}
-
-void stack_underflow(void)
-{
-  out_of_range = true;
-  printf("stack underflow!\n");
+  *ones = dollars;
 }
 

@@ -9,6 +9,7 @@ OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
 
 compile:
 	${MKDIR} -p bin
+	${CC} ${OPTIONS} bin/maxmin		maxmin.c
 
 	${CC} ${OPTIONS} bin/exercises03	exercises03.c
 	${CC} ${OPTIONS} bin/exercises04	exercises04.c
