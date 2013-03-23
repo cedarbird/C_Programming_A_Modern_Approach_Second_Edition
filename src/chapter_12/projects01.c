@@ -7,40 +7,44 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects01.c (Chapter 11, page 256) */
-/* Pays amount using the smallest number of $20,$10,$5,$1 */
+/* projects05.c (Chapter 12, page 276) */
+/* Reverses a sentence */
+/* Multiple continous space is also considered. */
 
 #include <stdio.h>
+#include <stdbool.h>
 
-void pay_amount(int dollars, int *twenties, int *tens, int *fives, int *ones);
+#define LENGTH 80
 
 int main(void)
 {
-  int amount, twenties, tens, fives, ones;
+  char ch, terminator = '\0', sentence[LENGTH] = {'\0'};
+  char *i = sentence, *j, *word_ending = sentence + LENGTH - 1;
 
-  printf("Enter a dollar amount: ");
-  scanf("%d", &amount);
+  /* read sentence - end with period, question mark or exlamation point. */
+  printf("Enter a sentence: ");
+  while ((ch = getchar()) != '\n' && i < sentence + LENGTH) {
+    if (ch == '.' || ch == '?' || ch == '!')
+      terminator = ch;
+    else if (ch != ' ')
+      word_ending = i;
+    *i++ = ch;
+  }
 
-  pay_amount(amount, &twenties, &tens, &fives, &ones);
-  printf("$20 bills: %d\n", twenties);
-  printf("$10 bills: %d\n", tens);
-  printf(" $5 bills: %d\n", fives);
-  printf(" $1 bills: %d\n", ones);
+  /* reverse sentence */
+  printf("Reversal of sentence: ");
+  for (i = word_ending; i >= sentence; i--) {
+    if (*i == ' ') {
+      for (j = i + 1; j <= word_ending; j++)
+        putchar(*j);
+      putchar(' ');
+      word_ending = i - 1;
+    } else if (i == sentence)
+      for (j = sentence; j <= word_ending; j++)
+        putchar(*j);
+  }
+  printf("%c\n", terminator);
 
   return 0;
-}
-
-void pay_amount(int dollars, int *twenties, int *tens, int *fives, int *ones)
-{
-  *twenties = dollars / 20;
-  dollars = dollars - *twenties * 20;
-
-  *tens = dollars / 10;
-  dollars = dollars - *tens * 10;
-
-  *fives = dollars / 5;
-  dollars = dollars - *fives * 5;
-
-  *ones = dollars;
 }
 
