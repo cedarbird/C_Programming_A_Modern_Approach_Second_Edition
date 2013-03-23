@@ -24,6 +24,7 @@ compile:
 	${CC} ${OPTIONS} bin/exercises15	exercises15.c
 	${CC} ${OPTIONS} bin/exercises16	exercises16.c
 	${CC} ${OPTIONS} bin/exercises17	exercises17.c
+	${CC} ${OPTIONS} bin/exercises18	exercises18.c
 
 	${CC} ${OPTIONS} bin/projects01		projects01.c
 	${CC} ${OPTIONS} bin/projects02		projects02.c
