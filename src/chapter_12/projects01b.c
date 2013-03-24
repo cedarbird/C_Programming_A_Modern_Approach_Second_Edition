@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects01b.c (Chapter 12, page 276) */
+/* projects01b.c (Chapter 12, page 275) */
 /* Reverses a message */
 
 #include <stdio.h>

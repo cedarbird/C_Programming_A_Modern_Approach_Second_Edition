@@ -7,42 +7,29 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects03.c (Chapter 11, page 256) */
-/* Calculates Lowest Terms by Euclid's alorithm */
+/* projects03.c (Chapter 12, page 276) */
+/* Reverses a message */
 
 #include <stdio.h>
 
-void reduce(int numerator, int denominator,
-            int *reduced_numerator, int *reduced_denominator);
+#define MSG_LEN 80     /* maximum length of message */
 
 int main(void)
 {
-  int numerator, denominator, reduced_numerator, reduced_denominator;
+  char msg[MSG_LEN], *p;
 
-  printf("Enter a fraction: ");
-  scanf("%d /%d", &numerator, &denominator);
-
-  reduce(numerator, denominator, &reduced_numerator, &reduced_denominator);
-
-  printf("In lowest Terms: %d/%d\n", reduced_numerator, reduced_denominator);
-
-  return 0;
-}
-
-void reduce(int numerator, int denominator,
-            int *reduced_numerator, int *reduced_denominator)
-{
-  int remainder, m, n;
-  m = numerator;
-  n = denominator;
-
-  while (n != 0) {
-    remainder = m % n;
-    m = n;
-    n = remainder;
+  printf("Enter a message: ");
+  for (p = msg; p < msg + MSG_LEN; p++) {
+    *p = getchar();
+    if (*p == '\n')
+      break;
   }
 
-  *reduced_numerator = numerator / m;
-  *reduced_denominator = denominator / m;
+  printf("Reversal is: ");
+  for (p--; p >= msg; p--)
+    putchar(*p);
+  putchar('\n');
+
+  return 0;
 }
 
