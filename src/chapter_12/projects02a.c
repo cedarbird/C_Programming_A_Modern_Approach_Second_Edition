@@ -20,32 +20,36 @@
 int main(void)
 {
   char msg[MSG_LEN];
-  int k, i, j;
+  int end, before, after;
   bool matched;
 
   printf("Enter a message: ");
-  for (k = 0; k < MSG_LEN; k++) {
-    msg[k] = getchar();
-    if (msg[k] == '\n')
+  for (end = 0; end < MSG_LEN; end++) {
+    msg[end] = getchar();
+    if (msg[end] == '\n')
       break;
   }
 
-  for (i = 0, j = k; i <= (k - 1) / 2; i++) {
-    if (isalpha(msg[i])) {
-      for (; j > (k - 1) / 2; j--) {
-        if (isalpha(msg[j])) {
-          if (toupper(msg[i]) != toupper(msg[j])) {
-            printf("Not a Palindrome");
-            exit(0);
-          }
-          j--;
+  for (before = 0, after = end; before < after; before++) {
+    if (isalpha(msg[before])) {
+      matched = false;
+      for (; after >= before; after--) {
+        if (isalpha(msg[after])) {
+          if (toupper(msg[before]) == toupper(msg[after]))
+            matched = true;
+          after--;
           break;
         }
+      }
+
+      if (!matched) {
+        printf("Not a palindrome\n");
+        exit(0);
       }
     }
   }
 
-  printf("Palindrome");
+  printf("Palindrome\n");
 
   return 0;
 }

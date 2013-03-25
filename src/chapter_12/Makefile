@@ -26,10 +26,10 @@ compile:
 	${CC} ${OPTIONS} bin/exercises17	exercises17.c
 	${CC} ${OPTIONS} bin/exercises18	exercises18.c
 
-	${CC} ${OPTIONS} bin/projects01a		projects01a.c
-	${CC} ${OPTIONS} bin/projects01b		projects01b.c
-	${CC} ${OPTIONS} bin/projects02a		projects02a.c
-	${CC} ${OPTIONS} bin/projects02b		projects02b.c
+	${CC} ${OPTIONS} bin/projects01a	projects01a.c
+	${CC} ${OPTIONS} bin/projects01b	projects01b.c
+	${CC} ${OPTIONS} bin/projects02a	projects02a.c
+	${CC} ${OPTIONS} bin/projects02b	projects02b.c
 	${CC} ${OPTIONS} bin/projects03		projects03.c
 	${CC} ${OPTIONS} bin/projects04		projects04.c
 	${CC} ${OPTIONS} bin/projects05		projects05.c
