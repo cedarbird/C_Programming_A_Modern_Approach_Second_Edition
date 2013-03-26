@@ -7,9 +7,10 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises02.txt (Chapter 12, page 273) */
+/* exercises02.txt (Chapter 13, page 308) */
 
- The statement is illegal because pointers cannot be added. Here's a legal
- statement that has the desired effect:
- middle = low + (high - low) / 2;
+(a) Illegal; p is not a character.
+(b) Legal; output is a.
+(c) Legal; output is abc.
+(d) Illegal; *p is not a pointer.
 

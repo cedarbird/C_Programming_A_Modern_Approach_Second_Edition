@@ -7,22 +7,65 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises04.txt (Chapter 12, page 273) */
+/* exercises04.txt (Chapter 13, page 308) */
 
-int *top_ptr;
+(a)
 
-void make_empty(void)
+int read_line(char str[], int n)
 {
-  top_ptr = &contents[0];
+  int ch, i = 0;
+
+  while ((ch = getchar()) != '\n')
+    if (i == 0 && isspace(ch))
+      ;   /* ignore */
+    else if (i < n)
+      str[i++] = ch;
+  str[i] = '\0';
+  return i;
 }
 
-bool is_empty(void)
+(b)
+
+int read_line(char str[], int n)
 {
-  return top_ptr == &contents[0];
+  int ch, i = 0;
+
+  while (!isspace(ch = getchar()))
+    if (i < n)
+      str[i++] = ch;
+  str[i] = '\0';
+  return i;
 }
 
-bool is_full(void)
+(c)
+
+int read_line(char str[], int n)
 {
-  return top_ptr == &contents[STACK_SIZE];
+  int ch, i = 0;
+
+  do {
+    ch = getchar();
+    if (i < n)
+      str[i++] = ch;
+  } while (ch != '\n');
+  str[i] = '\0';
+  return i;
 }
+
+(d)
+
+int read_line(char str[], int n)
+{
+  int ch, i;
+
+  for (i = 0; i < n; i++) {
+    ch = getchar();
+    if (ch == '\n')
+      break;
+    str[i] = ch;
+  }
+  str[i] = '\0';
+  return i;
+}
+
 

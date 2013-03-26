@@ -7,18 +7,23 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises03.c (Chapter 13, page 308) */
+/* exercises01.c (Chapter 13, page 308) */
 
 #include <stdio.h>
 
 int main(void)
 {
-  int i, j;
-  char s[10];
-
-  scanf("%d%s%d", &i, s, &j); /* input: 12abc34 56def78 */
-  printf("i:[%d]\ns:[%s]\nj:[%d]\n", i, s, j); /* 12	abc34	56 */
+  printf("%c", '\n'); /* (a) */
+//printf("%c", "\n"); /* (b), type mismatch */
+//printf("%s", '\n'); /* (c), type mismatch */
+  printf("%s", "\n"); /* (d) */
+//printf('\n');       /* (e), type mismatch */
+  printf("\n");       /* (f) */
+  putchar('\n');      /* (g) */
+//putchar("\n");      /* (h), type mismatch */
+//puts('\n');         /* (i), type mismatch */
+//puts("\n");         /* (j), two new-line */
+  puts("");           /* (k) */
 
   return 0;
 }
-
