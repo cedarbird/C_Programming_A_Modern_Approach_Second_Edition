@@ -7,43 +7,31 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises18.c (Chapter 12, page 275) */
-/* Evaluates position */
+/* exercises18.c (Chapter 13, page 311) */
 
 #include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 
-int evaluate_position(char *board, int n)
-{
-  int position = 0, current_score;
-  char *current_pieces;
-
-  for (current_pieces = board; current_pieces < board + n; current_pieces++) {
-    switch (toupper(*current_pieces)) {
-      case 'Q': current_score = 9; break;
-      case 'R': current_score = 5; break;
-      case 'B': current_score = 3; break;
-      case 'N': current_score = 3; break;
-      case 'P': current_score = 1; break;
-      default : current_score = 0; break;
-    }
-
-    if (*current_pieces >='A' && *current_pieces <= 'Z')
-      position += current_score;
-    if (*current_pieces >='a' && *current_pieces <= 'z')
-      position -= current_score;
-  }
-
-  return position;
-}
+void remove_filename(char *url);
 
 int main(void)
 {
-  char board[8][8] = {[0][1] = 'Q', 'B', 'B', 'N', 'P',
-                      [7][1] = 'q', 'r', 'b', 'n'};
-
-  printf("the position is %d\n", evaluate_position(&board[0][0], 8 * 8));
+  char *url = "http://www.knking.com/index.html";
+  remove_filename(url);
+  printf("%s\n", url);
 
   return 0;
+}
+
+void remove_filename(char *url)
+{
+  char *p = url + strlen(url);
+
+  for (; p >= url; p--) {
+    if (*p == '/') {
+      *p = '\0';
+      return;
+    }
+  }
 }
 
