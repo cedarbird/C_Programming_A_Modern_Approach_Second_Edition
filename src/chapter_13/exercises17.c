@@ -7,27 +7,19 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises17.c (Chapter 12, page 275) */
+/* exercises14.c (Chapter 13, page 310) */
+/* result: Grinch */
 
 #include <stdio.h>
-
-int sum_two_dimentional_array(int *a, int n)
-{
-  int sum = 0, *p;
-
-  for (p = a; p < a + n; p++)
-    sum += *p;
-
-  return sum;
-}
+#include <string.h>
 
 int main(void)
 {
-  int a[][2] = {{1, 2}, {3, 8}};
-  int b[][3] = {{1, 2, 3}, {3, 8}, {2, 2, 2}};
+  char s[20] = "Hsjodi", *p;
 
-  printf("sum: %d\n", sum_two_dimentional_array(&a[0][0], 4));
-  printf("sum: %d\n", sum_two_dimentional_array(&b[0][0], 9));
+  for (p = s; *p; p++)
+    --*p;
+  puts(s);
 
   return 0;
 }
