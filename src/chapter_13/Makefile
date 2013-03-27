@@ -26,7 +26,7 @@ compile:
 	${CC} ${OPTIONS} bin/exercises17	exercises17.c
 	${CC} ${OPTIONS} bin/exercises18	exercises18.c
 
-	${CC} ${OPTIONS} bin/projects07		projects07.c
+	${CC} ${OPTIONS} bin/projects01		projects01.c
 
 clean:
 	${RM} -fR bin
