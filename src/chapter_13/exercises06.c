@@ -7,24 +7,31 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises06.c (Chapter 12, page 273) */
+/* exercises06.c (Chapter 13, page 309) */
+/* Note that the short-circuit evaluation of && prevents the if statement from
+   testing characters that follow the null character. */
 
 #include <stdio.h>
 
-int sum_array(const int a[], int n)
-{
-  int sum = 0;
-  const int *p = a;
-
-  while (p < a + n)
-    sum += *p++;
-
-  return sum;
-}
+void censor(char s[]);
 
 int main(void)
 {
-  printf("%d\n", sum_array((int []) {1, 2, 3, 4}, 4));
+  char s[] = "food fool.";
+
+  censor(s);
+
+  puts(s);
+
   return 0;
+}
+
+void censor(char s[])
+{
+  int i;
+
+  for (i = 0; s[i] != '\0'; i++)
+    if (s[i] == 'f' && s[i+1] == 'o' && s[i+2] =='o')
+      s[i] = s[i+1] = s[i+2] = 'x';
 }
 

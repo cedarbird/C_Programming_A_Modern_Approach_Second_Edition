@@ -7,10 +7,29 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises05.txt (Chapter 12, page 273) */
+/* exercises05a.c (Chapter 13, page 309) */
 
-(a) illegal, because of mismatched types.
-(b) true
-(c) true
-(d) true
+#include <stdio.h>
+#include <ctype.h>
+
+char *capitalize(char *s);
+
+int main(void)
+{
+  char s[] = "abc\tD fg.";
+
+  puts(capitalize(s));
+
+  return 0;
+}
+
+char *capitalize(char *s)
+{
+  char *p = s;
+
+  for (int i = 0; p[i] != '\0'; i++)
+    p[i] = toupper(p[i]);
+
+  return p;
+}
 

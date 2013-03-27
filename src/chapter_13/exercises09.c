@@ -7,25 +7,27 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises09.c (Chapter 12, page 274) */
+/* exercises09.c (Chapter 13, page 309) */
+/* result: computers */
 
 #include <stdio.h>
-
-double inner_product(const double *a, const double *b, int n)
-{
-  double product = 0.0;
-  const double *pa = a, *pb = b;
-
-  while (pa < a + n)
-    product += (*pa++) * (*pb++);
-
-  return product;
-}
+#include <string.h>
 
 int main(void)
 {
-  printf("inner product: %f\n", inner_product((double []) {1.0, 2.0, 3.0},
-                                              (double []) {1.0, 2.0, 3.0}, 3));
+  char s1[20], s2[20];
+
+  strcpy(s1, "computer");
+  strcpy(s2, "science");
+
+  if (strcmp(s1, s2) < 0)
+    strcat(s1, s2);
+  else
+    strcat(s2, s1);
+
+  s1[strlen(s1) - 6] = '\0';
+
+  puts(s1);
 
   return 0;
 }

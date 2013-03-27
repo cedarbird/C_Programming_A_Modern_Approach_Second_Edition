@@ -7,21 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises15.c (Chapter 12, page 275) */
+/* exercises08.txt (Chapter 13, page 309) */
 
-#include <stdio.h>
-
-#define N 10
-
-int main(void)
-{
-  int *p;
-  int temperatures[7][24] = {[3][1] = 1, [3][2] = 2, [3][20] = 10};
-  int i = 3;
-
-  for (p = temperatures[i]; p < temperatures[i] + 24; p++)
-    printf("%d ", *p);
-
-  return 0;
-}
+tired-or-wired?
 

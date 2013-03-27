@@ -7,33 +7,19 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises14.c (Chapter 12, page 275) */
+/* exercises14.c (Chapter 13, page 310) */
+/* result: Grinch */
 
 #include <stdio.h>
-
-void search(const int *a, int n, int temperature, int *pindex, int *num)
-{
-  const int *p = a;
-  int i = 1;
-
-  while (p < a + n) {
-    if (temperature == *p++) {
-      (*num)++;
-      *pindex++ = i;
-    }
-    i++;
-  }
-}
+#include <string.h>
 
 int main(void)
 {
-  int temperatures[7][24] = { [2][3] = 32, [4][19] = 32, [5][21] = 21};
-  int index[7][24] = {{0}}, num = 0, *p;
+  char s[20] = "Hsjodi", *p;
 
-  search(&temperatures[0][0], 168, 32, &index[0][0], &num);
-
-  for (p = &index[0][0]; p < &index[0][0] + num; p++)
-    printf("[%d][%d]\n", *p / 24, *p % 24 - 1);
+  for (p = s; *p; p++)
+    --*p;
+  puts(s);
 
   return 0;
 }

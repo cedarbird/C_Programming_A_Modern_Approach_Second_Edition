@@ -14,6 +14,15 @@ compile:
 
 	${CC} ${OPTIONS} bin/exercises01	exercises01.c
 	${CC} ${OPTIONS} bin/exercises03	exercises03.c
+	${CC} ${OPTIONS} bin/exercises05a	exercises05a.c
+	${CC} ${OPTIONS} bin/exercises05b	exercises05b.c
+	${CC} ${OPTIONS} bin/exercises06	exercises06.c
+	${CC} ${OPTIONS} bin/exercises09	exercises09.c
+	${CC} ${OPTIONS} bin/exercises11	exercises11.c
+	${CC} ${OPTIONS} bin/exercises12	exercises12.c
+	${CC} ${OPTIONS} bin/exercises13	exercises13.c
+	${CC} ${OPTIONS} bin/exercises14	exercises14.c
+	${CC} ${OPTIONS} bin/exercises16	exercises16.c
 
 	${CC} ${OPTIONS} bin/projects07		projects07.c
 

@@ -7,40 +7,35 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises12.c (Chapter 12, page 274) */
+/* exercises12.c (Chapter 13, page 309) */
 
 #include <stdio.h>
+#include <string.h>
 
-void find_two_largest(const int *a, int n, int *largest,
-                      int *second_largest);
+void get_extension(char *file_name, char *extension);
 
 int main(void)
 {
-  int largest, second_largest;
-  find_two_largest((int []) {4, 6, 9, 3, 12}, 5, &largest, &second_largest);
-  printf("largest: %d, second_largest: %d\n", largest, second_largest);
+  char file_name[20], extension[20];
+
+  printf("Enter a filename: ");
+  scanf("%s", file_name);
+  get_extension(file_name, extension);
+  printf("Extension: %s\n", extension); 
 
   return 0;
 }
 
-void find_two_largest(const int *a, int n, int *largest,
-                      int *second_largest)
+void get_extension(char *file_name, char *extension)
 {
-  const int *p = a;
+  char *p = file_name + strlen(file_name);
 
-  if (*p > *(p + 1)) {
-    *largest = *p;
-    *second_largest = *(p + 1);
-  } else {
-    *largest = *(p + 1);
-    *second_largest = *p;
-  }
+  for (; p >= file_name; p--)
+    if (*p == '.') {
+      strcpy(extension, p + 1);
+      return;
+    }
 
-  for ( p = p + 2; p < a + n; p++)
-    if (*p > *largest) {
-      *second_largest = *largest;
-      *largest = *p;
-    } else if (*p > *second_largest)
-      *second_largest = *p;
+  *extension='\0';
 }
 

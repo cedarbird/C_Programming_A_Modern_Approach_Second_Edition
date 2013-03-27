@@ -7,26 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises16.c (Chapter 13, page 310) */
+/* exercises07.txt (Chapter 13, page 309) */
 
-#include <stdio.h>
-
-int count_spaces(const char *s);
-
-int main(void)
-{
-  printf("%d\n", count_spaces(" A  B C "));
-
-  return 0;
-}
-
-int count_spaces(const char *s)
-{
-  int count = 0;
-
-  while (*s)
-    if (*s++ == ' ')
-      count++;
-  return count;
-}
+(d), because of no-change on str. (a)(b)(c) set str to 0-length string.
 

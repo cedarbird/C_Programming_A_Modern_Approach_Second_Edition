@@ -7,27 +7,29 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises07.c (Chapter 12, page 274) */
+/* exercises05b.c (Chapter 13, page 309) */
 
 #include <stdio.h>
-#include <stdbool.h> /* C99 Only */
+#include <ctype.h>
 
-bool search(const int a[], int n, int key)
-{
-  const int *p = a;
-
-  while (p < a + n)
-    if (key == *p++)
-      return true;
-
-  return false;
-}
+char *capitalize(char *s);
 
 int main(void)
 {
-  printf("%d\n", search((int []) {1, 2, 3, 4}, 4, 4));
-  printf("%d\n", search((int []) {1, 2, 3, 4}, 4, 5));
+  char s[] = "abc\tD fg.";
+
+  puts(capitalize(s));
 
   return 0;
+}
+
+char *capitalize(char *s)
+{
+  char *p = s;
+
+  while ((*p = toupper(*p)))
+    p++;
+
+  return s;
 }
 

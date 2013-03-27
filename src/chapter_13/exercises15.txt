@@ -7,28 +7,11 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises08.c (Chapter 12, page 274) */
+/* exercises15.txt (Chapter 13, page 310) */
 
-#include <stdio.h>
-
-void store_zeros(int a[], int n)
-{
-  int *p = a;
-
-  while (p < a + n)
-    *p++ = 0;
-}
-
-int main(void)
-{
-  int a[10];
-
-  store_zeros(a, 10);
-
-  for (int i = 0; i < 10; i++)
-    printf("%d ", a[i]);
-  printf("\n");
-
-  return 0;
-}
+(a) 3
+(b) 0
+(c) The length of the longest prefix of the string s that consists entirely of
+characters from the string t. Or, equivalently, the position of the first
+character in s that is not also in t.
 

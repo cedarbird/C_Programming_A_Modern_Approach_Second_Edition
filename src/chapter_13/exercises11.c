@@ -7,27 +7,24 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises11.c (Chapter 12, page 274) */
+/* exercises11.c (Chapter 13, page 309) */
 
 #include <stdio.h>
 
-int find_largest(int a[], int n)
-{
-  int *p = a, max = *p;
-
-  while (p < a + n) {
-    if (*p > max)
-      max = *p;
-    p++;
-  }
-
-  return max;
-}
+int mystrcmp(char *s, char *t);
 
 int main(void)
 {
-  printf("max: %d\n", find_largest((int []) {1, 2, 3, 8, 5}, 5));
+  printf("abc CMP abC: %d\n", mystrcmp("abc", "abC"));
 
   return 0;
+}
+
+int mystrcmp(char *s, char *t)
+{
+  for (; *s == *t; s++, t++)
+    if (!(*s))
+      return 0;
+  return *s - *t;
 }
 
