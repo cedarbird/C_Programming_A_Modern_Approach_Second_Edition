@@ -7,61 +7,45 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects06.c (Chapter 12, page 276) */
-/* Sorts an array of integers using Quicksort algorithm */
+/* projects06.c (Chapter 13, page 312) */
+/* Checks planet names */
 
+#include <ctype.h>
 #include <stdio.h>
+#include <string.h>
 
-#define N 10
+#define NUM_PLANETS 9
 
-void quicksort(int *low, int *high);
-int *split(int *low, int *high);
+int string_equal(const char *s, const char *t);
 
-int main(void)
+int main(int argc, char *argv[])
 {
-  int a[N], i;
+  char *planets[] = {"Mercury", "Venus", "Earth",
+                     "Mars", "Jupiter", "Saturn",
+                     "Uranus", "Neptune", "Pluto"};
+  int i, j;
 
-  printf("Enter %d numbers to be sorted: ", N);
-  for (i = 0; i < N; i++)
-    scanf("%d", &a[i]);
-
-  quicksort(a, a + N - 1);
-
-  printf("In sorted order: ");
-  for (i = 0; i < N; i++)
-    printf("%d ", a[i]);
-  printf("\n");
+  for (i = 1; i < argc; i++) {
+    for (j = 0; j < NUM_PLANETS; j++)
+      if (string_equal(argv[i], planets[j])) {
+        printf("%s is planet %d\n", argv[i], j + 1);
+        break;
+      }
+    if (j == NUM_PLANETS)
+      printf("%s is not a planet\n", argv[i]);
+  }
 
   return 0;
 }
 
-void quicksort(int *low, int *high)
+int string_equal(const char *s, const char *t)
 {
-  int *middle;
+  int i;
 
-  if (low >= high) return;
-  middle = split(low, high);
-  quicksort(low, middle - 1);
-  quicksort(middle + 1, high);
-}
+  for (i = 0; toupper(s[i]) == toupper(t[i]); i++)
+    if (s[i] == '\0')
+      return 1;
 
-int *split(int *low, int *high)
-{
-  int part_element = *low;
-
-  for (;;) {
-    while (low < high && part_element <= *high)
-      high--;
-    if (low >= high) break;
-    *low++ = *high;
-
-    while (low < high && *low <= part_element)
-      low++;
-    if (low >= high) break;
-    *high-- = *low;
-  }
-
-  *high = part_element;
-  return high;
+  return 0;
 }
 
