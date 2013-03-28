@@ -7,49 +7,18 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects02a.c (Chapter 12, page 275) */
-/* Checks whether the message is a palindrome */
+/* projects04.c (Chapter 13, page 311) */
+/* Reverses command-line arguments */
 
 #include <stdio.h>
-#include <stdbool.h> /* C99 Only */
-#include <ctype.h>
-#include <stdlib.h>
 
-#define MSG_LEN 80     /* maximum length of message */
-
-int main(void)
+int main(int argc, char *argv[])
 {
-  char msg[MSG_LEN];
-  char *end, *before, *after;
-  bool matched;
+  int i;
 
-  printf("Enter a message: ");
-  for (end = msg; end < msg + MSG_LEN; end++) {
-    *end = getchar();
-    if (*end == '\n')
-      break;
-  }
-
-  for (before = msg, after = end; before < after; before++) {
-    if (isalpha(*before)) {
-      matched = false;
-      for (; after >= before; after--) {
-        if (isalpha(*after)) {
-          if (toupper(*before) == toupper(*after))
-            matched = true;
-          after--;
-          break;
-        }
-      }
-
-      if (!matched) {
-        printf("Not a palindrome\n");
-        exit(0);
-      }
-    }
-  }
-
-  printf("Palindrome\n");
+  for (i = argc - 1; i > 0; i--)
+    printf("%s ", argv[i]);
+  printf("\n");
 
   return 0;
 }
