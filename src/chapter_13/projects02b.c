@@ -7,50 +7,71 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects02a.c (Chapter 12, page 275) */
-/* Checks whether the message is a palindrome */
+/* projects02b.c (Chapter 13, page 311) */
+/* Prints a one-month reminder list */
 
 #include <stdio.h>
-#include <stdbool.h> /* C99 Only */
-#include <ctype.h>
-#include <stdlib.h>
+#include <string.h>
 
-#define MSG_LEN 80     /* maximum length of message */
+#define MAX_REMIND 50   /* maximum number of reminders */
+#define MSG_LEN 60      /* max length of reminder message */
+
+int read_line(char str[], int n);
 
 int main(void)
 {
-  char msg[MSG_LEN];
-  char *end, *before, *after;
-  bool matched;
+  char reminders[MAX_REMIND][MSG_LEN+3];
+  char day_time_str[9], msg_str[MSG_LEN+1];
+  int day, hour, min, i, j, num_remind = 0;
 
-  printf("Enter a message: ");
-  for (end = &msg[0]; end < &msg[MSG_LEN]; end++) {
-    *end = getchar();
-    if (*end == '\n')
+  for (;;) {
+    if (num_remind == MAX_REMIND) {
+      printf("-- No space left --\n");
       break;
-  }
-
-  for (before = &msg[0], after = end; before < after; before++) {
-    if (isalpha(*before)) {
-      matched = false;
-      for (; after >= before; after--) {
-        if (isalpha(*after)) {
-          if (toupper(*before) == toupper(*after))
-            matched = true;
-          after--;
-          break;
-        }
-      }
-
-      if (!matched) {
-        printf("Not a palindrome\n");
-        exit(0);
-      }
     }
+
+    printf("Enter day time and reminder: ");
+    scanf("%d", &day);
+
+    if (day < 0 || day > 31)
+      continue;
+    else if (day == 0)
+      break;
+
+    scanf("%d :%d", &hour, &min);
+    if (hour < 0 || hour > 23 || min < 0 || min > 59)
+      continue;
+
+    sprintf(day_time_str, "%2d %.2d:%.2d", day, hour, min);
+    read_line(msg_str, MSG_LEN);
+
+    for (i = 0; i < num_remind; i++)
+      if (strcmp(day_time_str, reminders[i]) < 0)
+        break;
+    for (j = num_remind; j > i; j--)
+      strcpy(reminders[j], reminders[j-1]);
+
+    strcpy(reminders[i], day_time_str);
+    strcat(reminders[i], msg_str);
+
+    num_remind++;
   }
 
-  printf("Palindrome\n");
+  printf("\nDay Reminder\n");
+  for (i = 0; i < num_remind; i++)
+    printf(" %s\n", reminders[i]);
 
   return 0;
+}
+
+int read_line(char str[], int n)
+{
+  int ch, i = 0;
+
+  while ((ch = getchar()) != '\n')
+    if (i < n)
+      str[i++] = ch;
+  str[i] = '\0';
+  return i;
 }
 

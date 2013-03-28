@@ -7,8 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects02a.c (Chapter 13, page 311) */
-/* Prints a one-month reminder list */
+/* projects02c.c (Chapter 13, page 311) */
+/* Prints a one-year reminder list */
 
 #include <stdio.h>
 #include <string.h>
@@ -21,8 +21,8 @@ int read_line(char str[], int n);
 int main(void)
 {
   char reminders[MAX_REMIND][MSG_LEN+3];
-  char day_str[3], msg_str[MSG_LEN+1];
-  int day, i, j, num_remind = 0;
+  char day_time_str[12], msg_str[MSG_LEN+1];
+  int month, day, hour, min, i, j, num_remind = 0;
 
   for (;;) {
     if (num_remind == MAX_REMIND) {
@@ -30,24 +30,28 @@ int main(void)
       break;
     }
 
-    printf("Enter day and reminder: ");
-    scanf("%2d", &day);
+    printf("Enter month/day 24-hour time and reminder: ");
+    scanf("%d /%d", &month, &day);
 
-    if (day < 0 || day > 31)
+    if (month < 0 || month > 12 || day < 0 || day > 31)
       continue;
-    else if (day == 0)
+    else if (month == 0)
       break;
 
-    sprintf(day_str, "%2d", day);
+    scanf("%d :%d", &hour, &min);
+    if (hour < 0 || hour > 23 || min < 0 || min > 59)
+      continue;
+
+    sprintf(day_time_str, "%2d/%.2d %.2d:%.2d", month, day, hour, min);
     read_line(msg_str, MSG_LEN);
 
     for (i = 0; i < num_remind; i++)
-      if (strcmp(day_str, reminders[i]) < 0)
+      if (strcmp(day_time_str, reminders[i]) < 0)
         break;
     for (j = num_remind; j > i; j--)
       strcpy(reminders[j], reminders[j-1]);
 
-    strcpy(reminders[i], day_str);
+    strcpy(reminders[i], day_time_str);
     strcat(reminders[i], msg_str);
 
     num_remind++;
