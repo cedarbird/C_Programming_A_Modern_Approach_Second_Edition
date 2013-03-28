@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects04.c (Chapter 13, page 311) */
+/* projects04.c (Chapter 13, page 312) */
 /* Reverses command-line arguments */
 
 #include <stdio.h>
