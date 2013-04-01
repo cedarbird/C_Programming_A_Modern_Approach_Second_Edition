@@ -7,30 +7,52 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects02b.c (Chapter 12, page 275) */
+/* projects017.c (Chapter 13, page 313) */
 /* Checks whether the message is a palindrome */
 
 #include <stdio.h>
 #include <stdbool.h> /* C99 Only */
 #include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define MSG_LEN 80     /* maximum length of message */
+
+int read_line(char str[], int n);
+bool is_palindrome(const char *messages);
 
 int main(void)
 {
   char msg[MSG_LEN];
-  char *end, *before, *after;
-  bool matched;
 
   printf("Enter a message: ");
-  for (end = &msg[0]; end < &msg[MSG_LEN]; end++) {
-    *end = getchar();
-    if (*end == '\n')
-      break;
-  }
+  read_line(msg, MSG_LEN);
 
-  for (before = &msg[0], after = end; before < after; before++) {
+  if (is_palindrome(msg))
+    printf("Palindrome\n");
+  else
+    printf("Not a palindrome\n");
+
+  return 0;
+}
+
+int read_line(char str[], int n)
+{
+  int ch, i = 0;
+
+  while ((ch = getchar()) != '\n')
+    if (i < n)
+      str[i++] = ch;
+  str[i] = '\0';
+  return i;
+}
+
+bool is_palindrome(const char *messages)
+{
+  const char *after = messages + strlen(messages), *before = messages;
+  bool matched;
+
+  for (; before < after; before++) {
     if (isalpha(*before)) {
       matched = false;
       for (; after >= before; after--) {
@@ -43,14 +65,11 @@ int main(void)
       }
 
       if (!matched) {
-        printf("Not a palindrome\n");
-        exit(0);
+        return false;
       }
     }
   }
 
-  printf("Palindrome\n");
-
-  return 0;
+  return true;
 }
 
