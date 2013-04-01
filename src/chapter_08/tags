@@ -1,0 +1,89 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.6	//
+CC	Makefile	/^CC=gcc$/;"	m
+COLS	exercises10.c	16;"	d	file:
+COLS	exercises11.c	16;"	d	file:
+COLS	projects07.c	16;"	d	file:
+DAYS_MONTH	exercises08.c	15;"	d	file:
+DAYS_MONTH	exercises09.c	16;"	d	file:
+DAYS_OF_WEEK	exercises03.c	16;"	d	file:
+DAYS_OF_WEEK	exercises04.c	16;"	d	file:
+DIGITS_DECIMAL	exercises06.c	15;"	d	file:
+DIGITS_DECIMAL	exercises07.c	15;"	d	file:
+DIRECTION	projects09.c	23;"	d	file:
+DOWN	projects09.c	20;"	d	file:
+EVEN_CHAR	exercises11.c	18;"	d	file:
+HOURS_DAY	exercises08.c	16;"	d	file:
+HOURS_DAY	exercises09.c	17;"	d	file:
+INITIAL_BALANCE	interest.c	16;"	d	file:
+INITIAL_BALANCE	projects05.c	16;"	d	file:
+LEFT	projects09.c	21;"	d	file:
+LENGTH	projects14.c	17;"	d	file:
+LENGTH_ALPHABETS	projects15.c	19;"	d	file:
+LENGTH_ALPHABETS	projects16.c	17;"	d	file:
+MAXLENGHS	projects11.c	26;"	d	file:
+MAX_LENGTH	projects13.c	17;"	d	file:
+MAX_LENGTH	projects15.c	18;"	d	file:
+MKDIR	Makefile	/^MKDIR=mkdir$/;"	m
+N	exercises05.c	14;"	d	file:
+N	projects04.c	14;"	d	file:
+N	reverse.c	15;"	d	file:
+NUMS_CHAR	projects06.c	16;"	d	file:
+NUMS_DECIMAL	projects01.c	16;"	d	file:
+NUMS_DECIMAL	projects03.c	16;"	d	file:
+NUMS_SEGMENT	exercises06.c	16;"	d	file:
+NUMS_SEGMENT	exercises07.c	16;"	d	file:
+NUM_FLIGHTS	projects10.c	15;"	d	file:
+NUM_QUIZZES	projects08.c	15;"	d	file:
+NUM_RANKS	deal.c	19;"	d	file:
+NUM_RATES	interest.c	15;"	d	file:
+NUM_RATES	projects05.c	15;"	d	file:
+NUM_STUDENTS	projects08.c	16;"	d	file:
+NUM_SUITS	deal.c	18;"	d	file:
+ODD_CHAR	exercises11.c	17;"	d	file:
+OPTIONS	Makefile	/^OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o$/;"	m
+RIGHT	projects09.c	22;"	d	file:
+RM	Makefile	/^RM=rm$/;"	m
+ROWS	exercises10.c	15;"	d	file:
+ROWS	exercises11.c	15;"	d	file:
+ROWS	projects07.c	15;"	d	file:
+SHELL	Makefile	/^SHELL=\/bin\/sh$/;"	m
+SIDE	projects09.c	18;"	d	file:
+SIZE	projects04.c	15;"	d	file:
+UP	projects09.c	19;"	d	file:
+WALK_DISTANCE	projects09.c	24;"	d	file:
+main	deal.c	/^int main(void)$/;"	f
+main	exercises03.c	/^int main(void)$/;"	f
+main	exercises04.c	/^int main(void)$/;"	f
+main	exercises05.c	/^int main(void)$/;"	f
+main	exercises06.c	/^int main(void)$/;"	f
+main	exercises07.c	/^int main(void)$/;"	f
+main	exercises08.c	/^int main(void)$/;"	f
+main	exercises09.c	/^int main(void)$/;"	f
+main	exercises10.c	/^int main(void)$/;"	f
+main	exercises11.c	/^int main(void)$/;"	f
+main	interest.c	/^int main(void)$/;"	f
+main	projects01.c	/^int main(void)$/;"	f
+main	projects02.c	/^int main(void)$/;"	f
+main	projects03.c	/^int main(void)$/;"	f
+main	projects04.c	/^int main(void)$/;"	f
+main	projects05.c	/^int main(void)$/;"	f
+main	projects06.c	/^int main(void)$/;"	f
+main	projects07.c	/^int main(void)$/;"	f
+main	projects08.c	/^int main(void)$/;"	f
+main	projects09.c	/^int main(void)$/;"	f
+main	projects10.c	/^int main(void)$/;"	f
+main	projects11.c	/^int main(void)$/;"	f
+main	projects12.c	/^int main(void)$/;"	f
+main	projects13.c	/^int main(void)$/;"	f
+main	projects14.c	/^int main(void)$/;"	f
+main	projects15.c	/^int main(void)$/;"	f
+main	projects16.c	/^int main(void)$/;"	f
+main	projects17.c	/^int main(void)$/;"	f
+main	repdigit.c	/^int main(void)$/;"	f
+main	reverse.c	/^int main(void)$/;"	f
+main	reverse2.c	/^int main(void)$/;"	f

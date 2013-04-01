@@ -1,0 +1,89 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.6	//
+CC	Makefile	/^CC=gcc$/;"	m
+DISTANCE	projects03.c	21;"	d	file:
+MKDIR	Makefile	/^MKDIR=mkdir$/;"	m
+N	projects01.c	15;"	d	file:
+N	qsort.c	15;"	d	file:
+NUMS_OF_DIRECTION	projects03.c	20;"	d	file:
+NUM_ALPHABETS	projects04.c	17;"	d	file:
+NUM_DIRECTIONS	projects08.c	19;"	d	file:
+OPTIONS	Makefile	/^OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o$/;"	m
+POINT	projects03.c	22;"	d	file:
+RM	Makefile	/^RM=rm$/;"	m
+SHELL	Makefile	/^SHELL=\/bin\/sh$/;"	m
+X	projects03.c	19;"	d	file:
+Y	projects03.c	18;"	d	file:
+average	average.c	/^double average(double a, double b)$/;"	f
+average	exercises10.c	/^int average(int a[], int n)$/;"	f
+check	exercises02.c	/^int check(int x, int y, int n)$/;"	f
+compute_GPA	exercises11.c	/^float compute_GPA(char grades[], int n)$/;"	f
+create_magic_square	projects05.c	/^void create_magic_square(int n, char magic_square[n][n])$/;"	f
+day_of_year	exercises04.c	/^int day_of_year(int month, int day, int year)$/;"	f
+digit	exercises06.c	/^int digit(int n, int k)$/;"	f
+equal_array	projects04.c	/^int equal_array(int counts1[NUM_ALPHABETS], int counts2[NUM_ALPHABETS])$/;"	f
+evaluate_position	exercises13.c	/^int evaluate_position(char board[8][8])$/;"	f
+f	exercises07.c	/^int f(int a, int b)$/;"	f
+fact	exercises16.c	/^int fact(int n)$/;"	f
+fact	exercises17.c	/^int fact(int n)$/;"	f
+gcd	exercises03.c	/^int gcd(int m, int n)$/;"	f
+gcd	exercises18.c	/^int gcd(int m, int n)$/;"	f
+generate_random_walk	projects03.c	/^void generate_random_walk(char walk[Y][X])$/;"	f
+has_zero	exercises14.c	/^bool has_zero(int a[], int n)$/;"	f
+inner_product	exercises12.c	/^double inner_product(double a[], double b[], int n)$/;"	f
+is_prime	prime.c	/^bool is_prime(int n)$/;"	f
+largest	exercises10.c	/^int largest(int a[], int n)$/;"	f
+main	average.c	/^int main(void)$/;"	f
+main	countdown.c	/^int main(void)$/;"	f
+main	exercises01.c	/^int main(void)$/;"	f
+main	exercises02.c	/^int main(void)$/;"	f
+main	exercises03.c	/^int main(void)$/;"	f
+main	exercises04.c	/^int main(void)$/;"	f
+main	exercises05.c	/^int main(void)$/;"	f
+main	exercises06.c	/^int main(void)$/;"	f
+main	exercises07.c	/^int main(void)$/;"	f
+main	exercises09.c	/^int main(void)$/;"	f
+main	exercises10.c	/^int main(void)$/;"	f
+main	exercises11.c	/^int main(void)$/;"	f
+main	exercises12.c	/^int main(void)$/;"	f
+main	exercises13.c	/^int main(void)$/;"	f
+main	exercises14.c	/^int main(void)$/;"	f
+main	exercises15.c	/^int main(void)$/;"	f
+main	exercises16.c	/^int main(void)$/;"	f
+main	exercises17.c	/^int main(void)$/;"	f
+main	exercises18.c	/^int main(void)$/;"	f
+main	exercises19.c	/^int main(void)$/;"	f
+main	prime.c	/^int main(void)$/;"	f
+main	projects01.c	/^int main(void)$/;"	f
+main	projects02.c	/^int main(void)$/;"	f
+main	projects03.c	/^int main(void)$/;"	f
+main	projects04.c	/^int main(void)$/;"	f
+main	projects05.c	/^int main(void)$/;"	f
+main	projects06.c	/^int main(void)$/;"	f
+main	projects07.c	/^int main(void)$/;"	f
+main	projects08.c	/^int main(void)$/;"	f
+main	pun2.c	/^int main(void)$/;"	f
+main	qsort.c	/^int main(void)$/;"	f
+median	exercises15.c	/^double median(double x, double y, double z)$/;"	f
+num_digits	exercises05.c	/^int num_digits(int n)$/;"	f
+num_positive	exercises10.c	/^int num_positive(int a[], int n)$/;"	f
+pb	exercises19.c	/^void pb(int n)$/;"	f
+play_game	projects08.c	/^bool play_game(void)$/;"	f
+polynomial	projects06.c	/^int polynomial(int x)$/;"	f
+power	projects07.c	/^int power(int x, int n)$/;"	f
+print_array	projects03.c	/^void print_array(char walk[Y][X])$/;"	f
+print_count	countdown.c	/^void print_count(int n)$/;"	f
+print_magic_square	projects05.c	/^void print_magic_square(int n, char magic_square[n][n])$/;"	f
+print_pun	pun2.c	/^void print_pun(void)$/;"	f
+quicksort	qsort.c	/^void quicksort(int a[], int low, int high)$/;"	f
+read_word	projects04.c	/^void read_word(int counts[NUM_ALPHABETS])$/;"	f
+roll_dice	projects08.c	/^int roll_dice(void)$/;"	f
+selection_sort	projects01.c	/^void selection_sort(int a[], int n)$/;"	f
+split	qsort.c	/^int split(int a[], int low, int high)$/;"	f
+swap	exercises09.c	/^void swap(int a, int b)$/;"	f
+tax	projects02.c	/^float tax(float income)$/;"	f
+triangle_area	exercises01.c	/^double triangle_area(double base, double height)$/;"	f

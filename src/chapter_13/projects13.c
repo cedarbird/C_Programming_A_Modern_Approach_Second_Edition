@@ -52,15 +52,12 @@ int read_line(char str[], int n)
 
 void encrypt(char *message, int shift)
 {
-  char ch;
-
   /* caesar cipher */
   for (; *message; message++) {
-    ch = *message;
-    if ('A' <= ch && ch <= 'Z')
-      *message = ((ch - 'A') + shift) % LENGTH_ALPHABETS + 'A';
-    else if ('a' <= ch && ch <= 'z')
-      *message = ((ch - 'a') + shift) % LENGTH_ALPHABETS + 'a';
+    if ('A' <= *message && *message <= 'Z')
+      *message = ((*message - 'A') + shift) % LENGTH_ALPHABETS + 'A';
+    else if ('a' <= *message && *message <= 'z')
+      *message = ((*message - 'a') + shift) % LENGTH_ALPHABETS + 'a';
   }
 }
 
