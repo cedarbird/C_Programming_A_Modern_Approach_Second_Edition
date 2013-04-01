@@ -4,9 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.6	//
-CC	Makefile	/^CC=gcc$/;"	m
 LENGTH	projects05.c	17;"	d	file:
-MKDIR	Makefile	/^MKDIR=mkdir$/;"	m
 MSG_LEN	projects01a.c	15;"	d	file:
 MSG_LEN	projects01b.c	15;"	d	file:
 MSG_LEN	projects02a.c	18;"	d	file:
@@ -19,9 +17,6 @@ N	exercises15.c	14;"	d	file:
 N	projects06.c	15;"	d	file:
 N	projects07.c	15;"	d	file:
 N	reverse3.c	15;"	d	file:
-OPTIONS	Makefile	/^OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o$/;"	m
-RM	Makefile	/^RM=rm$/;"	m
-SHELL	Makefile	/^SHELL=\/bin\/sh$/;"	m
 evaluate_position	exercises18.c	/^int evaluate_position(char *board, int n)$/;"	f
 find_largest	exercises11.c	/^int find_largest(int a[], int n)$/;"	f
 find_largest	exercises16.c	/^int find_largest(int *a, int n)$/;"	f

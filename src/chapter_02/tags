@@ -4,15 +4,10 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.6	//
-CC	Makefile	/^CC=gcc$/;"	m
 FREEZING_PT	celsius.c	15;"	d	file:
-MKDIR	Makefile	/^MKDIR=mkdir$/;"	m
-OPTIONS	Makefile	/^OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o$/;"	m
 PI	projects02.c	15;"	d	file:
 PI	projects03.c	15;"	d	file:
-RM	Makefile	/^RM=rm$/;"	m
 SCALE_FACTOR	celsius.c	16;"	d	file:
-SHELL	Makefile	/^SHELL=\/bin\/sh$/;"	m
 TAX_RATE	projects04.c	15;"	d	file:
 main	celsius.c	/^int main(void)$/;"	f
 main	dweight.c	/^int main(void)$/;"	f

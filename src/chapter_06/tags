@@ -4,14 +4,9 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.6	//
-CC	Makefile	/^CC=gcc$/;"	m
 MAXDAYS_OF_MONTH	projects10.c	17;"	d	file:
 MAXDAYS_OF_YEAR	projects10.c	16;"	d	file:
-MKDIR	Makefile	/^MKDIR=mkdir$/;"	m
 NUM	projects09.c	15;"	d	file:
-OPTIONS	Makefile	/^OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o$/;"	m
-RM	Makefile	/^RM=rm$/;"	m
-SHELL	Makefile	/^SHELL=\/bin\/sh$/;"	m
 main	checking.c	/^int main(void)$/;"	f
 main	exercises01.c	/^int main(void)$/;"	f
 main	exercises02.c	/^int main(void)$/;"	f

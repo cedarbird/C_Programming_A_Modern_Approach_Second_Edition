@@ -4,18 +4,13 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.6	//
-CC	Makefile	/^CC=gcc$/;"	m
 DISTANCE	projects03.c	21;"	d	file:
-MKDIR	Makefile	/^MKDIR=mkdir$/;"	m
 N	projects01.c	15;"	d	file:
 N	qsort.c	15;"	d	file:
 NUMS_OF_DIRECTION	projects03.c	20;"	d	file:
 NUM_ALPHABETS	projects04.c	17;"	d	file:
 NUM_DIRECTIONS	projects08.c	19;"	d	file:
-OPTIONS	Makefile	/^OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o$/;"	m
 POINT	projects03.c	22;"	d	file:
-RM	Makefile	/^RM=rm$/;"	m
-SHELL	Makefile	/^SHELL=\/bin\/sh$/;"	m
 X	projects03.c	19;"	d	file:
 Y	projects03.c	18;"	d	file:
 average	average.c	/^double average(double a, double b)$/;"	f

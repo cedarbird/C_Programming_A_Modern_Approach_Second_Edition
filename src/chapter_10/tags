@@ -4,12 +4,10 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.6	//
-CC	Makefile	/^CC=gcc$/;"	m
 HEIGHT	projects07.c	19;"	d	file:
 MAX_LENGTH	projects06.c	19;"	d	file:
 MAX_NUMBER	guess.c	17;"	d	file:
 MAX_NUMBER	guess2.c	17;"	d	file:
-MKDIR	Makefile	/^MKDIR=mkdir$/;"	m
 NUM_CARDS	poker.c	19;"	d	file:
 NUM_CARDS	projects02.c	19;"	d	file:
 NUM_CARDS	projects03.c	17;"	d	file:
@@ -26,10 +24,7 @@ NUM_SUITS	poker.c	18;"	d	file:
 NUM_SUITS	projects02.c	18;"	d	file:
 NUM_SUITS	projects04.c	18;"	d	file:
 NUM_SUITS	projects05.c	18;"	d	file:
-OPTIONS	Makefile	/^OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o$/;"	m
 RANK	projects03.c	18;"	d	file:
-RM	Makefile	/^RM=rm$/;"	m
-SHELL	Makefile	/^SHELL=\/bin\/sh$/;"	m
 STACK_SIZE	projects01.c	17;"	d	file:
 STACK_SIZE	projects06.c	18;"	d	file:
 SUIT	projects03.c	19;"	d	file:

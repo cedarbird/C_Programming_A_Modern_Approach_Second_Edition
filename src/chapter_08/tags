@@ -4,7 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.6	//
-CC	Makefile	/^CC=gcc$/;"	m
 COLS	exercises10.c	16;"	d	file:
 COLS	exercises11.c	16;"	d	file:
 COLS	projects07.c	16;"	d	file:
@@ -28,7 +27,6 @@ LENGTH_ALPHABETS	projects16.c	17;"	d	file:
 MAXLENGHS	projects11.c	26;"	d	file:
 MAX_LENGTH	projects13.c	17;"	d	file:
 MAX_LENGTH	projects15.c	18;"	d	file:
-MKDIR	Makefile	/^MKDIR=mkdir$/;"	m
 N	exercises05.c	14;"	d	file:
 N	projects04.c	14;"	d	file:
 N	reverse.c	15;"	d	file:
@@ -45,13 +43,10 @@ NUM_RATES	projects05.c	15;"	d	file:
 NUM_STUDENTS	projects08.c	16;"	d	file:
 NUM_SUITS	deal.c	18;"	d	file:
 ODD_CHAR	exercises11.c	17;"	d	file:
-OPTIONS	Makefile	/^OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o$/;"	m
 RIGHT	projects09.c	22;"	d	file:
-RM	Makefile	/^RM=rm$/;"	m
 ROWS	exercises10.c	15;"	d	file:
 ROWS	exercises11.c	15;"	d	file:
 ROWS	projects07.c	15;"	d	file:
-SHELL	Makefile	/^SHELL=\/bin\/sh$/;"	m
 SIDE	projects09.c	18;"	d	file:
 SIZE	projects04.c	15;"	d	file:
 UP	projects09.c	19;"	d	file:
