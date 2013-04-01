@@ -47,7 +47,7 @@ bool are_anagrams(const char *word1, const char *word2)
 
   for (; *word2; word2++)
     if (isalpha(*word2))
-      amount_alphas[tolower(*word2) - 'a']++;
+      amount_alphas[tolower(*word2) - 'a']--;
 
   for (int i = 0; i < LENGTH_ALPHABETS; i++)
     if (amount_alphas[i] != 0) {
