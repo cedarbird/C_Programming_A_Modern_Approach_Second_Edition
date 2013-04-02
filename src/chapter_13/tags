@@ -5,15 +5,16 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.6	//
 EXPRESSION_LEN	projects15.c	20;"	d	file:
-LENGTH	projects12.c	17;"	d	file:
 LENGTH_ALPHABETS	projects13.c	19;"	d	file:
 LENGTH_ALPHABETS	projects14.c	17;"	d	file:
+MAX_CHARS	projects12.c	18;"	d	file:
 MAX_LENGTH	projects13.c	18;"	d	file:
 MAX_LENGTH	projects15.c	19;"	d	file:
 MAX_REMIND	projects02a.c	16;"	d	file:
 MAX_REMIND	projects02b.c	16;"	d	file:
 MAX_REMIND	projects02c.c	16;"	d	file:
 MAX_REMIND	remind.c	16;"	d	file:
+MAX_WORDS	projects12.c	17;"	d	file:
 MSG_LEN	projects02a.c	17;"	d	file:
 MSG_LEN	projects02b.c	17;"	d	file:
 MSG_LEN	projects02c.c	17;"	d	file:
@@ -97,6 +98,7 @@ read_line	projects15.c	/^int read_line(char str[], int n)$/;"	f
 read_line	projects16.c	/^int read_line(char str[], int n)$/;"	f
 read_line	projects17.c	/^int read_line(char str[], int n)$/;"	f
 read_line	remind.c	/^int read_line(char str[], int n)$/;"	f
+read_word	projects12.c	/^char read_word(char *word)$/;"	f
 remove_filename	exercises18.c	/^void remove_filename(char *url)$/;"	f
 reverse	projects16.c	/^void reverse(char *messages)$/;"	f
 reverse_name	projects10.c	/^void reverse_name(char *name)$/;"	f
