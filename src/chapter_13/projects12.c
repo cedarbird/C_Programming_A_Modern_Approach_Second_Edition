@@ -27,7 +27,7 @@ int main(void)
   /* read sentence - end with period, question mark or exlamation point. */
   printf("Enter a sentence: ");
   for (num_words = 0; num_words < MAX_WORDS; num_words++)
-    if (terminator = read_word(words[num_words]))
+    if ((terminator = read_word(words[num_words])))
       break;
 
   /* reverse sentence */
@@ -47,7 +47,10 @@ char read_word(char *word)
   while ((ch = getchar()) == ' ')
     ;
 
-  *word++ = ch;
+  if (ch == '.' || ch == '?' || ch == '!' || ch == '\n')
+    return ch;
+  else
+    *word++ = ch;
 
   for (;;) {
     ch = getchar();
