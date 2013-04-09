@@ -12,6 +12,7 @@ compile:
 
 	${CC} ${OPTIONS} bin/exercises01	exercises01.c
 	${CC} ${OPTIONS} bin/exercises02	exercises02.c
+	${CC} ${OPTIONS} bin/exercises06	exercises06.c
 
 clean:
 	${RM} -fR bin

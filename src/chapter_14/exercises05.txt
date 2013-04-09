@@ -1,0 +1,23 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/* exercises05.txt (Chapter 14, page 345) */
+
+ (a) The call of putchar expands into the following statement:
+
+putchar(('a'<=(s[++i])&&(s[++i])<='z'?(s[++i])-'a'+'A':(s[++i])));
+
+The character a is less than or equal to s[1] (which is b), yielding a true
+condition. The character s[2] (which is c) is less than or equal to z, which
+is also true. The value printed is s[3]-'a'+'A', which is D (assuming that the
+character set is ASCII).
+
+(b) The character a is not less than or equal to s[1] (which is 1) so the test
+condition is false. The value printed is s[2], which is 2.
+

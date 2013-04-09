@@ -1,0 +1,39 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/* exercises07.txt (Chapter 14, page 345) */
+
+(a)
+
+long long_max(long x, long y)
+{
+  return x > y ? x : y;
+}
+
+The preprocessor would actually put all the tokens on one line, but this
+version is more readable.
+
+(b)
+
+The problem with types such as unsigned long is that they require two
+words, which prevents GENERIC_MAX from creating the desired function name. For
+example, GENERIC_MAX(unsigned long) would expand into
+
+unsigned long unsigned long_max(unsigned long x, unsigned long y)
+{
+  return x > y ? x : y;
+}
+
+(c) To make GENERIC_MAX work with any basic type, use a type definition to
+rename the type:
+
+typedef unsigned long ULONG;
+
+We can now write GENERIC_MAX(ULONG). 
+

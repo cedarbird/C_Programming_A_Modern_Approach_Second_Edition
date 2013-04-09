@@ -7,17 +7,17 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises02.c (Chapter 14, page 345) */
+/* exercises06.c (Chapter 14, page 345) */
 
 #include <stdio.h>
+#include <math.h>
 
-#define NELEMS(a) ((int) (sizeof(a) / sizeof(a[0])))
+#define DISP(f, x) printf(#f "(%g) = %g\n", (x),  f(x))
 
 int main(void)
 {
-  int a[] = {0, 1, 2};
-
-  printf("{0, 1, 2} size: %d\n", NELEMS(a));
+  DISP(sqrt, 3.0);
+  DISP(sqrt, 3.0 + 2.0);
 
   return 0;
 }
