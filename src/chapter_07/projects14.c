@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects14.c (Chapter 07, page 159) */
-/* Uses Newton's methnod to compute
+/* Uses Newton's method to compute
    the square x of a positive floating-point number */
 /* Example: (we also let y = 1)
  *  x y       x/y     Average of y and x/y
