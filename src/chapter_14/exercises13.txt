@@ -1,0 +1,40 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/* exercises13.txt (Chapter 14, page 347) */
+
+(a)
+# 2 "exercises13c.c" 2
+
+
+
+void f(void);
+
+int main(void)
+{
+  f();
+
+
+
+  return 0;
+}
+
+void f(void)
+{
+
+
+
+  printf("N is undefined\n");
+
+}
+
+(b)
+
+N is undefined
+

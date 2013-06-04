@@ -1,0 +1,46 @@
+preprocessing:
+
+Blank line
+Blank line
+Blank line
+Blank line
+Blank line
+Blank line
+Blank line
+
+int main(void)
+{
+  int a[= 10], i, j, k, m;
+
+Blank line
+  i = j;
+Blank line
+Blank line
+Blank line
+
+  i = 10 * j+1;
+  i = (x,y) x-y(j, k);
+  i = ((((j)*(j)))*(((j)*(j))));
+  i = (((j)*(j))*(j));
+  i = jk;
+  puts("i" "j");
+
+Blank line
+  i = SQR(j);
+Blank line
+  i = (j);
+
+  return 0;
+}
+
+Some preprocessors delete white-space characters at the beginning of a line,
+so your results may vary. Three lines will cause errors when the program is
+compiled. Two contain syntax errors:
+
+int a[= 10], i, j, k, m;
+i = (x,y) x-y(j, k);
+
+The third refers to an undefined variable:
+
+i = jk;
+

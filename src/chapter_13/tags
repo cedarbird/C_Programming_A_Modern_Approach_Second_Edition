@@ -3,7 +3,7 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.6	//
+!_TAG_PROGRAM_VERSION	5.8	//
 EXPRESSION_LEN	projects15.c	20;"	d	file:
 LENGTH_ALPHABETS	projects13.c	19;"	d	file:
 LENGTH_ALPHABETS	projects14.c	17;"	d	file:
