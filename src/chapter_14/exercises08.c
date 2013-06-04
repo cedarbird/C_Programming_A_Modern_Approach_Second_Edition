@@ -10,8 +10,8 @@
 /* exercises08.c (Chapter 14, page 346) */
 
 #include <stdio.h>
-#define STRINGIFY(x) #x
-#define TOSTRING(x) STRINGIFY(x)
+#define STR(x) #x
+#define TOSTRING(x) STR(x)
 #define LINE_FILE "Line " TOSTRING(__LINE__) " of file " __FILE__
 
 int main(void)
