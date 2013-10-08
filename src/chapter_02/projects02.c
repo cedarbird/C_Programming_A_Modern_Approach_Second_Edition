@@ -17,7 +17,7 @@
 int main(void)
 {
   printf("The volume of a sphere with 10-meter radius is: %.2f\n",
-           4.0f * PI * 10.0f * 10.0f * 10.0f / 3.0f);
+           4.0f / 3.0f * PI * 10.0f * 10.0f * 10.0f);
 
   return 0;
 }

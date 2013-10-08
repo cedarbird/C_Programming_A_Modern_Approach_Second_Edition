@@ -8,8 +8,8 @@
  *********************************************************/
 
 exercises06.txt (Chapter 02, page 33)
-Used by core & standard library, should be
+ 1. identifiers beginning with an underscore and an uppercase letter
+*2. identifiers containing adjacent underscores (or "double underscore")
+used by core & standard library, should be
 Reserved in any scope, including for use as implementation macros:
-  identifiers beginning with an underscore and an uppercase letter
-* identifiers containing adjacent underscores (or "double underscore")
 

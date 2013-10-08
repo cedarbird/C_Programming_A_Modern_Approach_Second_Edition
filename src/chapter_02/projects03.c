@@ -22,7 +22,7 @@ int main(void)
   scanf("%f", &radius);
 
   printf("The volume of a sphere with %.2f-meter radius is: %.2f\n",
-           radius, 4.0f * PI * radius * radius * radius / 3.0f);
+           radius, 4.0f / 3.0f * PI * radius * radius * radius);
 
   return 0;
 }

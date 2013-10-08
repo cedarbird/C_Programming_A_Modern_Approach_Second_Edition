@@ -10,6 +10,18 @@
 /* exercises04.c (Chapter 02, page 33) */
 /* Here's one possible program: */
 /* Warning: it's wrong to use uninitialized variable */
+/*
+ *  When compiled using GCC and then executed, this program produced the following output:
+ *
+ *  Value of i: 5618848
+ *  Value of j: 0
+ *  Value of k: 6844404
+ *  Value of x: 3.98979e-34
+ *  Value of y: 9.59105e-39
+ *  Value of z: 9.59105e-39
+ *
+ *  The values printed depend on many factors, so the chance that you'll get exactly these numbers is small.
+ */
 
 #include <stdio.h>
 

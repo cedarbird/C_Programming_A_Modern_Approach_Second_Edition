@@ -9,4 +9,3 @@
 
 exercises09.txt (Chapter 02, page 34)
 answer = ( 3 * q - p * p ) / 3 ;
-

@@ -9,12 +9,13 @@
 
 /* exercises02.c (Chapter 02, page 33) */
 /**
- * print message:
- * Parkinson's Law:
- * Work expands so as to fill the time
- * available for its completion.
+ *(a) The program contains one directive (#include)
+ *     and four statements (three calls of printf and one return).
+ *(b)
+ *Parkinson's Law:
+ *Work expands so as to fill the time
+ *available for its completion.
  */
-
 #include <stdio.h>
 
 int main(void)
@@ -22,6 +23,7 @@ int main(void)
   printf("Parkinson's Law:\nWork expands so as to ");
   printf("fill the time\n");
   printf("available for its completion.\n");
+
   return 0;
 }
 
