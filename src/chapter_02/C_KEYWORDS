@@ -17,8 +17,8 @@
     17	inline      (c99)
     18	int
     19	long
-    20	register    (c99)
-    21	restrict
+    20	register
+    21	restrict    (c99)
     22	return
     23	short
     24	signed
