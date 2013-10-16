@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects03.c (Chapter 03, page 50) */
-/* Prints ISBN */
+/* Prints ISBN-13 */
 
 #include <stdio.h>
 
@@ -17,7 +17,8 @@ int main(void)
   int gs1_prefix, group_id, publisher_code, item_number, check_digit;
 
   printf("Enter ISBN: ");
-  scanf("%d-%d-%d-%d-%d", &gs1_prefix, &group_id, &publisher_code, &item_number, &check_digit);
+  scanf("%d-%d-%d-%d-%d",
+          &gs1_prefix, &group_id, &publisher_code, &item_number, &check_digit);
 
   printf("GS1 prefix: %d\n", gs1_prefix);
   printf("Group identifier: %d\n", group_id);
