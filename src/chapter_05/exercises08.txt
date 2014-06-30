@@ -8,5 +8,5 @@
  *********************************************************/
 
 /* exercises08.txt (Chapter 05, page 94) */
-teenager = (13 <= age && age <= 19) ? true : false;
+teenager = (13 <= age && age <= 19);
 
