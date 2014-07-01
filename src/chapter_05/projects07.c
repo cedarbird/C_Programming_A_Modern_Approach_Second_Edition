@@ -42,10 +42,10 @@ int main(void)
   else
     printf("The largest is : %d\n", max2);
 
-  if (min1 > min2)
-    printf("The smallest is : %d\n", min2);
-  else
+  if (min1 < min2)
     printf("The smallest is : %d\n", min1);
+  else
+    printf("The smallest is : %d\n", min2);
 
   return 0;
 }
