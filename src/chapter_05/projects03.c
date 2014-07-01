@@ -14,7 +14,7 @@
 
 int main(void)
 {
-  float commission, price, value;
+  float commission, rival_commission, price, value;
   int share;
 
   printf("Enter number of shares and price per share: ");
@@ -38,7 +38,13 @@ int main(void)
   if (commission < 39.00f)
     commission = 39.00f;
 
-  printf("Commission: $%.2f\n", commission);
+ if (share < 2000)
+   rival_commission = 33.00f + 0.03f * share;
+ else
+   rival_commission = 33.00f + 0.02f * share;
+
+  printf("Original's commission: $%.2f\n", commission);
+  printf("Rival's commission: $%.2f\n", rival_commission);
 
   return 0;
 }
