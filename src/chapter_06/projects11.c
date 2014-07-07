@@ -20,10 +20,8 @@ int main(void)
 
   printf("Enter a number: ");
   scanf("%d", &n);
-  for (int i = 2; i <= n; i++) {
-    a *= i;
-    e += 1.0f / a;
-  }
+  for (int i = 2; i <= n; i++)
+    e += 1.0f / (a *= i);
   printf("the e is %f.\n", e);
 
   return 0;
