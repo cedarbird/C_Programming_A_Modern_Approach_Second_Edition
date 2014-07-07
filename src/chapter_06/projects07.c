@@ -20,10 +20,8 @@ int main(void)
   printf("Enter number of entries in table: ");
   scanf("%d", &n);
 
-  for (i = 1, odd = 3, square = 1; i <= n; ++i, odd += 2) {
+  for (i = 1, odd = 3, square = 1; i <= n; ++i, square += odd, odd += 2)
     printf("%10d%10d\n", i, square);
-    square += odd;
-  }
 
   return 0;
 }
