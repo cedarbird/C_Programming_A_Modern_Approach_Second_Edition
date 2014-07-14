@@ -23,8 +23,10 @@ int main(void)
   /* while (getchar() != '\n'); -> advoid abnormal read error */
 
   /* Adjusts time */
-  if (toupper(ch) == 'A' && hours == 12) hours -= 12;
-  if (toupper(ch) == 'P' && hours != 12) hours += 12;
+  if (toupper(ch) == 'A' && hours == 12)
+    hours -= 12;
+  if (toupper(ch) == 'P' && hours != 12)
+    hours += 12;
 
   printf("Equivalment 24-hour time: %.2d:%.2d\n", hours, minutes);
 
