@@ -20,21 +20,23 @@ int main(void)
   printf("Enter an expression: ");
   scanf("%f", &result);
 
-  while ((ch = getchar()) != '\n')
+  do {
+    scanf("%c", &ch);
     switch (ch) {
       case '+': scanf("%f", &value); result += value; break;
       case '-': scanf("%f", &value); result -= value; break;
       case '*': scanf("%f", &value); result *= value; break;
       case '/': scanf("%f", &value);
         if (value != 0.0f) {
-                                     result /= value; break;
+          result /= value; break;
         } else {
           printf("can't divide with 0.");
           return 1; /* error exit */
         }
     }
+  } while (ch != '\n');
 
-  printf("The result is %f\n", result);
+  printf("Value of expression: %.1f\n", result);
 
   return 0;
 }
