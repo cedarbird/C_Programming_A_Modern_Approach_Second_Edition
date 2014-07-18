@@ -16,18 +16,18 @@
 #include <time.h>
 
 #define SIDE 10
-#define UP 0
-#define DOWN 1
-#define LEFT 2
+#define UP    0
+#define DOWN  1
+#define LEFT  2
 #define RIGHT 3
-#define DIRECTION 4
+#define NUM_DIRECTIONS 4
 #define WALK_DISTANCE 26
 
 int main(void)
 {
   char grid[SIDE][SIDE];
   char ch = 'A';
-  int position[DIRECTION], x = 0, y = 0, num_selections;
+  int position[NUM_DIRECTIONS], x = 0, y = 0, num_selections;
 
   /* grid initializer */
   for (int i = 0; i < SIDE; i++)
@@ -68,7 +68,7 @@ int main(void)
   /* show result */
   for (int i = 0; i < SIDE; i++) {
     for (int j = 0; j < SIDE; j++)
-      printf("%2c", grid[i][j]);
+      printf("%-2c", grid[i][j]);
     printf("\n");
   }
 
