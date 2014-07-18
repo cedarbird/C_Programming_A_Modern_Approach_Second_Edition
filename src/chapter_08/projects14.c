@@ -34,8 +34,7 @@ int main(void)
   /* reverse sentence */
   printf("Reversal of sentence: ");
   for (i = word_ending; i >= 0; i--) {
-    ch = sentence[i];
-    if (ch == ' ') {
+    if (sentence[i] == ' ') {
       for (j = i + 1; j <= word_ending; j++)
         putchar(sentence[j]);
       putchar(' ');
