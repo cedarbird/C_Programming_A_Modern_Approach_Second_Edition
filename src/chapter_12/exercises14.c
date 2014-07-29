@@ -14,7 +14,7 @@
 void search(const int *a, int n, int temperature, int *pindex, int *num)
 {
   const int *p = a;
-  int i = 1;
+  int i = 0;
 
   while (p < a + n) {
     if (temperature == *p++) {
@@ -33,7 +33,7 @@ int main(void)
   search(&temperatures[0][0], 168, 32, &index[0][0], &num);
 
   for (p = &index[0][0]; p < &index[0][0] + num; p++)
-    printf("[%d][%d]\n", *p / 24, *p % 24 - 1);
+    printf("[%d][%d]\n", *p / 24, *p % 24);
 
   return 0;
 }
