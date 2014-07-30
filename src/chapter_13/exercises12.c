@@ -21,21 +21,21 @@ int main(void)
   printf("Enter a filename: ");
   scanf("%s", file_name);
   get_extension(file_name, extension);
-  printf("Extension: %s\n", extension); 
+  printf("Extension: %s\n", extension);
 
   return 0;
 }
 
 void get_extension(char *file_name, char *extension)
 {
-  char *p = file_name + strlen(file_name);
+  char *p = file_name;
 
-  for (; p >= file_name; p--)
-    if (*p == '.') {
-      strcpy(extension, p + 1);
+  while ( *p )
+    if (*p++ == '.') {
+      strcpy(extension, p);
       return;
     }
 
-  *extension='\0';
+  *extension = '\0';
 }
 
