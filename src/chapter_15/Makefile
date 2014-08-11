@@ -18,6 +18,12 @@ word.o: word.c word.h
 line.o: line.c line.h
 	${CC} ${OPTIONS} -c line.c line.h
 
+projects01: justify.o word.o prj01_line.o
+	${CC} -o projects01 justify.o word.o prj01_line.o
+
+prj01_line.o: prj01_line.c line.h
+	${CC} ${OPTIONS} -c prj01_line.c line.h
+
 projects03: projects03.c quicksort.h quicksort.o
 	${CC} -o projects03 projects03.c quicksort.h quicksort.o
 
