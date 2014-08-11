@@ -24,6 +24,15 @@ projects01: justify.o word.o prj01_line.o
 prj01_line.o: prj01_line.c line.h
 	${CC} ${OPTIONS} -c prj01_line.c line.h
 
+projects02: projects02.o prj02_word.o line.o
+	${CC} -o projects02 projects02.o prj02_word.o line.o
+
+projects02.o: projects02.c word.h line.h
+	${CC} ${OPTIONS} -c projects02.c word.h line.h
+
+prj02_word.o: prj02_word.c word.h
+	${CC} ${OPTIONS} -c prj02_word.c word.h
+
 projects03: projects03.c quicksort.h quicksort.o
 	${CC} -o projects03 projects03.c quicksort.h quicksort.o
 
