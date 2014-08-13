@@ -1,0 +1,41 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/* exercises04.txt (Chapter 16, page 408) */
+
+ (a)
+
+ typedef struct {
+     double real, imaginary;
+ } Complex;
+
+ (b) Complex c1, c2, c3;
+
+ (c)
+
+ Complex make_complex(double real, double imaginary)
+ {
+     Complex c;
+
+     c.real = real;
+     c.imaginary = imaginary;
+     return c;
+ }
+
+ (d)
+
+ Complex add_complex(Complex c1, Complex c2)
+ {
+     Complex c3;
+
+     c3.real = c1.real + c2.real;
+     c3.imaginary = c1.imaginary + c2.imaginary;
+     return c3;
+ }
+
