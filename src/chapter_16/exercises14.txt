@@ -1,0 +1,47 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/* exercises14.txt (Chapter 16, page 411) */
+
+(a)
+
+double area(struct shape s)
+{
+  if (s.shape_kind == RECTANGLE)
+    return s.u.rectangle.height * s.u.rectangle.width;
+  else
+    return 3.14159 * s.u.circle.radius * s.u.circle.radius;
+}
+
+(b)
+
+struct shape move(struct shape s, int x, int y)
+{
+  struct shape new_shape = s;
+
+  new_shape.center.x += x;
+  new_shape.center.y += y;
+  return new_shape;
+}
+
+(c)
+
+struct shape scale(struct shape s, double c)
+{
+  struct shape new_shape = s;
+
+  if (new_shape.shape_kind == RECTANGLE) {
+    new_shape.u.rectangle.height *= c;
+    new_shape.u.rectangle.width *= c;
+  } else
+    new_shape.u.circle.radius *= c;
+
+  return new_shape;
+}
+
