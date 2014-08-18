@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects01.c (Chapter 16, page 412) */
+/* projects03.c (Chapter 16, page 412) */
 /* Maintains a parts database (struct version) */
 
 #include <stdio.h>

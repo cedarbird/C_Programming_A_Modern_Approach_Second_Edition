@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects02.c (Chapter 16, page 412) */
+/* projects04.c (Chapter 16, page 412) */
 /* Maintains a parts database (array version) */
 
 #include <stdio.h>
@@ -20,6 +20,7 @@ struct part {
   int number;
   char name[NAME_LEN+1];
   int on_hand;
+  int price;
 } inventory[MAX_PARTS];
 
 int num_parts = 0;   /* number of parts currently stored */
@@ -86,7 +87,7 @@ int find_part(int number)
  **********************************************************/
 void insert(void)
 {
-  int part_number, i, j;
+  int part_number;
 
   if (num_parts == MAX_PARTS) {
     printf("Database is full; can't add more parts.\n");
@@ -100,18 +101,13 @@ void insert(void)
     return;
   }
 
-  for (i = 0; i < num_parts;i++)
-    if (part_number < inventory[i].number)
-      break;
-
-  for (j = num_parts; j > i; j--)
-    inventory[j] = inventory[j-1];
-
-  inventory[i].number = part_number;
+  inventory[num_parts].number = part_number;
   printf("Enter part name: ");
-  read_line(inventory[i].name, NAME_LEN);
+  read_line(inventory[num_parts].name, NAME_LEN);
   printf("Enter quantity on hand: ");
-  scanf("%d", &inventory[i].on_hand);
+  scanf("%d", &inventory[num_parts].on_hand);
+  printf("Enter price: ");
+  scanf("%d", &inventory[num_parts].price);
   num_parts++;
 }
 
@@ -131,6 +127,7 @@ void search(void)
   if (i >= 0) {
     printf("Part name: %s\n", inventory[i].name);
     printf("Quantity on hand: %d\n", inventory[i].on_hand);
+    printf("Price: %d\n", inventory[i].price);
   } else
     printf("Part not found.\n");
 }
@@ -144,7 +141,7 @@ void search(void)
  **********************************************************/
 void update(void)
 {
-  int i, number, change;
+  int i, number, change, price;
 
   printf("Enter part number: ");
   scanf("%d", &number);
@@ -153,6 +150,9 @@ void update(void)
     printf("Enter change in quantity on hand: ");
     scanf("%d", &change);
     inventory[i].on_hand += change;
+    printf("Enter change in price: ");
+    scanf("%d", &price);
+    inventory[i].price += price;
   } else
     printf("Part not found.\n");
 }
@@ -169,8 +169,8 @@ void print(void)
   int i;
 
   printf("Part Number   Part Name                  "
-         "Quantity on Hand\n");
+         "Quantity on Hand        Price\n");
   for (i = 0; i < num_parts; i++)
-    printf("%7d       %-25s%11d\n", inventory[i].number,
-           inventory[i].name, inventory[i].on_hand);
+    printf("%7d       %-25s%11d%18d\n", inventory[i].number,
+           inventory[i].name, inventory[i].on_hand, inventory[i].price);
 }

@@ -30,5 +30,13 @@ projects02: projects02.c readline.h readline.o
 projects03: projects03.c readline.h readline.o
 	${CC} ${OPTIONS} -o projects03 projects03.c readline.h readline.o
 
-clean:
-	${RM} -fR *.gch *.o
+projects04: projects04.c readline.h readline.o
+	${CC} ${OPTIONS} -o projects04 projects04.c readline.h readline.o
+
+projects05: projects05.c
+	${CC} ${OPTIONS} -o projects05 projects05.c
+
+projects06: projects06.c
+	${CC} ${OPTIONS} -o projects06 projects06.c
+
+
