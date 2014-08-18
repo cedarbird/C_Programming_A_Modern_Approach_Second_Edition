@@ -1,0 +1,23 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/* exercises20.txt (Chapter 16, page 412) */
+
+(a)
+const int pieces_value = {200, 9, 5, 3, 3, 1};
+
+(b)
+const int pieces_value = {
+  [KING]   = 200,
+  [QUEEN]  = 9,
+  [ROOK]   = 5,
+  [BISHOP] = 3,
+  [KNIGHT] = 3,
+  [PAWN]   = 1
+};

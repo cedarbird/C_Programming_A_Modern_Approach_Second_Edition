@@ -1,0 +1,23 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/* exercises20.txt (Chapter 16, page 412) */
+
+(a)
+0 1 2 3
+
+(b)
+11 12 13
+
+(c)
+14 15 16 24 25
+
+(d)
+45 46 47 37 38 39
+

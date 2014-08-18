@@ -21,5 +21,14 @@ exercises06: exercises06.c
 exercises07: exercises07.c
 	${CC} ${OPTIONS} -o exercises06 exercises06.c
 
+projects01: projects01.c
+	${CC} ${OPTIONS} -o projects01 projects01.c
+
+projects02: projects02.c readline.h readline.o
+	${CC} ${OPTIONS} -g -O0 -o projects02 projects02.c readline.h readline.o
+
+projects03: projects03.c readline.h readline.o
+	${CC} ${OPTIONS} -o projects03 projects03.c readline.h readline.o
+
 clean:
 	${RM} -fR *.gch *.o
