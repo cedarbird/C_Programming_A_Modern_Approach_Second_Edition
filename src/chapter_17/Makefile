@@ -15,3 +15,8 @@ inventory2: inventory2.c readline.h readline.o
 readline.o: readline.h readline.c
 	${CC} ${OPTIONS} -c readline.h readline.c
 
+projects01: readline.h projects01.c readline.o
+	${CC} ${OPTIONS} -o projects01 projects01.c readline.h readline.o
+
+projects02: readline.h projects02.c readline.o
+	${CC} ${OPTIONS} -o projects02 projects02.c readline.h readline.o
