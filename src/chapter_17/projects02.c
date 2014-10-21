@@ -7,8 +7,8 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects02.c (Chapter 17, page 456) */
-/* Add sort function */
+/* projects03.c (Chapter 17, page 456) */
+/* Maintains a parts database (sort version) */
 
 #include <stdio.h>
 #include <stdlib.h>

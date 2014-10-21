@@ -188,14 +188,17 @@ void erase(void)
        cur != NULL && number != cur->number;
        prev = cur, cur = cur->next)
     ;
-  if (prev == NULL)
+  if (cur == NULL) {
+    printf("Part not found.\n");
+    return;
+  }
+  if (prev == NULL) {
     inventory = cur->next;
     free(cur);
-  else if (cur != NULL) {
+  } else {
     prev->next = cur->next;
     free(cur);
-  } else
-    printf("Part not found.\n");
+  }
 }
 
 /**********************************************************

@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* projects01.c (Chapter 17, page 456) */
-/* Add auto extend function */
+/* Maintains a parts database (memory auto extend version) */
 
 #include <stdio.h>
 #include <stdlib.h>
