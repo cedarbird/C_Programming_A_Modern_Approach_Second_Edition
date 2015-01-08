@@ -10,22 +10,22 @@
 /* exercises05.c (Chapter 16, page 408) */
 #include <stdio.h>
 
-typedef struct date {
+struct date {
   int year;
   int month;
   int day;
-} date;
+};
 
 int day_of_year(struct date d);
 
 int main(void)
 {
-  printf("%d\n", day_of_year((date){2014, 3, 1}));
+  printf("%d\n", day_of_year((struct date){2014, 3, 1}));
 
   return 0;
 }
 
-int day_of_year(date d)
+int day_of_year(struct date d)
 {
   int num_days[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
   int day_count = 0, i;
