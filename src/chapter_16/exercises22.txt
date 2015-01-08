@@ -7,13 +7,13 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises20.txt (Chapter 16, page 412) */
+/* exercises22.txt (Chapter 16, page 412) */
 
 (a)
-const int pieces_value = {200, 9, 5, 3, 3, 1};
+const int pieces_value[] = {200, 9, 5, 3, 3, 1};
 
 (b)
-const int pieces_value = {
+const int pieces_value[] = {
   [KING]   = 200,
   [QUEEN]  = 9,
   [ROOK]   = 5,
