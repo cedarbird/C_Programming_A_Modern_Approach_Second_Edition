@@ -9,4 +9,4 @@
 
 /* exercises12.txt (Chapter 16, page 410) */
 
-8 + 4 + 8 + 4 + 4 = 28
+4 + 8 + 4 = 16 (= struct e)
