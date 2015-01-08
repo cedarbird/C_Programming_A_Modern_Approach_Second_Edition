@@ -100,7 +100,7 @@ void insert(void)
     return;
   }
 
-  for (i = 0; i < num_parts;i++)
+  for (i = 0; i < num_parts; i++)
     if (part_number < inventory[i].number)
       break;
 
@@ -174,3 +174,4 @@ void print(void)
     printf("%7d       %-25s%11d\n", inventory[i].number,
            inventory[i].name, inventory[i].on_hand);
 }
+
