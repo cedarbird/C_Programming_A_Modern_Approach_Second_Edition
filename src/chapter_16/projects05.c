@@ -38,13 +38,13 @@ struct flight_time ft[] = {{{ 8,  0}, {10, 16}},
 
 int main(void)
 {
-  int hours, minutes, minutes_from_midnight, i;
-
+  int minutes_from_midnight, i;
+  struct time t;
 
   printf("Enter a 24-hour time: ");
-  scanf("%d :%d", &hours, &minutes);
+  scanf("%d :%d", &t.hour, &t.minute);
 
-  minutes_from_midnight = calculate_minutes((struct time){hours, minutes});
+  minutes_from_midnight = calculate_minutes(t);
 
   for (i = NUM_FLIGHTS - 1; i >= 0; i--)
     if (minutes_from_midnight > calculate_minutes(ft[i].departure_time)) {
