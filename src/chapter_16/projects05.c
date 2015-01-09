@@ -13,7 +13,7 @@
 
 #include <stdio.h>
 
-#define SIZE_OF_ARRAY(array) (sizeof(array)/sizeof((array)[0]))
+#define NUM_FLIGHTS (sizeof(ft)/sizeof(ft[0]))
 
 struct time {
   int hour;
@@ -46,13 +46,17 @@ int main(void)
 
   minutes_from_midnight = calculate_minutes((struct time){hours, minutes});
 
-  for (i = SIZE_OF_ARRAY(ft) - 1; i >= 0; i--)
+  for (i = NUM_FLIGHTS - 1; i >= 0; i--)
     if (minutes_from_midnight > calculate_minutes(ft[i].departure_time)) {
-      printf("Closest departure time is %.2d:%.2d, arriving at %.2d:%.2d.\n",
-              ft[i].departure_time.hour, ft[i].departure_time.minute,
-              ft[i].arrival_time.hour,   ft[i].arrival_time.minute);
       break;
     }
+
+  if (i < 0)
+    i = NUM_FLIGHTS - 1;
+
+  printf("Closest departure time is %.2d:%.2d, arriving at %.2d:%.2d.\n",
+          ft[i].departure_time.hour, ft[i].departure_time.minute,
+          ft[i].arrival_time.hour,   ft[i].arrival_time.minute);
 
   return 0;
 }
