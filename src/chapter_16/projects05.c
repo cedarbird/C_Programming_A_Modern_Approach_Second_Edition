@@ -12,58 +12,53 @@
    is closest to that entered bu the user */
 
 #include <stdio.h>
-#define NUM_FLIGHTS 8
-typedef struct flight_time {
-  int departure_time;
-  int arrival_time;
-} flight_time;
 
-typedef struct time {
+#define SIZE_OF_ARRAY(array) (sizeof(array)/sizeof((array)[0]))
+
+struct time {
   int hour;
   int minute;
-} time;
+};
 
-time convert24to12(time t);
+struct flight_time {
+  struct time departure_time;
+  struct time arrival_time;
+};
+
+int calculate_minutes(struct time t);
+
+struct flight_time ft[] = {{{ 8,  0}, {10, 16}},
+                           {{ 9, 43}, {11, 52}},
+                           {{11, 19}, {13, 31}},
+                           {{12, 47}, {15,  0}},
+                           {{14,  0}, {16,  8}},
+                           {{15, 45}, {17, 55}},
+                           {{19,  0}, {21, 20}},
+                           {{21, 45}, {23, 58}}};
 
 int main(void)
 {
   int hours, minutes, minutes_from_midnight, i;
-  flight_time ft[NUM_FLIGHTS]
-                   = {{ 8 * 60     , 10 * 60 + 16},
-                      { 9 * 60 + 43, 11 * 60 + 52},
-                      {11 * 60 + 19, 13 * 60 + 31},
-                      {12 * 60 + 47, 15 * 60     },
-                      {14 * 60     , 16 * 60 +  8},
-                      {15 * 60 + 45, 17 * 60 + 55},
-                      {19 * 60     , 21 * 60 + 20},
-                      {21 * 60 + 45, 23 * 60 + 58}};
 
 
   printf("Enter a 24-hour time: ");
   scanf("%d :%d", &hours, &minutes);
 
-  minutes_from_midnight = hours * 60 + minutes;
+  minutes_from_midnight = calculate_minutes((struct time){hours, minutes});
 
-  for (i = NUM_FLIGHTS - 1; i >= 0; i--)
-    if (minutes_from_midnight > ft[i].departure_time) {
-      printf("Closest departure time is %d, arriving at %d.\n",
-              ft[i].departure_time, ft[i].arrival_time);
+  for (i = SIZE_OF_ARRAY(ft) - 1; i >= 0; i--)
+    if (minutes_from_midnight > calculate_minutes(ft[i].departure_time)) {
+      printf("Closest departure time is %.2d:%.2d, arriving at %.2d:%.2d.\n",
+              ft[i].departure_time.hour, ft[i].departure_time.minute,
+              ft[i].arrival_time.hour,   ft[i].arrival_time.minute);
       break;
     }
 
   return 0;
 }
 
-time convert24to12(time t)
+int calculate_minutes(struct time t)
 {
-  if (t.hour == 0)
-
-    printf("12:%.2d AM\n", minutes);
-  else if (hours < 12)
-    printf("%d:%.2d AM\n", hours, minutes);
-  else if (hours == 12)
-    printf("%d:%.2d PM\n", hours, minutes);
-  else
-    printf("%d:%.2d PM\n", hours - 12, minutes);
+  return t.hour * 60 + t.minute;
 }
 
