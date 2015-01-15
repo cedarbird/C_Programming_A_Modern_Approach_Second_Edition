@@ -9,7 +9,18 @@
 
 /* exercises01.txt (Chapter 15, page 373) */
 
-(a)
-  1. team work
-(b)
+(a) advantages
+  1. Speed up compilation
+  2. Increase organization(Files can contain all functions from a related group.)
+  3. Facilitate code reuse
+  4. Share code between projects
+  5. Team work(Split coding responsibilities among programmers)
+  6. An object oriented style can be used.
+(b) disadvantages
+  None directly. If you're using C anyway, it's the best way to do things.
+  If you've got a choice of language/compiler, then maybe you can pick one
+  where this is not an issue. The only thing to consider with splitting
+  declarations into header files is to avoid mutually recursive
+  #include-statements - but that's what include guards are for.
+
 
