@@ -9,7 +9,6 @@
 
 /* exercises04.c (Chapter 15, page 374) */
 #include <stdio.h>
-
 #include "exercises04.h"
 
 int main(void)

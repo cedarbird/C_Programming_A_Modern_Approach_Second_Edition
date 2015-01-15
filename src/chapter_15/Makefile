@@ -18,6 +18,9 @@ word.o: word.c word.h
 line.o: line.c line.h
 	${CC} ${OPTIONS} -c line.c line.h
 
+exercises04: exercises04.c exercises04.h
+	${CC} ${OPTIONS} -DDEBUG -o exercises04 exercises04.c exercises04.h
+
 projects01: justify.o word.o prj01_line.o
 	${CC} ${OPTIONS} -o projects01 justify.o word.o prj01_line.o
 
@@ -50,6 +53,3 @@ projects05: projects05.c stack.h stack.o
 
 stack.o: stack.h stack.c
 	${CC} ${OPTIONS} -c stack.c stack.h
-
-clean:
-	${RM} -fR *.gch *.o
