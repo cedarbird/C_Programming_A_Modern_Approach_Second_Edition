@@ -15,10 +15,10 @@ CC=gcc
 OPTIONS=-O -Wall -W -pedantic -ansi -std=c99
 
 demo: demo.o f1.o f2.o
-	${CC} -o demo demo.o f1.o f2.o
+	${CC} -o demo main.o f1.o f2.o
 
-demo.o: demo.c f1.h
-	${CC} ${OPTIONS} -c demo.c f1.h
+main.o: main.c f1.h
+	${CC} ${OPTIONS} -c main.c f1.h
 
 f1.o: f1.c f1.h f2.h
 	${CC} ${OPTIONS} -c f1.c f1.h f2.h
