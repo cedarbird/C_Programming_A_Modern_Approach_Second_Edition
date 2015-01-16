@@ -9,8 +9,5 @@
 
 /* readline.c (Chapter 15, page 375) */
 
-#define MAX_REMIND 50   /* maximum number of reminders */
-#define MSG_LEN 60      /* max length of reminder message */
-
 int read_line(char str[], int n);
 

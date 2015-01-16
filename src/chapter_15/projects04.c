@@ -14,6 +14,9 @@
 #include <string.h>
 #include "readline.h"
 
+#define MAX_REMIND 50   /* maximum number of reminders */
+#define MSG_LEN 60      /* max length of reminder message */
+
 int main(void)
 {
   char reminders[MAX_REMIND][MSG_LEN+3];
