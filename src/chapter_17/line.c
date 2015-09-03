@@ -29,8 +29,7 @@ int num_words = 0;
 
 void clear_line(void)
 {
-  struct word *cur;
-  cur = line;
+  struct word *cur = line;
   while (cur != NULL) {
     line = cur->next;
     free(cur);
@@ -65,7 +64,7 @@ void write_line(void)
   extra_spaces = MAX_LINE_LEN - line_len;
   while (cur != NULL) {
     p = cur->text;
-    while (p != NULL)
+    while (*p)
       putchar(*p++);
     spaces_to_insert = extra_spaces / (num_words - 1);
     for (j = 1; j <= spaces_to_insert + 1; j++)
@@ -82,7 +81,7 @@ void flush_line(void)
   char *p;
   while (cur != NULL) {
     p = cur->text;
-    while (p != NULL)
+    while (*p)
       putchar(*p++);
     cur = cur->next;
   }
