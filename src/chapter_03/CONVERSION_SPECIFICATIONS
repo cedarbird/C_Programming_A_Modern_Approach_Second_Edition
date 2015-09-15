@@ -11,7 +11,7 @@ X        conversion specifier
 Precision:
 
 float-point number(%e, %f)    the number of digits printed after the decimal point.
-float-point number(%g)        the maximun number of significant digits.
+float-point number(%g)        the maximum number of significant digits.
 integer(%d)                   the minimum number of digits printed,
                               if necessary extra zero are added to the beginning of the number.
 integer(%.0d)                 special case, means no output when number is zero.
