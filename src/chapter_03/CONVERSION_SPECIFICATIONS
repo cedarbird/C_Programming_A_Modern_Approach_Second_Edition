@@ -3,7 +3,7 @@ Conversion Specification:
 %[flag][minimum field width][precision][length modifier][conversion specifier]
 %-m.pX
 
--        left justification
+-        left justification (default: right justification)
 m        minimum field width
 p        precision
 X        conversion specifier
@@ -17,3 +17,9 @@ integer(%d)                   the minimum number of digits printed,
 integer(%.0d)                 special case, means no output when number is zero.
 string(%s)                    the maximum length of the string displayed.
 
+Conversion Specifier:
+
+d        decimal(base 10)
+e        floating-point number in exponential format
+f        floating-point number in fixed format
+g        floating-point number in either exponential format or fixed format, depending on the number's size.
