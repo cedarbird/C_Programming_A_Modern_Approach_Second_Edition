@@ -19,7 +19,7 @@ int main(void)
   printf("Enter phone number [(xxx) xxx-xxxx]: ");
   scanf("(%d)%d-%d", &digit1, &digit2, &digit3);
 
-  printf("you enterd %d.%d.%d\n", digit1, digit2, digit3);
+  printf("you entered %d.%d.%d\n", digit1, digit2, digit3);
 
   return 0;
 }
