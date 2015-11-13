@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* line.c (Chapter 15, page 364) */
+/* prj01_line.c (Chapter 15, page 364) */
 
 #include <stdio.h>
 #include <string.h>

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* word.c (Chapter 15, page 363) */
+/* prj02_word.c (Chapter 15, page 363) */
 
 #include <stdio.h>
 #include "word.h"

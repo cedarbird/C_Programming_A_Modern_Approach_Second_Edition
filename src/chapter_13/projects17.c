@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects017.c (Chapter 13, page 313) */
+/* projects17.c (Chapter 13, page 313) */
 /* Checks whether the message is a palindrome */
 
 #include <stdio.h>

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects.c (Chapter 09, page 216) */
+/* projects01.c (Chapter 09, page 216) */
 /* Sorts array with recursive method */
 
 #include <stdio.h>

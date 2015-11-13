@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects03.c (Chapter 17, page 456) */
+/* projects02.c (Chapter 17, page 456) */
 /* Maintains a parts database (sort version) */
 
 #include <stdio.h>
