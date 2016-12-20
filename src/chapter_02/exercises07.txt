@@ -12,5 +12,5 @@ exercises07.txt (Chapter 02, page 33)
 (b) If      no  (c is a case-sensitive language)
 (c) main    no  (a program entry function name)
 (d) printf  no  (standard library function name)
-(c) while   yes (reference to C_KEYWORDS)
+(e) while   yes (reference to C_KEYWORDS)
 
