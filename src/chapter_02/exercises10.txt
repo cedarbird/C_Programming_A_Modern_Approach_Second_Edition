@@ -17,34 +17,34 @@ REFERENCE:
 
              1         2         3         4         5         6
     123456789012345678901234567890123456789012345678901234567890
- 1	/*********************************************************
- 2	 * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
- 3	 * By K. N. King                                         *
- 4	 * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
- 5	 * All rights reserved.                                  *
- 6	 * This program may be freely distributed for class use, *
- 7	 * provided that this copyright notice is retained.      *
- 8	 *********************************************************/
- 9	
-10	/* dweight.c (Chapter 02, page 20) */
-11	/* Computes the dimensional weight of a 12" x 10" x 8" box */
-12	
-13	#include <stdio.h>
-14	
-15	int main(void)
-16	{
-17	  int height, length, width, volume, weight;
-18	
-19	  height = 8;
-20	  length = 12;
-21	  width = 10;
-22	  volume = height * length * width;
-23	  weight = (volume + 165) / 166;
-24	
-25	  printf("Dimensions: %dx%dx%d\n", length, width, height);
-26	  printf("Volume (cubic inches): %d\n", volume);
-27	  printf("Dimensional weight (pounds): %d\n", weight);
-28	
-29	  return 0;
-30	}
-31	
+ 1  /*********************************************************
+ 2   * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ 3   * By K. N. King                                         *
+ 4   * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ 5   * All rights reserved.                                  *
+ 6   * This program may be freely distributed for class use, *
+ 7   * provided that this copyright notice is retained.      *
+ 8   *********************************************************/
+ 9
+10  /* dweight.c (Chapter 02, page 20) */
+11  /* Computes the dimensional weight of a 12" x 10" x 8" box */
+12
+13  #include <stdio.h>
+14
+15  int main(void)
+16  {
+17    int height, length, width, volume, weight;
+18
+19    height = 8;
+20    length = 12;
+21    width = 10;
+22    volume = height * length * width;
+23    weight = (volume + 165) / 166;
+24
+25    printf("Dimensions: %dx%dx%d\n", length, width, height);
+26    printf("Volume (cubic inches): %d\n", volume);
+27    printf("Dimensional weight (pounds): %d\n", weight);
+28
+29    return 0;
+30  }
+31
