@@ -12,6 +12,7 @@ compile: *.c
 	${CC} ${OPTIONS} bin/length		length.c
 	${CC} ${OPTIONS} bin/length2		length2.c
 
+	${CC} ${OPTIONS} bin/exercises07		exercises07.c
 	${CC} ${OPTIONS} bin/exercises13		exercises13.c
 
 	${CC} ${OPTIONS} bin/projects01		projects01.c

@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercise13.txt (Chapter 07, page 157)
+/* exercise13.c (Chapter 07, page 157)
 (a) -3    signed int
 (b) 7     signed long
 (c) 6.5f  float
@@ -15,6 +15,7 @@
 (e) -1.0  double
 (f) 6     signed int
 */
+#include <stdio.h>
 
 int main(void)
 {
