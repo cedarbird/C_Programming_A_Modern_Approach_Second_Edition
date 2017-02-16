@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* exercise15.txt (Chapter 07, page 157) */
-typedef char  Int8
-typedef short Int16
-typedef int   Int32
+typedef char  Int8;
+typedef short Int16;
+typedef int   Int32;
 
