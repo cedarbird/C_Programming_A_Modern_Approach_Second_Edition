@@ -4,7 +4,7 @@ SHELL=/bin/sh
 CC=gcc
 RM=rm
 MKDIR=mkdir
-OPTIONS=-O -Wall -W -pedantic -ansi -std=c99
+OPTIONS=-O -Wall -W -pedantic -std=c99
 
 inventory: inventory.c readline.h readline.o
 	${CC} ${OPTIONS} -o inventory inventory.c readline.h readline.o

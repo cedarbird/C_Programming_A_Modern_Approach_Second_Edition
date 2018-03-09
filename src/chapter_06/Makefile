@@ -4,7 +4,7 @@ SHELL=/bin/sh
 CC=gcc
 RM=rm
 MKDIR=mkdir
-OPTIONS=-O -Wall -W -pedantic -ansi -std=c99 -o
+OPTIONS=-O -Wall -W -pedantic -std=c99 -o
 
 compile: *.c
 	${MKDIR} -p bin
