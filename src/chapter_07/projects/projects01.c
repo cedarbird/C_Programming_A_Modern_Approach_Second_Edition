@@ -19,6 +19,9 @@ int main(void)
 {
   int i, n;
 
+  printf("%zu\n", sizeof(char));
+  printf("%zu\n", sizeof(short));
+  printf("%zu\n", sizeof(int));
   printf("This program prints a table of squares.\n");
   printf("Enter number of entries in table: ");
   scanf("%d", &n);
