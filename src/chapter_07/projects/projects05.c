@@ -20,8 +20,11 @@ int main(void)
 
   printf("Enter a word: ");
 
-  while ((ch = getchar()) != '\n')
+  while ((ch = getchar()) != '\n') {
     switch (toupper(ch)) {
+      case 'A': case 'E': case 'I': case 'L': case 'N':
+      case 'O': case 'R': case 'S': case 'T': case 'U':
+        sum++;    break;
       case 'D': case 'G':
         sum += 2; break;
       case 'B': case 'C': case 'M': case 'P':
@@ -35,8 +38,9 @@ int main(void)
       case 'Q': case 'Z':
         sum += 10; break;
       default:
-        sum++; break;
+        break;
     }
+  }
 
   printf("Scrabble value: %d\n", sum);
 
