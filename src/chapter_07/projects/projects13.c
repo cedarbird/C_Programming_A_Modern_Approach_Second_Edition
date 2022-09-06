@@ -20,14 +20,16 @@ int main(void)
   char ch, previous_ch = ' ';
 
   printf("Enter a sentence: ");
-  do {
-    ch = getchar();
-    if (ch  != ' ' && ch != '\n')
+  while ((ch = (char) getchar()) != '\n')
+  {
+    if (ch  != ' ') {
       lengths++;
-    else if (previous_ch != ' ') /* letter is followed by space or LF */
-      words++;
+      if (previous_ch == ' ') {/* letter is followed by space or LF */
+        words++;
+      }
+    }
     previous_ch = ch;
-  } while (ch != '\n');
+  }
 
   printf("Avarage  word length: %.1f\n", (float) lengths / words);
 
