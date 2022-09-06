@@ -20,7 +20,7 @@ int main(void)
   char ch, previous_ch = ' ';
 
   printf("Enter a sentence: ");
-  while ((ch = (char) getchar()) != '\n')
+  while ((ch = getchar()) != '\n')
   {
     if (ch  != ' ') {
       lengths++;

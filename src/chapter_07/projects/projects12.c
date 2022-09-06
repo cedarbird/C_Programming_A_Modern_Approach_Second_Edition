@@ -21,18 +21,20 @@ int main(void)
   scanf("%f", &result);
 
   do {
-    scanf("%c", &ch);
+    ch = getchar();
     switch (ch) {
       case '+': scanf("%f", &value); result += value; break;
       case '-': scanf("%f", &value); result -= value; break;
       case '*': scanf("%f", &value); result *= value; break;
-      case '/': scanf("%f", &value);
-        if (value != 0.0f) {
-          result /= value; break;
-        } else {
-          printf("can't divide with 0.");
-          return 1; /* error exit */
-        }
+      case '/':
+                scanf("%f", &value);
+                if (value != 0.0f) {
+                  result /= value; break;
+                } else {
+                  printf("can't divide with 0.");
+                  return 1; /* error exit */
+                }
+                break;
     }
   } while (ch != '\n');
 
