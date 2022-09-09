@@ -20,14 +20,14 @@
 #define DOWN  1
 #define LEFT  2
 #define RIGHT 3
-#define NUM_DIRECTIONS 4
+#define NUMS_DIRECTION 4
 #define WALK_DISTANCE 26
 
 int main(void)
 {
   char grid[SIDE][SIDE];
   char ch = 'A';
-  int position[NUM_DIRECTIONS], x = 0, y = 0, num_selections;
+  int position[NUMS_DIRECTION], x = 0, y = 0, nums_selection; /* position array to hold all possible selection */
 
   /* grid initializer */
   for (int i = 0; i < SIDE; i++)
@@ -40,24 +40,24 @@ int main(void)
 
   /* main logic */
   for (int i = 0; i < WALK_DISTANCE - 1; i++) {
-    num_selections = 0;
+    nums_selection = 0;
 
     /* get info for effective selection */
     if (y != 0 && grid[y - 1][x] == '.')
-      position[num_selections++] = UP;
+      position[nums_selection++] = UP;
     if (y != (SIDE - 1) && grid[y + 1][x] == '.')
-      position[num_selections++] = DOWN;
+      position[nums_selection++] = DOWN;
     if (x != 0 && grid[y][x - 1] == '.')
-      position[num_selections++] = LEFT;
+      position[nums_selection++] = LEFT;
     if (x != (SIDE - 1) && grid[y][x + 1] == '.')
-      position[num_selections++] = RIGHT;
+      position[nums_selection++] = RIGHT;
 
     /* stop when no way */
-    if (num_selections == 0)
+    if (nums_selection == 0)
       break;
 
     /* make a random direction decision */
-    switch((position[rand() % num_selections])) {
+    switch((position[rand() % nums_selection])) {
       case UP:    grid[--y][x] = ++ch; break;
       case DOWN:  grid[++y][x] = ++ch; break;
       case LEFT:  grid[y][--x] = ++ch; break;
