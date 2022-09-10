@@ -19,31 +19,30 @@
 int main(void)
 {
   char ch, terminator = '\0', sentence[LENGTH] = {'\0'};
-  int i = 0, j, word_ending = 0;
+  int i = 0, j;
 
   /* read sentence - end with period, question mark or exlamation point. */
   printf("Enter a sentence: ");
   while ((ch = getchar()) != '\n') {
-    if (ch == '.' || ch == '?' || ch == '!')
+    if (ch == '.' || ch == '?' || ch == '!') {
       terminator = ch;
-    else if (ch != ' ')
-      word_ending = i;
+      break;
+    }
     sentence[i++] = ch;
   }
 
   /* reverse sentence */
   printf("Reversal of sentence: ");
-  for (i = word_ending; i >= 0; i--) {
-    if (sentence[i] == ' ') {
-      for (j = i + 1; j <= word_ending; j++)
-        putchar(sentence[j]);
+  while (i >= 0) {
+    if ((sentence[i] != ' ' && sentence[i] != '\0') && (i == 0 || sentence[i-1] == ' ')) {
+      j = i;
+      while (sentence[j] != ' ' && sentence[j] != '\0')
+        putchar(sentence[j++]);
       putchar(' ');
-      word_ending = i - 1;
-    } else if (i == 0)
-      for (j = 0; j <= word_ending; j++)
-        putchar(sentence[j]);
+    }
+    i--;
   }
-  printf("%c\n", terminator);
+  printf("\b%c\n", terminator);
 
   return 0;
 }
