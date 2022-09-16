@@ -20,10 +20,11 @@ float compute_GPA(char grades[], int n)
 
   for (i = 0; i < n; i++)
     switch (toupper(grades[i])) {
-      case 'A': sum += 4.0; break;
-      case 'B': sum += 3.0; break;
-      case 'C': sum += 2.0; break;
-      case 'D': sum += 1.0; break;
+      case 'A': sum += 4; break;
+      case 'B': sum += 3; break;
+      case 'C': sum += 2; break;
+      case 'D': sum += 1; break;
+      /* case 'F': sum += 0.0; break; +0.0 ignore */
     }
 
   return sum / n;

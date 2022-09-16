@@ -11,7 +11,6 @@
 /* Generates random walk across 10 X 10 array */
 
 #include <stdio.h>
-#include <stdbool.h>
 #include <stdlib.h>
 #include <time.h>
 
@@ -21,27 +20,27 @@
 #define DISTANCE 26
 #define POINT '.'
 
-void generate_random_walk(char walk[Y][X]);
-void print_array(char walk[Y][X]);
+void generate_random_walk(int n, int m, char [n][m]);
+void print_array(int n, int m, char [n][m]);
 
 int main(void)
 {
   char walk[Y][X];
 
-  generate_random_walk(walk);
-  print_array(walk);
+  generate_random_walk(Y, X, walk);
+  print_array(Y, X, walk);
 
   return 0;
 }
 
-void generate_random_walk(char walk[Y][X])
+void generate_random_walk(int n, int m, char walk[n][m])
 {
   char ch = 'A';
   int i, j, x = 0, y = 0, nums_of_selection;
   int axis[][2] = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}}; /* UP/DOWN/LEFT/RIGHT{y, x} */
 
-  for (i = 0; i < Y; i++)
-    for (j = 0; j < X; j++)
+  for (i = 0; i < n; i++)
+    for (j = 0; j < m; j++)
       walk[i][j] = POINT;
   walk[y][x] = ch;
 
@@ -50,8 +49,8 @@ void generate_random_walk(char walk[Y][X])
     nums_of_selection = 0;
     int next_axis[NUMS_OF_DIRECTION];
     for (j = 0; j < NUMS_OF_DIRECTION; j++)
-      if ((x + axis[j][1] >= 0 && x + axis[j][1] < X)
-       && (y + axis[j][0] >= 0 && y + axis[j][0] < Y)
+      if ((x + axis[j][1] >= 0 && x + axis[j][1] < m)
+       && (y + axis[j][0] >= 0 && y + axis[j][0] < n)
        && (walk[y + axis[j][0]][x + axis[j][1]] == POINT))
         next_axis[nums_of_selection++] = j;
 
@@ -65,11 +64,11 @@ void generate_random_walk(char walk[Y][X])
   }
 }
 
-void print_array(char walk[Y][X])
+void print_array(int n, int m, char walk[n][m])
 {
   int i, j;
-  for (i = 0; i < Y; i++) {
-    for (j = 0; j < X; j++)
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < m; j++)
       printf("%2c", walk[i][j]);
     printf("\n");
   }

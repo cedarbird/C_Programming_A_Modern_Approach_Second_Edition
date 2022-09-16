@@ -17,7 +17,7 @@
 #define NUM_ALPHABETS 26
 
 void read_word(int counts[NUM_ALPHABETS]);
-int equal_array(int counts1[NUM_ALPHABETS], int counts2[NUM_ALPHABETS]);
+bool equal_array(int counts1[NUM_ALPHABETS], int counts2[NUM_ALPHABETS]);
 
 int main(void)
 {
@@ -43,7 +43,7 @@ void read_word(int counts[NUM_ALPHABETS])
       counts[tolower(ch) - 'a']++;
 }
 
-int equal_array(int counts1[NUM_ALPHABETS], int counts2[NUM_ALPHABETS])
+bool equal_array(int counts1[NUM_ALPHABETS], int counts2[NUM_ALPHABETS])
 {
   int i;
   for (i = 0; i < NUM_ALPHABETS; i++)

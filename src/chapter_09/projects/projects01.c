@@ -37,7 +37,7 @@ void selection_sort(int a[], int n)
 {
   int i, swap;
   if (n == 0)
-   return;
+    return;
   else {
     for (i = 0; i < n - 1; i++)
       if (a[i] > a[n - 1]) {

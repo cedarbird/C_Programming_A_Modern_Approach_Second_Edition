@@ -13,8 +13,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-void create_magic_square(int n, char magic_square[n][n]);
-void print_magic_square(int n, char magic_square[n][n]);
+void create_magic_square(int n, int magic_square[n][n]);
+void print_magic_square(int n, int magic_square[n][n]);
 
 int main(void)
 {
@@ -25,14 +25,14 @@ int main(void)
   printf("Enter size of magic square: ");
   scanf("%d", &n);
 
-  char magic_square[n][n]; /* VLA */
+  int magic_square[n][n]; /* VLA */
   create_magic_square(n, magic_square);
   print_magic_square(n, magic_square);
 
   return 0;
 }
 
-void create_magic_square(int n, char magic_square[n][n])
+void create_magic_square(int n, int magic_square[n][n])
 {
   int i, j, rows = n / 2, cols = 0;
   for (i = 0; i < n; i++)
@@ -47,7 +47,7 @@ void create_magic_square(int n, char magic_square[n][n])
       magic_square[cols = (cols + 1) % n][rows] = i + 1;
 }
 
-void print_magic_square(int n, char magic_square[n][n])
+void print_magic_square(int n, int magic_square[n][n])
 {
   int i, j;
   for (i = 0; i < n; i++) {

@@ -16,7 +16,7 @@
 #include <time.h>
 #include <ctype.h>
 
-#define NUM_DIRECTIONS 6
+#define NUMS_DIRECTION 6
 
 int roll_dice(void);
 bool play_game(void);
@@ -65,7 +65,7 @@ bool play_game(void)
 
 int roll_dice(void)
 {
-  int dice = rand() % NUM_DIRECTIONS + rand() % NUM_DIRECTIONS + 2;
+  int dice = rand() % NUMS_DIRECTION + rand() % NUMS_DIRECTION + 2;
 
   printf("You rolled: %d\n", dice);
 

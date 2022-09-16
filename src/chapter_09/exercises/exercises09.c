@@ -8,7 +8,7 @@
  *********************************************************/
 
 /* exercises09.c (Chapter 09, page 215) */
-/* Checks function's output(no any change because of passed by value) */
+/* Checks function's output(no any change because of passing by value in c language) */
 
 #include <stdio.h>
 
