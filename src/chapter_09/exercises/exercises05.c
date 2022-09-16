@@ -7,22 +7,27 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* exercises02.c (Chapter 09, page 214) */
-/* Checks range */
+/* exercises05.c (Chapter 09, page 214) */
+/* Computes numbers of digit */
 
 #include <stdio.h>
 
-int check(int x, int y, int n)
+int nums_digit(int n)
 {
-  return (x >= 0 && x <= n - 1) && (y >= 0 && y <= n -1);
+  int num = 0;
+
+  while (n > 0) {
+    n /= 10;
+    num++;
+  }
+
+  return num;
 }
 
 int main(void)
 {
-  printf("%d\n", check(1, 2, 4));
-  printf("%d\n", check(5, 2, 4));
-  printf("%d\n", check(7, 6, 4));
-  printf("%d\n", check(1, 5, 4));
+  printf("%d\n", nums_digit(905));
+  printf("%d\n", nums_digit(4));
 
   return 0;
 }
