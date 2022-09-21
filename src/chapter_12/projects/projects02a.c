@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects02b.c (Chapter 12, page 275) */
+/* projects02a.c (Chapter 12, page 275) */
 /* Checks whether the message is a palindrome */
 
 #include <stdio.h>
@@ -19,37 +19,26 @@
 
 int main(void)
 {
-  char msg[MSG_LEN];
-  char *end, *before, *after;
-  bool matched;
+  char msg[MSG_LEN], ch;
+  int end, before, after;
+  bool matched = true;
 
   printf("Enter a message: ");
-  for (end = &msg[0]; end < &msg[MSG_LEN]; end++) {
-    *end = getchar();
-    if (*end == '\n')
-      break;
-  }
+  while ((ch = getchar()) != '\n')
+    if (isalpha(ch))
+      msg[end++] = tolower(ch);
 
-  for (before = &msg[0], after = end; before < after; before++) {
-    if (isalpha(*before)) {
+  for (before = 0, after = end - 1; before < after; before++, after--) {
+    if (msg[before] != msg[after]) {
       matched = false;
-      for (; after >= before; after--) {
-        if (isalpha(*after)) {
-          if (toupper(*before) == toupper(*after))
-            matched = true;
-          after--;
-          break;
-        }
-      }
-
-      if (!matched) {
-        printf("Not a palindrome\n");
-        exit(0);
-      }
+      break;
     }
   }
 
-  printf("Palindrome\n");
+  if (matched)
+    printf("Palindrome\n");
+  else
+    printf("Not a palindrome\n");
 
   return 0;
 }

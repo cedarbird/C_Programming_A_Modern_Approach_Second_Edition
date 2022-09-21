@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects05.c (Chapter 12, page 276) */
+/* projects05.c (Chapter 08, page 276) */
 /* Reverses a sentence */
 /* Multiple continous space is also considered. */
 
@@ -18,32 +18,33 @@
 
 int main(void)
 {
-  char ch, terminator = '\0', sentence[LENGTH] = {'\0'};
-  char *p = sentence, *q, *word_ending = sentence + LENGTH - 1;
+  char ch, terminator = '\0', sentence[LENGTH] = {'\0'}, *p = sentence, *q;
 
   /* read sentence - end with period, question mark or exlamation point. */
   printf("Enter a sentence: ");
-  while ((ch = getchar()) != '\n' && p < sentence + LENGTH) {
-    if (ch == '.' || ch == '?' || ch == '!')
+  while ((ch = getchar()) != '\n') {
+    if (ch == '.' || ch == '?' || ch == '!') {
       terminator = ch;
-    else if (ch != ' ')
-      word_ending = p;
+      break;
+    }
     *p++ = ch;
   }
 
+  /*adjust last char to space for simpling check condition */
+  *p = ' ';
+
   /* reverse sentence */
   printf("Reversal of sentence: ");
-  for (p = word_ending; p >= sentence; p--) {
-    if (*p == ' ') {
-      for (q = p + 1; q <= word_ending; q++)
-        putchar(*q);
+  while (p >= sentence) {
+    if (*p != ' ' && (p == sentence || *(p-1) == ' ')) {
+      q = p;
+      while (*q != ' ')
+        putchar(*q++);
       putchar(' ');
-      word_ending = p - 1;
-    } else if (p == sentence)
-      for (q = sentence; q <= word_ending; q++)
-        putchar(*q);
+    }
+    p--;
   }
-  printf("%c\n", terminator);
+  printf("\b%c\n", terminator);
 
   return 0;
 }

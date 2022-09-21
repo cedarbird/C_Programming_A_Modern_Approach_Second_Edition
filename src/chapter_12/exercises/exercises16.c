@@ -18,7 +18,7 @@ void initial_temperatures(int *p, int n);
 
 int main(void)
 {
-  int temperatures[7][24], (*p)[24];
+  int temperatures[7][24];
 
   initial_temperatures(&temperatures[0][0], 7 * 24);
 
@@ -28,8 +28,8 @@ int main(void)
     printf("\n");
   }
 
-  for (p = &temperatures[0]; p < &temperatures[7]; p++)
-    printf("%d\n", find_largest(&(*p)[0], 24));
+  for (int i = 0; i < 7; i++)
+    printf("%d\n", find_largest(temperatures[i], 24));
 
   return 0;
 }

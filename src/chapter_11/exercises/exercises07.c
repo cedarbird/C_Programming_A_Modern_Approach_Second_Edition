@@ -32,7 +32,7 @@ void split_date(int day_of_year, int year, int *month, int *day)
   int i;
 
   /* adjust for leap years */
-  if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0))
+  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
     num_days[1] = 29;
 
   for (i = 0; i < 12; i++)

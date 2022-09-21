@@ -17,7 +17,7 @@ void find_two_largest(int a[], int n, int *largest,
 int main(void)
 {
   int largest, second_largest;
-  find_two_largest((int []) {4, 6, 9, 3}, 4, &largest, &second_largest);
+  find_two_largest((int []) {12, 7, 4, 6, 9, 3}, 6, &largest, &second_largest);
   printf("largest: %d, second_largest: %d\n", largest, second_largest);
 
   return 0;
