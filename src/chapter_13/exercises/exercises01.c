@@ -22,7 +22,7 @@ int main(void)
   putchar('\n');      /* (g) */
 //putchar("\n");      /* (h), type mismatch */
 //puts('\n');         /* (i), type mismatch */
-//puts("\n");         /* (j), two new-line */
+  puts("\n");         /* (j), two new-line */
   puts("");           /* (k) */
 
   return 0;

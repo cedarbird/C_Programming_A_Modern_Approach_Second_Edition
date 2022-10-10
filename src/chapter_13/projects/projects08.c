@@ -29,24 +29,12 @@ int main(void)
 int compute_scrabble_value(const char *word)
 {
   int sum = 0;
+  int scrabble_table[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3,
+                          1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
   for (; *word; word++)
-    switch (toupper(*word)) {
-      case 'D': case 'G':
-        sum += 2; break;
-      case 'B': case 'C': case 'M': case 'P':
-        sum += 3; break;
-      case 'F': case 'H': case 'V': case 'W': case 'Y':
-        sum += 4; break;
-      case 'K':
-        sum += 5; break;
-      case 'J': case 'X':
-        sum += 8; break;
-      case 'Q': case 'Z':
-        sum += 10; break;
-      default:
-        sum++; break;
-    }
+    if(isalpha(*word))
+      sum += scrabble_table[toupper(*word) - 'A'];
 
   return sum;
 }

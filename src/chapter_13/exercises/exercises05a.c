@@ -25,11 +25,9 @@ int main(void)
 
 char *capitalize(char *s)
 {
-  char *p = s;
+  for (int i = 0; s[i] != '\0'; i++)
+    s[i] = toupper(s[i]);
 
-  for (int i = 0; p[i] != '\0'; i++)
-    p[i] = toupper(p[i]);
-
-  return p;
+  return s;
 }
 

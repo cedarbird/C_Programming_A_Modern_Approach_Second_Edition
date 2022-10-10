@@ -10,7 +10,6 @@
 /* exercises12.c (Chapter 13, page 309) */
 
 #include <stdio.h>
-#include <string.h>
 
 void get_extension(char *file_name, char *extension);
 
@@ -28,14 +27,9 @@ int main(void)
 
 void get_extension(char *file_name, char *extension)
 {
-  char *p = file_name;
-
-  while ( *p )
-    if (*p++ == '.') {
-      strcpy(extension, p);
-      return;
-    }
-
-  *extension = '\0';
+  while ( *file_name && '.' != *file_name++ )
+    ;
+  while ((*extension++ = *file_name++))
+    ;
 }
 

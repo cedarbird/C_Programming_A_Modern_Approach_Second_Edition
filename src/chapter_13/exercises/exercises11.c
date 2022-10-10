@@ -15,16 +15,22 @@ int mystrcmp(char *s, char *t);
 
 int main(void)
 {
-  printf("abc CMP abC: %d\n", mystrcmp("abc", "abC"));
+  char p[10], q[10];
+  scanf("%s", p); 
+  scanf("%s", q); 
+  printf("strcmp result: %d\n", mystrcmp(p, q));
 
   return 0;
 }
 
 int mystrcmp(char *s, char *t)
 {
-  for (; *s == *t; s++, t++)
-    if (!(*s))
-      return 0;
-  return *s - *t;
+ int ret;
+  while (!(ret = (*s - *t)) && *s)  {
+    s++;
+    t++;
+  }
+    ;
+  return ret;
 }
 
