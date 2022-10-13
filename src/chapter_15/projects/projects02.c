@@ -7,29 +7,32 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects03.c (Chapter 15, page 375) */
-/* Sorts an array of integers using Quicksort algorithm */
+/* projects02.c (Chapter 15, page 375) */
+/* Formats a file of text */
 
-#include <stdio.h>
-#include "quicksort.h"
+#include <string.h>
+#include "../common/line.h"
+#include "../common/word.h"
 
-#define N 10
+#define MAX_WORD_LEN 20
 
 int main(void)
 {
-  int a[N], i;
+  char word[MAX_WORD_LEN+2];
+  int word_len;
 
-  printf("Enter %d numbers to be sorted: ", N);
-  for (i = 0; i < N; i++)
-    scanf("%d", &a[i]);
-
-  quicksort(a, 0, N - 1);
-
-  printf("In sorted order: ");
-  for (i = 0; i < N; i++)
-    printf("%d ", a[i]);
-  printf("\n");
-
-  return 0;
+  clear_line();
+  for (;;) {
+    read_word(word, MAX_WORD_LEN+1);
+    word_len = strlen(word);
+    if (word_len == 0) {
+      flush_line();
+      return 0;
+    }
+    if (word_len + 1 > space_remaining()) {
+      write_line();
+      clear_line();
+    }
+    add_word(word);
+  }
 }
-

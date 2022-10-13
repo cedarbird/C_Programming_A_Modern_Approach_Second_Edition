@@ -7,32 +7,33 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects02.c (Chapter 15, page 375) */
-/* Formats a file of text */
+/* prj02_word.c (Chapter 15, page 363) */
 
-#include <string.h>
-#include "line.h"
-#include "word.h"
+#include <stdio.h>
+#include "../common/word.h"
 
-#define MAX_WORD_LEN 20
-
-int main(void)
+int read_char(void)
 {
-  char word[MAX_WORD_LEN+2];
-  int word_len;
+  int ch = getchar();
 
-  clear_line();
-  for (;;) {
-    read_word(word, MAX_WORD_LEN+1);
-    word_len = strlen(word);
-    if (word_len == 0) {
-      flush_line();
-      return 0;
-    }
-    if (word_len + 1 > space_remaining()) {
-      write_line();
-      clear_line();
-    }
-    add_word(word);
+  if (ch == '\n' || ch == '\t')
+    return ' ';
+  return ch;
+}
+
+void read_word(char *word, int len)
+{
+  int ch, pos = 0;
+
+  while ((ch = read_char()) == ' ')
+    ;
+  while (ch != ' ' && ch != EOF) {
+    if (pos < len)
+      word[pos++] = ch;
+    ch = read_char();
   }
+
+  if (pos == len)
+    word[pos - 1] = '*';
+  word[pos] = '\0';
 }

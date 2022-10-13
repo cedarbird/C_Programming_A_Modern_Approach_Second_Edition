@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "readline.h"
+#include "../common/readline.h"
 
 #define MAX_REMIND 50   /* maximum number of reminders */
 #define MSG_LEN 60      /* max length of reminder message */

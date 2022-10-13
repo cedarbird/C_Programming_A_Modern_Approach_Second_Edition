@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <stdbool.h> /* C99 only */
-#include "stack.h"
+#include "../common/stack.h"
 
 int main(void)
 {
