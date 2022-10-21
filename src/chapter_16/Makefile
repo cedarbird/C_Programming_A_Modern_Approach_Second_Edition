@@ -4,39 +4,47 @@ SHELL=/bin/sh
 CC=gcc
 RM=rm
 MKDIR=mkdir
-OPTIONS=-O -Wall -W -pedantic -std=c99
+OPTIONS=-g -O0 -Wall -W -pedantic -std=c99
 
-inventory: inventory.c readline.h readline.o
-	${CC} ${OPTIONS} -o inventory inventory.c readline.h readline.o
+all: init inventory exercises05 exercises06 exercises07 projects01 projects02 projects03 projects04 projects05 projects06
 
-readline.o: readline.h readline.c
-	${CC} ${OPTIONS} -c readline.h readline.c
+init:
+	${MKDIR} -p bin
 
-exercises05: exercises05.c
-	${CC} ${OPTIONS} -o exercises05 exercises05.c
+inventory: samples/inventory.c common/readline.h readline.o
+	${CC} ${OPTIONS} -o bin/inventory samples/inventory.c common/readline.h readline.o
 
-exercises06: exercises06.c
-	${CC} ${OPTIONS} -o exercises06 exercises06.c
+readline.o: common/readline.h common/readline.c
+	${CC} ${OPTIONS} -c common/readline.h common/readline.c
 
-exercises07: exercises07.c
-	${CC} ${OPTIONS} -o exercises06 exercises06.c
+exercises05: exercises/exercises05.c
+	${CC} ${OPTIONS} -o bin/exercises05 exercises/exercises05.c
 
-projects01: projects01.c
-	${CC} ${OPTIONS} -o projects01 projects01.c
+exercises06: exercises/exercises06.c
+	${CC} ${OPTIONS} -o bin/exercises06 exercises/exercises06.c
 
-projects02: projects02.c readline.h readline.o
-	${CC} ${OPTIONS} -g -O0 -o projects02 projects02.c readline.h readline.o
+exercises07: exercises/exercises07.c
+	${CC} ${OPTIONS} -o bin/exercises07 exercises/exercises07.c
 
-projects03: projects03.c readline.h readline.o
-	${CC} ${OPTIONS} -o projects03 projects03.c readline.h readline.o
+projects01: projects/projects01.c
+	${CC} ${OPTIONS} -o bin/projects01 projects/projects01.c
 
-projects04: projects04.c readline.h readline.o
-	${CC} ${OPTIONS} -o projects04 projects04.c readline.h readline.o
+projects02: projects/projects02.c common/readline.h common/readline.o
+	${CC} ${OPTIONS} -o bin/projects02 projects/projects02.c common/readline.h readline.o
 
-projects05: projects05.c
-	${CC} ${OPTIONS} -o projects05 projects05.c
+projects03: projects/projects03.c common/readline.h common/readline.o
+	${CC} ${OPTIONS} -o bin/projects03 projects/projects03.c common/readline.h readline.o
 
-projects06: projects06.c
-	${CC} ${OPTIONS} -o projects06 projects06.c
+projects04: projects/projects04.c common/readline.h readline.o
+	${CC} ${OPTIONS} -o bin/projects04 projects/projects04.c common/readline.h readline.o
+
+projects05: projects/projects05.c
+	${CC} ${OPTIONS} -o bin/projects05 projects/projects05.c
+
+projects06: projects/projects06.c
+	${CC} ${OPTIONS} -o bin/projects06 projects/projects06.c
+
+clean:
+	${RM} -fR bin && ${RM} *.o && ${RM} */*.gch
 
 

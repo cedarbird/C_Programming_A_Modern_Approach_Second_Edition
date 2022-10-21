@@ -11,8 +11,8 @@
 /* Formats a file of text */
 
 #include <string.h>
-#include "line.h"
-#include "word.h"
+#include "../common/line.h"
+#include "../common/word.h"
 
 #define MAX_WORD_LEN 20
 

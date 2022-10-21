@@ -7,31 +7,30 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects01.c (Chapter 17, page 456) */
-/* Maintains a parts database (memory auto extend version) */
+/* projects02.c (Chapter 17, page 456) */
+/* Maintains a parts database (sort version) */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "readline.h"
+#include "../common/readline.h"
 
 #define NAME_LEN 25
-#define INITIAL_PARTS 10
+#define MAX_PARTS 100
 
 struct part {
   int number;
   char name[NAME_LEN+1];
   int on_hand;
-};
+} inventory[MAX_PARTS];
 
-struct part *inventory;
-int num_parts = 0;      /* number of parts currently stored */
-int max_parts = INITIAL_PARTS;   /* size of inventory array */
+int num_parts = 0;   /* number of parts currently stored */
 
 int find_part(int number);
 void insert(void);
 void search(void);
 void update(void);
 void print(void);
+int compare_parts(const void *p, const void *q);
 
 /**********************************************************
  * main: Prompts the user to enter an operation code,     *
@@ -43,12 +42,6 @@ void print(void);
 int main(void)
 {
   char code;
-
-  inventory = malloc(max_parts * sizeof(struct part));
-  if (inventory == NULL) {
-    printf("Can't allocate initial inventory space.\n");
-    exit(EXIT_FAILURE);
-  }
 
   for (;;) {
     printf("Enter operation code: ");
@@ -96,16 +89,10 @@ int find_part(int number)
 void insert(void)
 {
   int part_number;
-  struct part *temp;
 
-  if (num_parts == max_parts) {
-    max_parts *= 2;
-    temp = realloc(inventory, max_parts * sizeof(struct part));
-    if (temp == NULL) {
-      printf("Insufficient memory; can't add more parts.\n");
-      return;
-    }
-    inventory = temp;
+  if (num_parts == MAX_PARTS) {
+    printf("Database is full; can't add more parts.\n");
+    return;
   }
 
   printf("Enter part number: ");
@@ -166,20 +153,25 @@ void update(void)
 }
 
 /**********************************************************
- * print: Prints a listing of all parts in the database,  *
+ * print: Sorts the inventory array by part number, then  *
+ *        prints a listing of all parts in the database,  *
  *        showing the part number, part name, and         *
- *        quantity on hand. Parts are printed in the      *
- *        order in which they were entered into the       *
- *        database.                                       *
+ *        quantity on hand.                               *
  **********************************************************/
 void print(void)
 {
   int i;
 
+  qsort(inventory, num_parts, sizeof(struct part), compare_parts);
   printf("Part Number   Part Name                  "
          "Quantity on Hand\n");
   for (i = 0; i < num_parts; i++)
     printf("%7d       %-25s%11d\n", inventory[i].number,
            inventory[i].name, inventory[i].on_hand);
+}
+
+int compare_parts(const void *p, const void *q)
+{
+  return ((struct part *) p)->number - ((struct part *) q)->number;
 }
 

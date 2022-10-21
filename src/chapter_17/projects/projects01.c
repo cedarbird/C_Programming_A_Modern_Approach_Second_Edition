@@ -7,14 +7,15 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects03.c (Chapter 16, page 412) */
-/* Maintains a parts database (struct version) */
+/* projects01.c (Chapter 17, page 456) */
+/* Maintains a parts database (memory auto extend version) */
 
 #include <stdio.h>
-#include "readline.h"
+#include <stdlib.h>
+#include "../common/readline.h"
 
 #define NAME_LEN 25
-#define MAX_PARTS 100
+#define INITIAL_PARTS 10
 
 struct part {
   int number;
@@ -22,11 +23,15 @@ struct part {
   int on_hand;
 };
 
-int find_part(int number, const struct part inv[], int np);
-void insert(struct part inv[], int *np);
-void search(const struct part inv[], int np);
-void update(struct part inv[], int np);
-void print(const struct part inv[], int np);
+struct part *inventory;
+int num_parts = 0;      /* number of parts currently stored */
+int max_parts = INITIAL_PARTS;   /* size of inventory array */
+
+int find_part(int number);
+void insert(void);
+void search(void);
+void update(void);
+void print(void);
 
 /**********************************************************
  * main: Prompts the user to enter an operation code,     *
@@ -38,8 +43,12 @@ void print(const struct part inv[], int np);
 int main(void)
 {
   char code;
-  struct part inventory[MAX_PARTS];
-  int num_parts = 0;
+
+  inventory = malloc(max_parts * sizeof(struct part));
+  if (inventory == NULL) {
+    printf("Can't allocate initial inventory space.\n");
+    exit(EXIT_FAILURE);
+  }
 
   for (;;) {
     printf("Enter operation code: ");
@@ -47,13 +56,13 @@ int main(void)
     while (getchar() != '\n')   /* skips to end of line */
       ;
     switch (code) {
-      case 'i': insert(inventory, &num_parts);
+      case 'i': insert();
                 break;
-      case 's': search(inventory, num_parts);
+      case 's': search();
                 break;
-      case 'u': update(inventory, num_parts);
+      case 'u': update();
                 break;
-      case 'p': print(inventory, num_parts);
+      case 'p': print();
                 break;
       case 'q': return 0;
       default:  printf("Illegal code\n");
@@ -63,108 +72,114 @@ int main(void)
 }
 
 /**********************************************************
- * find_part: Looks up a part number in the inv array.    *
- *            Returns the array index if the part number  *
- *            is found; otherwise, returns -1.            *
+ * find_part: Looks up a part number in the inventory     *
+ *            array. Returns the array index if the part  *
+ *            number is found; otherwise, returns -1.     *
  **********************************************************/
-int find_part(int number, const struct part inv[], int np)
+int find_part(int number)
 {
   int i;
 
-  for (i = 0; i < np; i++)
-    if (inv[i].number == number)
+  for (i = 0; i < num_parts; i++)
+    if (inventory[i].number == number)
       return i;
   return -1;
 }
 
 /**********************************************************
  * insert: Prompts the user for information about a new   *
- *         part and then inserts the part into the inv    *
- *         array. Prints an error message and returns     *
+ *         part and then inserts the part into the        *
+ *         database. Prints an error message and returns  *
  *         prematurely if the part already exists or the  *
- *         array is full.                                 *
+ *         database is full.                              *
  **********************************************************/
-void insert(struct part inv[], int *np)
+void insert(void)
 {
   int part_number;
+  struct part *temp;
 
-  if (*np == MAX_PARTS) {
-    printf("Database is full; can't add more parts.\n");
-    return;
+  if (num_parts == max_parts) {
+    max_parts *= 2;
+    temp = realloc(inventory, max_parts * sizeof(struct part));
+    if (temp == NULL) {
+      printf("Insufficient memory; can't add more parts.\n");
+      return;
+    }
+    inventory = temp;
   }
 
   printf("Enter part number: ");
   scanf("%d", &part_number);
-  if (find_part(part_number, inv, *np) >= 0) {
+  if (find_part(part_number) >= 0) {
     printf("Part already exists.\n");
     return;
   }
 
-  inv[*np].number = part_number;
+  inventory[num_parts].number = part_number;
   printf("Enter part name: ");
-  read_line(inv[*np].name, NAME_LEN);
+  read_line(inventory[num_parts].name, NAME_LEN);
   printf("Enter quantity on hand: ");
-  scanf("%d", &inv[*np].on_hand);
-  (*np)++;
+  scanf("%d", &inventory[num_parts].on_hand);
+  num_parts++;
 }
 
 /**********************************************************
  * search: Prompts the user to enter a part number, then  *
- *         looks up the part in the inv array. If the     *
- *         part exists, prints the name and quantity on   *
- *         hand; if not, prints an error message.         *
+ *         looks up the part in the database. If the part *
+ *         exists, prints the name and quantity on hand;  *
+ *         if not, prints an error message.               *
  **********************************************************/
-void search(const struct part inv[], int np)
+void search(void)
 {
   int i, number;
 
   printf("Enter part number: ");
   scanf("%d", &number);
-  i = find_part(number, inv, np);
+  i = find_part(number);
   if (i >= 0) {
-    printf("Part name: %s\n", inv[i].name);
-    printf("Quantity on hand: %d\n", inv[i].on_hand);
+    printf("Part name: %s\n", inventory[i].name);
+    printf("Quantity on hand: %d\n", inventory[i].on_hand);
   } else
     printf("Part not found.\n");
 }
 
 /**********************************************************
  * update: Prompts the user to enter a part number.       *
- *         Prints an error message if the part can't be   *
- *         found in the inv array; otherwise, prompts the *
- *         user to enter change in quantity on hand and   *
- *         updates the array.                             *
+ *         Prints an error message if the part doesn't    *
+ *         exist; otherwise, prompts the user to enter    *
+ *         change in quantity on hand and updates the     *
+ *         database.                                      *
  **********************************************************/
-void update(struct part inv[], int np)
+void update(void)
 {
   int i, number, change;
 
   printf("Enter part number: ");
   scanf("%d", &number);
-  i = find_part(number, inv, np);
+  i = find_part(number);
   if (i >= 0) {
     printf("Enter change in quantity on hand: ");
     scanf("%d", &change);
-    inv[i].on_hand += change;
+    inventory[i].on_hand += change;
   } else
     printf("Part not found.\n");
 }
 
 /**********************************************************
- * print: Prints a listing of all parts in the inv array, *
+ * print: Prints a listing of all parts in the database,  *
  *        showing the part number, part name, and         *
  *        quantity on hand. Parts are printed in the      *
  *        order in which they were entered into the       *
- *        array.                                          *
+ *        database.                                       *
  **********************************************************/
-void print(const struct part inv[], int np)
+void print(void)
 {
   int i;
 
   printf("Part Number   Part Name                  "
          "Quantity on Hand\n");
-  for (i = 0; i < np; i++)
-    printf("%7d       %-25s%11d\n", inv[i].number,
-           inv[i].name, inv[i].on_hand);
+  for (i = 0; i < num_parts; i++)
+    printf("%7d       %-25s%11d\n", inventory[i].number,
+           inventory[i].name, inventory[i].on_hand);
 }
 

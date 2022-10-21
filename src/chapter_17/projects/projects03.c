@@ -7,12 +7,12 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* inventory2.c (Chapter 17, page 434) */
-/* Maintains a parts database (linked list version) */
+/* projects03.c (Chapter 17, page 456) */
+/* Maintains a parts database (erase version) */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "readline.h"
+#include "../common/readline.h"
 
 #define NAME_LEN 25
 
@@ -30,6 +30,7 @@ void insert(void);
 void search(void);
 void update(void);
 void print(void);
+void erase(void);
 
 /**********************************************************
  * main: Prompts the user to enter an operation code,     *
@@ -55,6 +56,8 @@ int main(void)
       case 'u': update();
                 break;
       case 'p': print();
+                break;
+      case 'e': erase();
                 break;
       case 'q': return 0;
       default:  printf("Illegal code\n");
@@ -170,6 +173,35 @@ void update(void)
 }
 
 /**********************************************************
+ * erase:  Prompts the user to enter a part number.       *
+ *         Prints an error message if the part doesn't    *
+ *         exist; otherwise, find and erase the part.     *
+ **********************************************************/
+void erase(void)
+{
+  int number;
+  struct part *cur, *prev;
+
+  printf("Enter part number: ");
+  scanf("%d", &number);
+  for (cur = inventory, prev = NULL;
+       cur != NULL && number != cur->number;
+       prev = cur, cur = cur->next)
+    ;
+  if (cur == NULL) {
+    printf("Part not found.\n");
+    return;
+  }
+  if (prev == NULL) {
+    inventory = cur->next;
+    free(cur);
+  } else {
+    prev->next = cur->next;
+    free(cur);
+  }
+}
+
+/**********************************************************
  * print: Prints a listing of all parts in the database,  *
  *        showing the part number, part name, and         *
  *        quantity on hand. Part numbers will appear in   *
@@ -185,3 +217,4 @@ void print(void)
     printf("%7d       %-25s%11d\n", p->number, p->name,
            p->on_hand);
 }
+
