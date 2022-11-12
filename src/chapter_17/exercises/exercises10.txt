@@ -1,0 +1,17 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/*␣exercises10.txt␣(Chapter␣17,␣page␣454)␣*/↲
+
+void print_part(struct part *p)
+{
+  printf("Part number: %d\n", p->number);
+  printf("Part name: %s\n", p->name);
+  printf("Quantity on hand: %d\n", p->on_hand);
+}

@@ -1,0 +1,16 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/*␣exercises15.txt␣(Chapter␣17,␣page␣455)␣*/↲
+
+15. [was #12] The output of the program is
+
+Answer: 3
+The program tests the values of f2(0), f2(1), f2(2), and so on, stopping when f2 returns zero.
+It then prints the argument that was passed to f2 to make it return zero.

@@ -1,0 +1,14 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/*␣exercises05.txt␣(Chapter␣17,␣page␣454)␣*/↲
+
+5. [was #6] (b) and (c) are legal. (a) is illegal because it tries to reference 
+a member of d without mentioning d. (d) is illegal because it uses -> instead of .
+ to reference the c member of d.
