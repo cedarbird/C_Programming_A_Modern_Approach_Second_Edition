@@ -7,7 +7,7 @@
  * provided that this copyright notice is retained.      *
  *********************************************************/
 
-/* projects04.c (Chapter 15, page 363) */
+/* projects04.c (Chapter 17, page 456) */
 /* Formats a file of text */
 
 #include <string.h>
