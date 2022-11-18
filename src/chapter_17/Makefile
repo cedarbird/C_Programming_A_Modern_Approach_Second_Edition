@@ -8,7 +8,7 @@ OPTIONS=-O0 -g -Wall -W -pedantic -std=c99
 
 all: init linkedlist tabulate remind2 inventory2 exercises01 exercises02 exercises03 \
      exercises06 exercises08 exercises11 exercises12 exercises14 exercises16 exercises19 \
-     projects01 projects02 projects03 projects04 projects05
+     projects01 projects02 projects03 projects04 projects05 projects06 projects07
 
 init:
 	${MKDIR} -p bin
@@ -72,6 +72,12 @@ projects04: projects/projects04.c common/word.h common/line.h word.o line.o
 
 projects05: projects/projects05.c
 	${CC} ${OPTIONS} -o bin/projects05 projects/projects05.c
+
+projects06: projects/projects06.c
+	${CC} ${OPTIONS} -o bin/projects06 projects/projects06.c
+
+projects07: projects/projects07.c
+	${CC} ${OPTIONS} -o bin/projects07 projects/projects07.c
 
 word.o: common/word.c common/word.h
 	${CC} ${OPTIONS} -c common/word.c common/word.h

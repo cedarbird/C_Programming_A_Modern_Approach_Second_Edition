@@ -1,0 +1,33 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/* exercises09.txt (Chapter 18, page 480) */↲
+
+(a)
+typedef char Fcn(int);
+typedef Fcn *Fcn_ptr;
+typedef Fcn_ptr Fcn_ptr_array[10];
+Fcn_ptr_array x;
+
+(b)
+typedef int array_t[5];
+typedef array_t Fcn(int);
+Fcn x;
+
+(c)
+typedef float *Fcn(int);
+typedef Fcn *Fcn2(void);
+Fcn2 x;
+
+(d)
+typedef void Fcn(int);
+typedef void *Fcn2(int);
+typedef Fcn *Fcn3(int, Fcn2);
+Fcn3 x;
+

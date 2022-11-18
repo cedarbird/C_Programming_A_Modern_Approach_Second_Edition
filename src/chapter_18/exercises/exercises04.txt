@@ -1,0 +1,14 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/* exercises04.txt (Chapter 18, page 480) */↲
+
+4. [was #4] If f has never been called previously, the value of f(10) will be 0.
+   If f has been called five times previously, the value of f(10) will be 50,
+   since j is incremented once per call.

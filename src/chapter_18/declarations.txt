@@ -1,0 +1,21 @@
+sc-specifier scope initialized   linkage    storage duration    is a definition
+------------ ----- -----------   -------    ----------------    ---------------
+auto         file  no            [constraint violation]
+auto         file  yes           [constraint violation]
+auto         block no            none       automatic           yes
+auto         block yes           none       automatic           yes
+
+none         file  no            external   static              yes
+none         file  yes           external   static              yes
+none         block no            none       automatic           yes
+none         block yes           none       automatic           yes
+
+static       file  no            internal   static              yes
+static       file  yes           internal   static              yes
+static       block no            none       static              yes
+static       block yes           none       static              yes
+
+extern       file  no            external   static              no
+extern       file  yes           external   static              yes
+extern       block no            external   static              no
+extern       block yes           external   static              yes

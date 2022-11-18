@@ -1,0 +1,22 @@
+/*********************************************************
+ * From C PROGRAMMING: A MODERN APPROACH, Second Edition *
+ * By K. N. King                                         *
+ * Copyright (c) 2008, 1996 W. W. Norton & Company, Inc. *
+ * All rights reserved.                                  *
+ * This program may be freely distributed for class use, *
+ * provided that this copyright notice is retained.      *
+ *********************************************************/
+
+/* exercises11.txt (Chapter 18, page 481) */↲
+
+1.
+NG: int f(int)[];
+OK: int (*f(int))[];
+
+2.
+NG: int g(int)(int);
+OK: int (*g(int))(int);
+
+3.
+NG: int a[10](int);
+OK: int (*a[10])(int);
